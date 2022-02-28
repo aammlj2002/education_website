@@ -11,32 +11,32 @@
                             <Link
                                 :href="route('myLibrary')"
                                 :active="route().current('myLibrary')"
-                                class="px-3 py-2 text-sm font-medium text-gray-300 uppercase rounded-md hover:text-gray-800"
+                                class="px-3 py-2 text-sm font-medium text-gray-300 uppercase rounded-md hover:text-gray-100"
                             >My Library</Link>
                             <Link
                                 :href="route('topics')"
                                 :active="route().current('topics')"
-                                class="px-3 py-2 text-sm font-medium text-gray-300 uppercase rounded-md hover:text-gray-800"
+                                class="px-3 py-2 text-sm font-medium text-gray-300 uppercase rounded-md hover:text-gray-100"
                             >Topics</Link>
                             <Link
                                 :href="route('series')"
                                 :active="route().current('series')"
-                                class="px-3 py-2 text-sm font-medium text-gray-300 uppercase rounded-md hover:text-gray-800"
+                                class="px-3 py-2 text-sm font-medium text-gray-300 uppercase rounded-md hover:text-gray-100"
                             >Series</Link>
                             <Link
                                 :href="route('bits')"
                                 :active="route().current('bits')"
-                                class="px-3 py-2 text-sm font-medium text-gray-300 uppercase rounded-md hover:text-gray-800"
+                                class="px-3 py-2 text-sm font-medium text-gray-300 uppercase rounded-md hover:text-gray-100"
                             >Bits</Link>
                             <Link
                                 :href="route('discussions')"
                                 :active="route().current('discussions')"
-                                class="px-3 py-2 text-sm font-medium text-gray-300 uppercase rounded-md hover:text-gray-800"
+                                class="px-3 py-2 text-sm font-medium text-gray-300 uppercase rounded-md hover:text-gray-100"
                             >Discussions</Link>
                             <Link
                                 :href="route('podcast')"
                                 :active="route().current('podcast')"
-                                class="px-3 py-2 text-sm font-medium text-gray-300 uppercase rounded-md hover:text-gray-800"
+                                class="px-3 py-2 text-sm font-medium text-gray-300 uppercase rounded-md hover:text-gray-100"
                             >Podcast</Link>
                         </div>
                     </div>

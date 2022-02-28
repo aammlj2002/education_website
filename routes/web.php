@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Topic;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -14,7 +15,9 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
         return inertia('MyLibrary');
     })->name('myLibrary');
     Route::get('/browse/all', function () {
-        return inertia('Topics');
+        return inertia('Topics', [
+            "topics"=>Topic::all(),
+        ]);
     })->name('topics');
     Route::get('/series', function () {
         return inertia('Series');
