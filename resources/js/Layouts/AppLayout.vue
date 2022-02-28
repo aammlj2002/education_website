@@ -2,7 +2,6 @@
     <div>
         <Head :title="title" />
 
-        <!-- Primary Navigation Menu -->
         <div>
             <Nav />
 
@@ -30,24 +29,9 @@ export default defineComponent({
         Nav
     },
 
-    data() {
-        return {
-            showingNavigationDropdown: false,
-        }
-    },
-
     methods: {
-        switchToTeam(team) {
-            this.$inertia.put(route('current-team.update'), {
-                'team_id': team.id
-            }, {
-                preserveState: false
-            })
-        },
 
-        logout() {
-            this.$inertia.post(route('logout'));
-        },
+
     }
 })
 </script>
