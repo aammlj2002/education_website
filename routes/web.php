@@ -22,6 +22,14 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
             "categories"=>Category::all()
         ]);
     })->name('topics');
+    Route::get('/browse/{category:slug}', function (Category $category) {
+        $topic = Topic::all();
+        $topics = $topic->where("category_id", $category->id);
+        return inertia('Topics', [
+            "topics"=>$topics,
+            "categories"=>Category::all()
+        ]);
+    })->name('topic');
     Route::get('/series', function () {
         return inertia('Series');
     })->name('series');

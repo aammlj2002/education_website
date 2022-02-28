@@ -1,13 +1,13 @@
 <template>
     <app-layout title="Topics">
         <h1 class="text-3xl">Category</h1>
-        <Link class="block">All topics</Link>
+        <Link href="/browse/all" class="block">All topics</Link>
         <Link
             class="block"
             v-for="category in categories"
             :key="category.id"
             v-text="category.name"
-            :href="category.slug"
+            :href="`/browse/${category.slug}`"
         ></Link>
         <h1 class="text-3xl">topics</h1>
         <Link

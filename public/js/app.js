@@ -24797,6 +24797,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
       return [_hoisted_1, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["Link"], {
+        href: "/browse/all",
         "class": "block"
       }, {
         "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
@@ -24810,7 +24811,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
           "class": "block",
           key: category.id,
           textContent: (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(category.name),
-          href: category.slug
+          href: "/browse/".concat(category.slug)
         }, null, 8
         /* PROPS */
         , ["textContent", "href"]);
