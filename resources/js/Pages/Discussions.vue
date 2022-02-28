@@ -1,6 +1,6 @@
 <template>
-    <app-layout title="Dashboard">
-        <h1>Home Page</h1>
+    <app-layout title="Discussions">
+        <h1>Discussions</h1>
     </app-layout>
 </template>
 
