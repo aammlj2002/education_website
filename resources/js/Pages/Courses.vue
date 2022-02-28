@@ -1,9 +1,10 @@
 <template>
     <app-layout title="Series">
-        <h1>Series</h1>
+        <p v-for="course in courses" :key="course.id" v-text="course.name"></p>
     </app-layout>
 </template>
 
 <script setup>
 import AppLayout from '@/Layouts/AppLayout.vue'
+defineProps({ courses: Object })
 </script>

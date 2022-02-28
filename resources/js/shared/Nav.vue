@@ -19,10 +19,10 @@
                                 class="px-3 py-2 text-sm font-medium text-gray-300 uppercase rounded-md hover:text-gray-100"
                             >Topics</Link>
                             <Link
-                                :href="route('series')"
-                                :active="route().current('series')"
+                                :href="route('courses')"
+                                :active="route().current('courses')"
                                 class="px-3 py-2 text-sm font-medium text-gray-300 uppercase rounded-md hover:text-gray-100"
-                            >Series</Link>
+                            >courses</Link>
                             <Link
                                 :href="route('bits')"
                                 :active="route().current('bits')"

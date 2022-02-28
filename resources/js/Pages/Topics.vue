@@ -19,11 +19,25 @@
             <div v-for="topic in topics" :key="topic.id">
                 <Link
                     as="button"
-                    :href="topic.slug"
+                    :href="`/topics/${topic.slug}`"
                     class="w-full p-4 bg-gray-800 shadow-lg rounded-2xl"
                 >
                     <div class="flex items-center">
                         <p class="ml-2 text-gray-700 text-md dark:text-gray-50">{{topic.name}}</p>
+                    </div>
+                </Link>
+            </div>
+        </div>
+        <h3 class="mt-5 text-xl">Courses</h3>
+        <div class="grid grid-cols-4 gap-4">
+            <div v-for="course in courses" :key="course.id">
+                <Link
+                    as="button"
+                    :href="`/courses/${course.slug}`"
+                    class="w-full p-4 bg-gray-800 shadow-lg rounded-2xl"
+                >
+                    <div class="flex items-center">
+                        <p class="ml-2 text-gray-700 text-md dark:text-gray-50">{{course.name}}</p>
                     </div>
                 </Link>
             </div>
@@ -36,6 +50,7 @@ import AppLayout from '@/Layouts/AppLayout.vue'
 import { Link } from "@inertiajs/inertia-vue3"
 defineProps({
     topics: Object,
-    categories: Object
+    categories: Object,
+    courses: Object
 })
 </script>
