@@ -1,6 +1,8 @@
 <?php
 
+use App\Models\Category;
 use App\Models\Topic;
+use Illuminate\Console\Application;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -17,6 +19,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('/browse/all', function () {
         return inertia('Topics', [
             "topics"=>Topic::all(),
+            "categories"=>Category::all()
         ]);
     })->name('topics');
     Route::get('/series', function () {
