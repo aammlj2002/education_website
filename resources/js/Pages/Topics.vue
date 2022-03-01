@@ -15,33 +15,33 @@
                 ></Link>
             </div>
         </div>
+
         <div class="grid grid-cols-4 gap-4">
             <div v-for="topic in topics" :key="topic.id">
-                <Link
-                    as="button"
-                    :href="`/topics/${topic.slug}`"
-                    class="w-full p-4 bg-gray-800 shadow-lg rounded-2xl"
-                >
-                    <svg width="50" height="50">
-                        <g fill="none">
-                            <path
-                                d="M29.813 7.52l-4.836 8.377-4.836-8.376H4.036l20.94 36.27L45.918 7.52z"
-                                fill="#41B883"
-                            />
-                            <path
-                                d="M29.813 7.52l-4.836 8.377-4.836-8.376h-7.728l12.564 21.762L37.54 7.52z"
-                                fill="#34495E"
-                            />
-                        </g>
-                    </svg>
-                    <div class="flex items-center">
-                        <p class="ml-2 text-gray-700 text-md dark:text-gray-50">{{topic.name}}</p>
-                        <p
-                            class="ml-2 text-gray-700 text-md dark:text-gray-50"
-                        >{{topic.course_count}} series</p>
-                        <p
-                            class="ml-2 text-gray-700 text-md dark:text-gray-50"
-                        >{{topic.video_count}} videos</p>
+                <Link :href="`/topics/${topic.slug}`">
+                    <div class="p-4 bg-gray-800 shadow-lg rounded-xl">
+                        <div class="block w-full h-full">
+                            <div class="flex items-center w-full">
+                                <svg width="50" height="50">
+                                    <g fill="none">
+                                        <path
+                                            d="M29.813 7.52l-4.836 8.377-4.836-8.376H4.036l20.94 36.27L45.918 7.52z"
+                                            fill="#41B883"
+                                        />
+                                        <path
+                                            d="M29.813 7.52l-4.836 8.377-4.836-8.376h-7.728l12.564 21.762L37.54 7.52z"
+                                            fill="#34495E"
+                                        />
+                                    </g>
+                                </svg>
+                                <div class="flex flex-col ml-2 items-left">
+                                    <span class="dark:text-white">{{topic.name}}</span>
+                                    <span
+                                        class="text-sm text-gray-400 dark:text-gray-300"
+                                    >{{topic.course_count}} courses &#67871; {{topic.video_count}} videos</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </Link>
             </div>
