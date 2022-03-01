@@ -4,7 +4,10 @@
     </app-layout>
 </template>
 
-<script setup>
+<script>
 import AppLayout from '@/Layouts/AppLayout.vue'
-defineProps({ courses: Object })
+export default {
+    props: { courses: Object },
+    layout: AppLayout
+}
 </script>

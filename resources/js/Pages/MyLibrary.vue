@@ -1,9 +1,10 @@
 <template>
-    <app-layout title="My Library">
-        <h1>My Library</h1>
-    </app-layout>
+    <h1>My Library</h1>
 </template>
 
-<script setup>
+<script>
 import AppLayout from '@/Layouts/AppLayout.vue'
+export default {
+    layout: AppLayout
+}
 </script>

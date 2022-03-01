@@ -1,9 +1,10 @@
 <template>
-    <app-layout title="Discussions">
-        <h1>Discussions</h1>
-    </app-layout>
+    <h1>Discussions</h1>
 </template>
 
-<script setup>
+<script>
 import AppLayout from '@/Layouts/AppLayout.vue'
+export default {
+    layout: AppLayout
+}
 </script>

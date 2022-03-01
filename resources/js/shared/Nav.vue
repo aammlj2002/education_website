@@ -7,6 +7,7 @@
                         <h2 class="text-lg text-white">Edu Web</h2>
                     </a>
                     <div class="block">
+                        <input type="text" value="hello" />
                         <div class="flex items-baseline ml-10 space-x-4">
                             <Link
                                 :href="route('myLibrary')"
