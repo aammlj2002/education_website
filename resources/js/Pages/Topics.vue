@@ -4,10 +4,14 @@
             <div class="flex items-center justify-center mt-10 ml-10 space-x-4">
                 <Link
                     href="/browse/all"
-                    class="px-3 py-2 text-sm font-medium text-gray-600 capitalize rounded-md hover:text-gray-900"
+                    class="px-3 py-2 text-sm font-medium text-gray-600 capitalize border-4 border-transparent hover:border-b-4 hover:border-b-blue-500 hover:text-gray-900"
+                    :class="{' border-b-4 border-b-blue-500 text-gray-900': currentCategory == ''}"
+                    @click="currentCategory = ''"
                 >All topics</Link>
                 <Link
-                    class="px-3 py-2 text-sm font-medium text-gray-600 capitalize rounded-md hover:text-gray-900"
+                    class="px-3 py-2 text-sm font-medium text-gray-600 capitalize border-4 border-transparent hover:text-gray-900 hover:border-b-4 hover:border-b-blue-500"
+                    :class="{' border-b-4 border-b-blue-500 text-gray-900': currentCategory == category.slug}"
+                    @click="currentCategory = category.slug"
                     v-for="category in categories"
                     :key="category.id"
                     v-text="category.name"
@@ -70,6 +74,8 @@
 <script setup>
 import AppLayout from '@/Layouts/AppLayout.vue'
 import { Link } from "@inertiajs/inertia-vue3"
+import { ref } from '@vue/reactivity'
+let currentCategory = ref("");
 defineProps({
     topics: Object,
     categories: Object,
