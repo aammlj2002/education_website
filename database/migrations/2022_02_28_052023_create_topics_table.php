@@ -17,6 +17,8 @@ return new class extends Migration {
             $table->string("name");
             $table->string("slug");
             $table->foreignId("category_id");
+            $table->integer("course_count");
+            $table->integer("video_count");
             $table->timestamps();
         });
     }

@@ -19,7 +19,9 @@ class TopicFactory extends Factory
         return [
             "name"=>$this->faker->word(),
             "slug"=>$this->faker->word(),
-            "category_id"=>$this->faker->word()
+            "category_id"=>$this->faker->word(),
+            "course_count"=>7,
+            "video_count"=>40
         ];
     }
 }
