@@ -1,12 +1,12 @@
 import { createApp, h } from "vue";
-import { createInertiaApp } from "@inertiajs/inertia-vue3";
+import { createInertiaApp, Head } from "@inertiajs/inertia-vue3";
 import { InertiaProgress } from "@inertiajs/progress";
 import AppLayout from "@/Layouts/AppLayout";
-const appName =
-    window.document.getElementsByTagName("title")[0]?.innerText || "Laravel";
+// const appName =
+//     window.document.getElementsByTagName("title")[0]?.innerText || "Laravel";
 
 createInertiaApp({
-    title: (title) => `${title} - ${appName}`,
+    title: (title) => `Edu Website - ${title}`,
     resolve: (name) => {
         let page = require(`./Pages/${name}.vue`).default;
         if (app.layout === undefined) {
@@ -18,6 +18,7 @@ createInertiaApp({
         return createApp({ render: () => h(app, props) })
             .use(plugin)
             .mixin({ methods: { route } })
+            .component("Head", Head)
             .mount(el);
     },
 });

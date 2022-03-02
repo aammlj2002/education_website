@@ -1,4 +1,5 @@
 <template>
+    <Head title="Category: All"></Head>
     <div class="mb-10 border-b-2 border-b-gray-300">
         <div class="flex items-center justify-center mt-10 ml-10 space-x-4">
             <Link

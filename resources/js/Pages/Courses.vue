@@ -1,7 +1,6 @@
 <template>
-    <app-layout title="Series">
-        <p v-for="course in courses" :key="course.id" v-text="course.name"></p>
-    </app-layout>
+    <Head title="Courses"></Head>
+    <p v-for="course in courses" :key="course.id" v-text="course.name"></p>
 </template>
 
 <script>
