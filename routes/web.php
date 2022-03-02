@@ -19,23 +19,27 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     })->name('myLibrary');
     Route::get('/browse/all', function () {
         return inertia('Topics', [
+            "categories"=>Category::all(),
             "topics"=>Topic::all(),
             "courses"=>[]
         ]);
     })->name('topics');
     Route::get('/browse/{category:slug}', function (Category $category) {
         return inertia('Topics', [
+            "categories"=>Category::all(),
             "topics"=>$category->topics,
             "courses"=>[]
         ]);
     });
     Route::get('/topics/{topic:slug}', function (Topic $topic) {
         $courses =$topic->courses;
-        $category = $topic->category;
-        $topics = $category->topics;
+        $currentCategory = $topic->category;
+        $topics = $currentCategory->topics;
         return inertia('Topics', [
+            "categories"=>Category::all(),
             "topics"=>$topics,
-            "courses"=>$courses
+            "courses"=>$courses,
+            "currentCategory"=>$currentCategory->slug
         ]);
     });
     Route::get('/courses', function () {
