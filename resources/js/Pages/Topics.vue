@@ -70,7 +70,6 @@
 </template>
 
 <script>
-import AppLayout from '@/Layouts/AppLayout.vue'
 import { Link } from "@inertiajs/inertia-vue3"
 import { ref } from '@vue/reactivity'
 export default {
@@ -79,7 +78,6 @@ export default {
         categories: Object,
         courses: Object
     },
-    layout: AppLayout,
     components: {
         Link
     },

@@ -5,9 +5,7 @@
 </template>
 
 <script>
-import AppLayout from '@/Layouts/AppLayout.vue'
 export default {
     props: { courses: Object },
-    layout: AppLayout
 }
 </script>
