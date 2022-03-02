@@ -76,7 +76,9 @@
                     </div>
                 </div>
                 <div class="flex flex-row">
-                    <div class="w-full px-4 py-2 mr-3 text-black bg-gray-100 rounded-full">
+                    <button
+                        class="w-full px-4 py-2 mr-3 text-black bg-gray-100 rounded-full border-1 border- hover:border-blue-400 hover:text-blue-400 hover:transition-all"
+                    >
                         <div class="flex flex-row items-center justify-center">
                             <div>
                                 <svg width="15" height="15" viewBox="0 0 15 15" class="mr-3">
@@ -93,8 +95,10 @@
                                 <div class="text-sm">start course</div>
                             </div>
                         </div>
-                    </div>
-                    <div class="w-full px-4 py-2 mr-3 text-white bg-gray-700 rounded-full">
+                    </button>
+                    <button
+                        class="w-full px-4 py-2 mr-3 text-white bg-gray-700 rounded-full border-1 border- hover:border-blue-400 hover:text-blue-400 hover:transition-all"
+                    >
                         <div class="flex flex-row items-center justify-center">
                             <div>
                                 <svg
@@ -113,7 +117,7 @@
                                 <div class="text-sm">start course</div>
                             </div>
                         </div>
-                    </div>
+                    </button>
                 </div>
             </div>
         </div>
@@ -133,7 +137,9 @@
             <div
                 class="mb-5 text-xs text-center text-gray-300"
             >Let's wrap up this mini-series by demonstrating how we might test our SendInvoice job.</div>
-            <div class="w-full px-4 py-2 mr-3 text-lg text-white bg-gray-800 rounded-full">
+            <button
+                class="w-full px-4 py-2 mr-3 text-base text-white bg-gray-800 rounded-full border-1 border- hover:border-blue-400 hover:text-blue-400 hover:transition-all"
+            >
                 <div class="flex flex-row items-center justify-center">
                     <div>
                         <svg width="15" height="15" viewBox="0 0 15 15" class="mr-3">
@@ -150,7 +156,7 @@
                         <div class="uppercase">watch</div>
                     </div>
                 </div>
-            </div>
+            </button>
         </div>
     </div>
 </template>
@@ -160,3 +166,8 @@ export default {
     props: { courses: Object },
 }
 </script>
+<style>
+.border-1 {
+    border: 1px solid transparent;
+}
+</style>
