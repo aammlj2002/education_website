@@ -71,19 +71,24 @@
 </template>
 
 <script>
-import { Link } from "@inertiajs/inertia-vue3"
+import { App, Link } from "@inertiajs/inertia-vue3"
 import { ref } from '@vue/reactivity'
+import TopicPageLayout from '../Layouts/TopicPageLayout';
+import AppLayout from '../Layouts/AppLayout';
 export default {
     props: {
         topics: Object,
         categories: Object,
         courses: Object
     },
+    layout: (h, page) => h(AppLayout, () => h(TopicPageLayout, () => page)),
     components: {
         Link
     },
     setup() {
         let currentCategory = ref("");
+
+        return { currentCategory };
     }
 }
 </script>

@@ -8,10 +8,8 @@ import AppLayout from "@/Layouts/AppLayout";
 createInertiaApp({
     title: (title) => `Edu Website - ${title}`,
     resolve: (name) => {
-        let page = require(`./Pages/${name}.vue`).default;
-        if (app.layout === undefined) {
-            page.layout = AppLayout;
-        }
+        const page = require(`./Pages/${name}.vue`).default;
+        page.layout ??= AppLayout;
         return page;
     },
     setup({ el, app, props, plugin }) {
