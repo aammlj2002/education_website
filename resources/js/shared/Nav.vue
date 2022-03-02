@@ -52,7 +52,7 @@
                                         class="flex items-center justify-center w-full p-2 text-sm font-medium text-gray-700"
                                     >
                                         <img
-                                            :src="$page.props.user.profile_photo_url"
+                                            :src="$page.props.user.profile_photo_url ?? null"
                                             :alt="$page.props.user.name"
                                             class="object-cover w-10 h-10 mx-auto rounded-full"
                                         />

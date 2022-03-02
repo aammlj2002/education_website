@@ -20,6 +20,10 @@ class CourseFactory extends Factory
             "name"=>$this->faker->word(),
             "slug"=>$this->faker->word(),
             "topic_id"=>$this->faker->word(),
+            "description"=>$this->faker->paragraph(),
+            "level"=>"advanced",
+            "duration"=>"4h20m",
+            "lesson_count"=>10,
         ];
     }
 }
