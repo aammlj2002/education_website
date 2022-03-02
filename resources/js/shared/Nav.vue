@@ -7,37 +7,36 @@
                         <h2 class="text-lg text-white">Edu Web</h2>
                     </a>
                     <div class="block">
-                        <input type="text" value="hello" />
                         <div class="flex items-baseline ml-10 space-x-4">
                             <Link
                                 :href="route('myLibrary')"
-                                :active="route().current('myLibrary')"
-                                class="px-3 py-2 text-sm font-medium text-gray-300 uppercase rounded-md hover:text-gray-100"
+                                class="px-3 py-2 text-sm font-extrabold uppercase rounded-md text-slate-600 hover:text-gray-100"
+                                :class="{'text-gray-100': $page.component == 'MyLibrary'}"
                             >My Library</Link>
                             <Link
                                 :href="route('topics')"
-                                :active="route().current('topics')"
-                                class="px-3 py-2 text-sm font-medium text-gray-300 uppercase rounded-md hover:text-gray-100"
+                                class="px-3 py-2 text-sm font-extrabold uppercase rounded-md text-slate-600 hover:text-gray-100"
+                                :class="{'text-gray-100': $page.component == 'Topics'}"
                             >Topics</Link>
                             <Link
                                 :href="route('courses')"
-                                :active="route().current('courses')"
-                                class="px-3 py-2 text-sm font-medium text-gray-300 uppercase rounded-md hover:text-gray-100"
+                                class="px-3 py-2 text-sm font-extrabold uppercase rounded-md text-slate-600 hover:text-gray-100"
+                                :class="{'text-gray-100': $page.component == 'Courses'}"
                             >courses</Link>
                             <Link
                                 :href="route('bits')"
-                                :active="route().current('bits')"
-                                class="px-3 py-2 text-sm font-medium text-gray-300 uppercase rounded-md hover:text-gray-100"
+                                class="px-3 py-2 text-sm font-extrabold uppercase rounded-md text-slate-600 hover:text-gray-100"
+                                :class="{'text-gray-100': $page.component == 'Bits'}"
                             >Bits</Link>
                             <Link
                                 :href="route('discussions')"
-                                :active="route().current('discussions')"
-                                class="px-3 py-2 text-sm font-medium text-gray-300 uppercase rounded-md hover:text-gray-100"
+                                class="px-3 py-2 text-sm font-extrabold uppercase rounded-md text-slate-600 hover:text-gray-100"
+                                :class="{'text-gray-100': $page.component == 'Discussions'}"
                             >Discussions</Link>
                             <Link
                                 :href="route('podcast')"
-                                :active="route().current('podcast')"
-                                class="px-3 py-2 text-sm font-medium text-gray-300 uppercase rounded-md hover:text-gray-100"
+                                class="px-3 py-2 text-sm font-extrabold uppercase rounded-md text-slate-600 hover:text-gray-100"
+                                :class="{'text-gray-100': $page.component == 'Podcast'}"
                             >Podcast</Link>
                         </div>
                     </div>
