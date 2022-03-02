@@ -1,6 +1,22 @@
 <template>
-    <Head title="Category: All"></Head>
-
+    <Head title="Category"></Head>
+    <div class="mb-10 border-b-2 border-b-gray-300">
+        <div class="flex items-center justify-center mt-10 ml-10 space-x-4">
+            <Link
+                href="/browse/all"
+                class="px-3 py-2 text-sm font-medium text-gray-600 capitalize border-4 border-transparent hover:border-b-4 hover:border-b-blue-500 hover:text-gray-900"
+                :class="{' border-b-4 border-b-blue-500 text-gray-900': $page.url == '/browse/all'}"
+            >All topics</Link>
+            <Link
+                class="px-3 py-2 text-sm font-medium text-gray-600 capitalize border-4 border-transparent hover:text-gray-900 hover:border-b-4 hover:border-b-blue-500"
+                :class="{' border-b-4 border-b-blue-500 text-gray-900': $page.url == `/browse/${category.slug}` || currentCategory == category.slug}"
+                v-for="category in categories"
+                :key="category.slug"
+                v-text="category.name"
+                :href="`/browse/${category.slug}`"
+            ></Link>
+        </div>
+    </div>
     <div class="grid grid-cols-4 gap-4">
         <div v-for="topic in topics" :key="topic.id">
             <Link :href="`/topics/${topic.slug}`">
@@ -53,23 +69,18 @@
 
 <script>
 import { App, Link } from "@inertiajs/inertia-vue3"
-import { ref } from '@vue/reactivity'
-import TopicPageLayout from '../Layouts/TopicPageLayout';
-import AppLayout from '../Layouts/AppLayout';
+
 export default {
     props: {
         topics: Object,
         categories: Object,
-        courses: Object
+        courses: Object,
+        currentCategory: String
     },
-    layout: (h, page) => h(AppLayout, () => h(TopicPageLayout, () => page)),
     components: {
         Link
     },
     setup() {
-        let currentCategory = ref("");
-
-        return { currentCategory };
     }
 }
 </script>
