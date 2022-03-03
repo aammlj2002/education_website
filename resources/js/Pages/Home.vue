@@ -2,4 +2,7 @@
     <h1>Home</h1>
 </template>
 <script>
+export default {
+    layout: null
+}
 </script>

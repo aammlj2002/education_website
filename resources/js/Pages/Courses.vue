@@ -30,7 +30,7 @@
                                     </g>
                                 </svg>
                             </div>
-                            <div>{{course.lesson_count}} Lessions</div>
+                            <div>{{course.lesson_count}} Lessons</div>
                         </div>
                         <div class="flex flex-row items-center text-xs text-white">
                             <div class="mr-2">
