@@ -1,5 +1,5 @@
 import { createApp, h } from "vue";
-import { createInertiaApp, Head } from "@inertiajs/inertia-vue3";
+import { App, createInertiaApp, Head } from "@inertiajs/inertia-vue3";
 import { InertiaProgress } from "@inertiajs/progress";
 import AppLayout from "@/Layouts/AppLayout";
 // const appName =
@@ -9,7 +9,7 @@ createInertiaApp({
     title: (title) => `Edu Website - ${title}`,
     resolve: (name) => {
         const page = require(`./Pages/${name}.vue`).default;
-        page.layout ??= AppLayout;
+        if (page.layout === undefined) page.layout = AppLayout;
         return page;
     },
     setup({ el, app, props, plugin }) {

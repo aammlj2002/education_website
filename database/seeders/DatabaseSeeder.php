@@ -67,7 +67,7 @@ class DatabaseSeeder extends Seeder
         Topic::factory()->create(["name"=>"webpack", "slug"=>"webpack", "category_id"=>$tooling->id]);
         Topic::factory()->create(["name"=>"workshops", "slug"=>"workshops", "category_id"=>$techniques->id]);
 
-        // series
+        // course
         Course::factory()->create(["name"=>"laravel 8", "slug"=>"laravel-8", "topic_id"=>$laravel->id, "category_id"=>$laravel->category->id]);
         Course::factory()->create(["name"=>"laravel 9", "slug"=>"laravel-9", "topic_id"=>$laravel->id, "category_id"=>$laravel->category->id]);
         Course::factory()->create(["name"=>"PHPStorm Mastery", "slug"=>"phpstorm-mastery", "topic_id"=>$phpstorm->id, "category_id"=>$phpstorm->category->id]);
