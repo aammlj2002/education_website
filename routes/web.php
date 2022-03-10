@@ -47,6 +47,11 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
             "courses"=>Course::all()
         ]);
     })->name('courses');
+    Route::get("/courses/{course:slug}", function (Course $course) {
+        return inertia("Courses", [
+            "lessons"=>$course->lessons,
+        ]);
+    });
     Route::get('/bits', function () {
         return inertia('Bits');
     })->name('bits');

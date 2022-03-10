@@ -3,13 +3,16 @@
     <div v-for="course in courses" :key="course.id">
         <CourseCard :course="course" />
     </div>
+    <div v-for="lesson in lessons" :key="lesson.id">
+        <div>{{lesson.title}}</div>
+    </div>
 </template>
 
 <script>
 import CourseCard from '@/shared/CourseCard'
 export default {
     components: { CourseCard },
-    props: { courses: Object },
+    props: { courses: Object, lessons: Object },
 }
 </script>
 <style>

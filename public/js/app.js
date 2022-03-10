@@ -20499,7 +20499,8 @@ __webpack_require__.r(__webpack_exports__);
     CourseCard: _shared_CourseCard__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
   props: {
-    courses: Object
+    courses: Object,
+    lessons: Object
   }
 });
 
@@ -21093,7 +21094,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var _inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @inertiajs/inertia-vue3 */ "./node_modules/@inertiajs/inertia-vue3/dist/index.js");
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  components: {
+    Link: _inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_0__.Link
+  },
   props: {
     course: Object
   }
@@ -23404,6 +23410,14 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     , ["course"])]);
   }), 128
   /* KEYED_FRAGMENT */
+  )), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($props.lessons, function (lesson) {
+    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
+      key: lesson.id
+    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(lesson.title), 1
+    /* TEXT */
+    )]);
+  }), 128
+  /* KEYED_FRAGMENT */
   ))], 64
   /* STABLE_FRAGMENT */
   );
@@ -24855,11 +24869,43 @@ var _hoisted_12 = {
 
 var _hoisted_13 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"mr-2\"><div class=\"flex space-x-1\"><span class=\"block bg-white rounded\" style=\"width:5px;height:11px;\"></span><span class=\"block bg-white rounded\" style=\"width:5px;height:11px;\"></span><span class=\"block bg-white rounded\" style=\"width:5px;height:11px;\"></span></div></div>", 1);
 
-var _hoisted_14 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"flex flex-row\"><button class=\"w-full px-4 py-2 mr-3 text-black bg-gray-100 rounded-full border-1 border- hover:border-blue-400 hover:text-blue-400 hover:transition-all\"><div class=\"flex flex-row items-center justify-center\"><div><svg width=\"15\" height=\"15\" viewBox=\"0 0 15 15\" class=\"mr-3\"><g fill=\"none\" fill-rule=\"evenodd\"><path d=\"M-1-1h18v18H-1z\"></path><path class=\"fill-current\" d=\"M6 10.875L10.5 7.5 6 4.125v6.75zM7.5 0C3.36 0 0 3.36 0 7.5 0 11.64 3.36 15 7.5 15c4.14 0 7.5-3.36 7.5-7.5C15 3.36 11.64 0 7.5 0zm0 13.5c-3.307 0-6-2.693-6-6s2.693-6 6-6 6 2.693 6 6-2.693 6-6 6z\"></path></g></svg></div><div><div class=\"text-sm\">start course</div></div></div></button><button class=\"w-full px-4 py-2 mr-3 text-white bg-gray-700 rounded-full border-1 border- hover:border-blue-400 hover:text-blue-400 hover:transition-all\"><div class=\"flex flex-row items-center justify-center\"><div><svg width=\"8\" height=\"10\" viewBox=\"0 0 8 10\" class=\"mr-2 fill-current\"><path fill-rule=\"nonzero\" d=\"M7.092 0H.941C.44 0 0 .389 0 .849v8.583c0 .154.045.282.119.381a.469.469 0 0 0 .38.187c.143 0 .295-.06.435-.173l2.753-2.204a.54.54 0 0 1 .334-.108.54.54 0 0 1 .334.108l2.743 2.203a.683.683 0 0 0 .425.174C7.765 10 8 9.824 8 9.432V.849C8 .389 7.593 0 7.092 0z\"></path></svg></div><div><div class=\"text-sm\">start course</div></div></div></button></div>", 1);
+var _hoisted_14 = {
+  "class": "flex flex-row"
+};
+var _hoisted_15 = {
+  "class": "w-full px-4 py-2 mr-3 text-black bg-gray-100 rounded-full border-1 border- hover:border-blue-400 hover:text-blue-400 hover:transition-all"
+};
 
-var _hoisted_15 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"w-full col-span-3 p-6 bg-gray-900 rounded-3xl\"><div class=\"grid mb-8 text-white place-content-center\"><div class=\"grid w-40 h-40 grid-cols-1 p-10 border-2 border-gray-400 rounded-full\"><div class=\"relative\"><div class=\"absolute text-5xl transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2\">10</div></div></div></div><div class=\"text-xs text-center text-gray-300 uppercase\">last episode in this course</div><div class=\"mb-3 text-xs text-center text-gray-300 capitalize\">added mar 1st, 2022</div><div class=\"mb-2 text-lg text-center text-white capitalize\">Notification Tests and Fakes</div><div class=\"mb-5 text-xs text-center text-gray-300\">Let&#39;s wrap up this mini-series by demonstrating how we might test our SendInvoice job.</div><button class=\"w-full px-4 py-2 mr-3 text-base text-white bg-gray-800 rounded-full border-1 border- hover:border-blue-400 hover:text-blue-400 hover:transition-all\"><div class=\"flex flex-row items-center justify-center\"><div><svg width=\"15\" height=\"15\" viewBox=\"0 0 15 15\" class=\"mr-3\"><g fill=\"none\" fill-rule=\"evenodd\"><path d=\"M-1-1h18v18H-1z\"></path><path class=\"fill-current\" d=\"M6 10.875L10.5 7.5 6 4.125v6.75zM7.5 0C3.36 0 0 3.36 0 7.5 0 11.64 3.36 15 7.5 15c4.14 0 7.5-3.36 7.5-7.5C15 3.36 11.64 0 7.5 0zm0 13.5c-3.307 0-6-2.693-6-6s2.693-6 6-6 6 2.693 6 6-2.693 6-6 6z\"></path></g></svg></div><div><div class=\"uppercase\">watch</div></div></div></button></div>", 1);
+var _hoisted_16 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
+  width: "15",
+  height: "15",
+  viewBox: "0 0 15 15",
+  "class": "mr-3"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("g", {
+  fill: "none",
+  "fill-rule": "evenodd"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("path", {
+  d: "M-1-1h18v18H-1z"
+}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("path", {
+  "class": "fill-current",
+  d: "M6 10.875L10.5 7.5 6 4.125v6.75zM7.5 0C3.36 0 0 3.36 0 7.5 0 11.64 3.36 15 7.5 15c4.14 0 7.5-3.36 7.5-7.5C15 3.36 11.64 0 7.5 0zm0 13.5c-3.307 0-6-2.693-6-6s2.693-6 6-6 6 2.693 6 6-2.693 6-6 6z"
+})])])], -1
+/* HOISTED */
+);
+
+var _hoisted_17 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "text-sm"
+}, "Start Course")], -1
+/* HOISTED */
+);
+
+var _hoisted_18 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<button class=\"w-full px-4 py-2 mr-3 text-white bg-gray-700 rounded-full border-1 border- hover:border-blue-400 hover:text-blue-400 hover:transition-all\"><div class=\"flex flex-row items-center justify-center\"><div><svg width=\"8\" height=\"10\" viewBox=\"0 0 8 10\" class=\"mr-2 fill-current\"><path fill-rule=\"nonzero\" d=\"M7.092 0H.941C.44 0 0 .389 0 .849v8.583c0 .154.045.282.119.381a.469.469 0 0 0 .38.187c.143 0 .295-.06.435-.173l2.753-2.204a.54.54 0 0 1 .334-.108.54.54 0 0 1 .334.108l2.743 2.203a.683.683 0 0 0 .425.174C7.765 10 8 9.824 8 9.432V.849C8 .389 7.593 0 7.092 0z\"></path></svg></div><div><div class=\"text-sm\">Add to Watchlist</div></div></div></button>", 1);
+
+var _hoisted_19 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"w-full col-span-3 p-6 bg-gray-900 rounded-3xl\"><div class=\"grid mb-8 text-white place-content-center\"><div class=\"grid w-40 h-40 grid-cols-1 p-10 border-2 border-gray-400 rounded-full\"><div class=\"relative\"><div class=\"absolute text-5xl transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2\">10</div></div></div></div><div class=\"text-xs text-center text-gray-300 uppercase\">last episode in this course</div><div class=\"mb-3 text-xs text-center text-gray-300 capitalize\">added mar 1st, 2022</div><div class=\"mb-2 text-lg text-center text-white capitalize\">Notification Tests and Fakes</div><div class=\"mb-5 text-xs text-center text-gray-300\">Let&#39;s wrap up this mini-series by demonstrating how we might test our SendInvoice job.</div><button class=\"w-full px-4 py-2 mr-3 text-base text-white bg-gray-800 rounded-full border-1 border- hover:border-blue-400 hover:text-blue-400 hover:transition-all\"><div class=\"flex flex-row items-center justify-center\"><div><svg width=\"15\" height=\"15\" viewBox=\"0 0 15 15\" class=\"mr-3\"><g fill=\"none\" fill-rule=\"evenodd\"><path d=\"M-1-1h18v18H-1z\"></path><path class=\"fill-current\" d=\"M6 10.875L10.5 7.5 6 4.125v6.75zM7.5 0C3.36 0 0 3.36 0 7.5 0 11.64 3.36 15 7.5 15c4.14 0 7.5-3.36 7.5-7.5C15 3.36 11.64 0 7.5 0zm0 13.5c-3.307 0-6-2.693-6-6s2.693-6 6-6 6 2.693 6 6-2.693 6-6 6z\"></path></g></svg></div><div><div class=\"uppercase\">watch</div></div></div></button></div>", 1);
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
+  var _component_Link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Link");
+
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h2", _hoisted_4, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.course.name), 1
   /* TEXT */
   ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_5, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.course.description), 1
@@ -24870,7 +24916,19 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   /* TEXT */
   )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, [_hoisted_13, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.course.level), 1
   /* TEXT */
-  )])]), _hoisted_14])]), _hoisted_15]);
+  )])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", _hoisted_15, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
+    href: "courses/".concat($props.course.slug),
+    "class": "flex flex-row items-center justify-center"
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [_hoisted_16, _hoisted_17];
+    }),
+    _: 1
+    /* STABLE */
+
+  }, 8
+  /* PROPS */
+  , ["href"])]), _hoisted_18])])]), _hoisted_19]);
 }
 
 /***/ }),
