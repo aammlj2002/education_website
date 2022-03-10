@@ -1,6 +1,6 @@
 <template>
     <div
-        class="grid justify-between grid-cols-8 col-span-5 p-6 mx-8 bg-gray-800 shadow-xl mt-7 rounded-xl"
+        class="grid justify-between grid-cols-8 col-span-5 p-6 bg-gray-800 shadow-xl mt-7 rounded-xl"
     >
         <div class="flex flex-col justify-between w-full col-span-5">
             <div class="mt-2 ml-5 mr-10">
@@ -74,7 +74,7 @@
                 </div>
                 <div class="flex flex-row">
                     <button
-                        class="w-full px-4 py-2 mr-3 text-black bg-gray-100 rounded-full border-1 border- hover:border-blue-400 hover:text-blue-400 hover:transition-all"
+                        class="w-full px-4 py-2 mr-3 text-black bg-gray-100 border border-transparent rounded-full hover:border-blue-400 hover:text-blue-400 hover:transition-all"
                     >
                         <Link
                             :href="`courses/${course.slug}`"
@@ -97,7 +97,7 @@
                         </Link>
                     </button>
                     <button
-                        class="w-full px-4 py-2 mr-3 text-white bg-gray-700 rounded-full border-1 border- hover:border-blue-400 hover:text-blue-400 hover:transition-all"
+                        class="w-full px-4 py-2 mr-3 text-white bg-gray-700 border border-transparent rounded-full hover:border-blue-400 hover:text-blue-400 hover:transition-all"
                     >
                         <div class="flex flex-row items-center justify-center">
                             <div>
@@ -138,7 +138,7 @@
                 class="mb-5 text-xs text-center text-gray-300"
             >Let's wrap up this mini-series by demonstrating how we might test our SendInvoice job.</div>
             <button
-                class="w-full px-4 py-2 mr-3 text-base text-white bg-gray-800 rounded-full border-1 border- hover:border-blue-400 hover:text-blue-400 hover:transition-all"
+                class="w-full px-4 py-2 mr-3 text-base text-white bg-gray-800 border border-transparent rounded-full hover:border-blue-400 hover:text-blue-400 hover:transition-all"
             >
                 <div class="flex flex-row items-center justify-center">
                     <div>

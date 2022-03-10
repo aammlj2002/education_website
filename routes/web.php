@@ -50,6 +50,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get("/courses/{course:slug}", function (Course $course) {
         return inertia("Courses", [
             "lessons"=>$course->lessons,
+            "course"=>$course
         ]);
     });
     Route::get('/bits', function () {

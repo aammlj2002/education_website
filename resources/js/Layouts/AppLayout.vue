@@ -6,7 +6,7 @@
             <Nav />
 
             <!-- Page Content -->
-            <main class="px-8 mx-auto max-w-7xl">
+            <main class="mx-auto max-w-7xl">
                 <slot></slot>
             </main>
         </div>
