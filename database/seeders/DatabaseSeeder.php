@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Category;
 use App\Models\Course;
+use App\Models\Lesson;
 use App\Models\Topic;
 use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -18,7 +19,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        User::factory()->create(["name"=>"Mg Mg", "email"=>"mgmg@gmail.com", "password"=>bcrypt("00000000")]);
+        $mgmg = User::factory()->create(["name"=>"Mg Mg", "email"=>"mgmg@gmail.com", "password"=>bcrypt("00000000")]);
         
         // categories
         $frameworks = Category::factory()->create(["name"=>"frameworks", "slug"=>"frameworks"]);
@@ -68,12 +69,17 @@ class DatabaseSeeder extends Seeder
         Topic::factory()->create(["name"=>"workshops", "slug"=>"workshops", "category_id"=>$techniques->id]);
 
         // course
-        Course::factory()->create(["name"=>"laravel 8", "slug"=>"laravel-8", "topic_id"=>$laravel->id, "category_id"=>$laravel->category->id]);
+        $laravel8 = Course::factory()->create(["name"=>"laravel 8", "slug"=>"laravel-8", "topic_id"=>$laravel->id, "category_id"=>$laravel->category->id]);
         Course::factory()->create(["name"=>"laravel 9", "slug"=>"laravel-9", "topic_id"=>$laravel->id, "category_id"=>$laravel->category->id]);
         Course::factory()->create(["name"=>"PHPStorm Mastery", "slug"=>"phpstorm-mastery", "topic_id"=>$phpstorm->id, "category_id"=>$phpstorm->category->id]);
         Course::factory()->create(["name"=>"Learn Tailwindcss", "slug"=>"learn-tailwindcss", "topic_id"=>$tailwind->id, "category_id"=>$tailwind->category->id]);
         Course::factory()->create(["name"=>"Beyond ES6", "slug"=>"beyond-es6", "topic_id"=>$javascript->id, "category_id"=>$javascript->category->id]);
         Course::factory()->create(["name"=>"Laravel Blade Cookbook", "slug"=>"laravel-blade-cookbook", "topic_id"=>$blade->id, "category_id"=>$blade->category->id]);
         Course::factory()->create(["name"=>"Start PHPUnit", "slug"=>"start-phpunit", "topic_id"=>$phpunit->id, "category_id"=>$phpunit->category->id]);
+
+        Lesson::factory()->create(["topic_id"=>$laravel->id, "course_id"=>$laravel8->id, "user_id"=>$mgmg->id]);
+        Lesson::factory()->create(["topic_id"=>$laravel->id, "course_id"=>$laravel8->id, "user_id"=>$mgmg->id]);
+        Lesson::factory()->create(["topic_id"=>$laravel->id, "course_id"=>$laravel8->id, "user_id"=>$mgmg->id]);
+        Lesson::factory()->create(["topic_id"=>$laravel->id, "course_id"=>$laravel8->id, "user_id"=>$mgmg->id]);
     }
 }
