@@ -2,7 +2,10 @@
     <div class="flex flex-row bg-gray-100">
         <div class="relative w-1/5 h-screen px-3 overflow-y-scroll bg-gray-800">
             <div class="flex flex-row items-center justify-between px-2 py-4 text-white">
-                <button class="flex flex-row items-center justify-between hover:text-blue-500">
+                <Link
+                    :href="`/courses/${lesson.course.slug}`"
+                    class="flex flex-row items-center justify-between hover:text-blue-500"
+                >
                     <div>
                         <svg viewBox="0.75 0.75 32.5 32.5" width="30">
                             <g fill="none" fill-rule="evenodd">
@@ -30,7 +33,7 @@
                         </svg>
                     </div>
                     <div class="text-xs font-bold capitalize">course overview</div>
-                </button>
+                </Link>
                 <div>Edu</div>
             </div>
             <div class="px-2 py-4">
@@ -44,7 +47,7 @@
                     </div>
                     <div class="w-8/12">
                         <div class="flex flex-col">
-                            <div class="mb-2 text-sm font-bold text-white">Laravel 8 from scratch</div>
+                            <div class="mb-2 text-sm font-bold text-white">{{lesson.course.name}}</div>
                             <div class="flex flex-row mb-5 space-x-5 text-gray-300">
                                 <div class="flex flex-row items-center">
                                     <div class="mr-2">
@@ -65,7 +68,7 @@
                                             </g>
                                         </svg>
                                     </div>
-                                    <div class="text-2xs">1 Lessons</div>
+                                    <div class="text-2xs">{{lessons.length}} Lessons</div>
                                 </div>
                                 <div class="flex flex-row items-center text-xs">
                                     <div class="mr-2">
@@ -87,7 +90,7 @@
                                             </g>
                                         </svg>
                                     </div>
-                                    <div class="text-2xs">2 minutes</div>
+                                    <div class="text-2xs">{{lesson.course.duration}}</div>
                                 </div>
                             </div>
                         </div>
@@ -381,7 +384,9 @@
 </template>
 
 <script>
+import { Link } from "@inertiajs/inertia-vue3";
 export default {
+    components: { Link },
     props: { lessons: Object, lesson: Object },
     layout: null
 }

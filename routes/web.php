@@ -57,6 +57,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
         $lesson = $course->lessons[$episode-1]; //current lesson
         $lesson["topic"] = $lesson->topic->name; // current lesson topic
         $lesson["episode"]= $episode;
+        $lesson["course"]=$lesson->course;
         $lesson["instructor"]= $lesson->instructor;
         return inertia("Lesson", [
             "lessons"=>$course->lessons,
