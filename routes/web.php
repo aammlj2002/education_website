@@ -61,7 +61,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
         $lesson["instructor"]= $lesson->instructor;
         return inertia("Lesson", [
             "lessons"=>$course->lessons,
-            "lesson"=>$lesson
+            "currentLesson"=>$lesson
         ]);
     });
     Route::get('/bits', function () {

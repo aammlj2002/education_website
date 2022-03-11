@@ -3,7 +3,7 @@
         <div class="relative w-1/5 h-screen px-3 overflow-y-scroll bg-gray-800">
             <div class="flex flex-row items-center justify-between px-2 py-4 text-white">
                 <Link
-                    :href="`/courses/${lesson.course.slug}`"
+                    :href="`/courses/${currentLesson.course.slug}`"
                     class="flex flex-row items-center justify-between hover:text-blue-500"
                 >
                     <div>
@@ -41,13 +41,15 @@
                     <div class="w-4/12">
                         <img
                             class="rounded-full w-14 h-14"
-                            :src="lesson.instructor.profile_photo_url"
+                            :src="currentLesson.instructor.profile_photo_url"
                             alt="avatar"
                         />
                     </div>
                     <div class="w-8/12">
                         <div class="flex flex-col">
-                            <div class="mb-2 text-sm font-bold text-white">{{lesson.course.name}}</div>
+                            <div
+                                class="mb-2 text-sm font-bold text-white"
+                            >{{currentLesson.course.name}}</div>
                             <div class="flex flex-row mb-5 space-x-5 text-gray-300">
                                 <div class="flex flex-row items-center">
                                     <div class="mr-2">
@@ -90,7 +92,7 @@
                                             </g>
                                         </svg>
                                     </div>
-                                    <div class="text-2xs">{{lesson.course.duration}}</div>
+                                    <div class="text-2xs">{{currentLesson.course.duration}}</div>
                                 </div>
                             </div>
                         </div>
@@ -98,7 +100,7 @@
                 </div>
             </div>
             <div class="flex flex-col space-y-3">
-                <template v-for="lesson in lessons" :key="lesson.id">
+                <template v-for="(lesson, itemObjKey) in lessons" :key="lesson.id">
                     <div
                         class="flex flex-row content-center px-1 py-2 border border-transparent rounded-md hover:border-blue-500 hover:border-opacity-20"
                     >
@@ -131,9 +133,12 @@
                         </div>
                         <div class="w-9/12">
                             <div class="flex flex-col justify-between">
-                                <div class="text-sm font-bold text-white">Lesson</div>
+                                <Link
+                                    :href="`/courses/${currentLesson.course.slug}/lessons/${itemObjKey+1}`"
+                                    class="text-sm font-bold text-white hover:text-blue-500"
+                                >{{lesson.title}}</Link>
                                 <div class="flex flex-row space-x-5 text-gray-300">
-                                    <div class="text-2xs">Lesson 1</div>
+                                    <div class="text-2xs">Lesson {{itemObjKey+1}}</div>
 
                                     <div class="flex flex-row items-center text-xs">
                                         <div class="mr-1">
@@ -155,7 +160,7 @@
                                                 </g>
                                             </svg>
                                         </div>
-                                        <div class="text-2xs">11 minutes</div>
+                                        <div class="text-2xs">{{lesson.duration}}</div>
                                     </div>
                                 </div>
                             </div>
@@ -247,27 +252,29 @@
                                             </svg>
                                         </button>
                                     </div>
-                                    <h3 class="ml-3 text-3xl font-bold text-white">{{lesson.title}}</h3>
+                                    <h3
+                                        class="ml-3 text-3xl font-bold text-white"
+                                    >{{currentLesson.title}}</h3>
                                 </div>
                             </div>
                             <div class="flex flex-row justify-around">
                                 <div class="pr-3 border-r border-gray-300">
                                     <div class="mb-3 text-xs text-gray-200 capitalize">episode</div>
-                                    <div class="text-sm text-white">{{lesson.episode}}</div>
+                                    <div class="text-sm text-white">{{currentLesson.episode}}</div>
                                 </div>
                                 <div class="px-3 border-r border-gray-300">
                                     <div class="mb-3 text-xs text-gray-200 capitalize">run time</div>
-                                    <div class="text-sm text-white">{{lesson.duration}}</div>
+                                    <div class="text-sm text-white">{{currentLesson.duration}}</div>
                                 </div>
                                 <div class="px-3 border-r border-gray-300">
                                     <div class="mb-3 text-xs text-gray-200 capitalize">published</div>
                                     <div
                                         class="text-sm text-white"
-                                    >{{new Date(lesson.created_at).toISOString().slice(0, 10)}}</div>
+                                    >{{new Date(currentLesson.created_at).toISOString().slice(0, 10)}}</div>
                                 </div>
                                 <div class="px-3 border-r border-gray-300">
                                     <div class="mb-3 text-xs text-gray-200 capitalize">topic</div>
-                                    <div class="text-sm text-white">{{lesson.topic.name}}</div>
+                                    <div class="text-sm text-white">{{currentLesson.topic.name}}</div>
                                 </div>
                                 <div class="px-3 border-r border-gray-300">
                                     <div
@@ -370,7 +377,7 @@
                             <h2 class="text-black">
                                 <span class="font-bold uppercase">your teacher</span>
                                 <span class="mx-2">|</span>
-                                <span class="capitalize">{{lesson.instructor.name}}</span>
+                                <span class="capitalize">{{currentLesson.instructor.name}}</span>
                             </h2>
                             <div class="flex items-center justify-end space-x-2">
                                 <div>
@@ -414,7 +421,7 @@
                             >
                                 <img
                                     class="w-16 h-16"
-                                    :src="lesson.instructor.profile_photo_url"
+                                    :src="currentLesson.instructor.profile_photo_url"
                                     alt="avatar"
                                 />
                             </div>
@@ -433,7 +440,7 @@
 import { Link } from "@inertiajs/inertia-vue3";
 export default {
     components: { Link },
-    props: { lessons: Object, lesson: Object },
+    props: { lessons: Object, currentLesson: Object },
     layout: null
 }
 </script>
