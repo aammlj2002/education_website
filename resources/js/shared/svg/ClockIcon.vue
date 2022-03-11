@@ -1,6 +1,6 @@
 <template>
-    <svg width="9" viewBox="0 0 10 10">
-        <g fill="none" fill-rule="evenodd">
+    <svg :width="width" :height="height" :class="fill" viewBox="0 0 10 10">
+        <g fill-rule="evenodd">
             <g>
                 <g>
                     <g>
@@ -20,7 +20,20 @@
 
 <script>
 export default {
-
+    props: {
+        fill: {
+            default: "fill-current",
+            type: String,
+        },
+        width: {
+            default: "10",
+            type: String,
+        },
+        height: {
+            default: "auto",
+            type: String,
+        },
+    }
 }
 </script>
 

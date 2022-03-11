@@ -6,7 +6,7 @@
                     :href="`/courses/${currentLesson.course.slug}`"
                     class="flex flex-row items-center justify-between hover:text-blue-500"
                 >
-                    <RightArrowIcon />
+                    <LeftArrowIcon width="26" />
                     <div class="text-xs font-bold capitalize">course overview</div>
                 </Link>
                 <Link href="/courses">Edu</Link>
@@ -28,13 +28,13 @@
                             <div class="flex flex-row mb-5 space-x-5 text-gray-300">
                                 <div class="flex flex-row items-center">
                                     <div class="mr-2">
-                                        <BookIcon />
+                                        <BookIcon fill="fill-gray-300" />
                                     </div>
                                     <div class="text-2xs">{{lessons.length}} Lessons</div>
                                 </div>
                                 <div class="flex flex-row items-center text-xs">
                                     <div class="mr-2">
-                                        <ClockIcon />
+                                        <ClockIcon fill="fill-gray-300" />
                                     </div>
                                     <div class="text-2xs">{{currentLesson.course.duration}}</div>
                                 </div>
@@ -57,7 +57,7 @@
                                         <div
                                             class="absolute text-lg transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2"
                                         >
-                                            <PlayIcon />
+                                            <PlayIcon width="10" fill="fill-white" />
                                         </div>
                                     </div>
                                 </div>
@@ -74,7 +74,7 @@
 
                                     <div class="flex flex-row items-center text-xs">
                                         <div class="mr-1">
-                                            <ClockIcon />
+                                            <ClockIcon fill="fill-gray-300" />
                                         </div>
                                         <div class="text-2xs">{{lesson.duration}}</div>
                                     </div>
@@ -107,7 +107,7 @@
                                     <div
                                         class="absolute text-lg transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2"
                                     >
-                                        <RightArrowIcon />
+                                        <LeftArrowIcon width="40" fill="text-white" />
                                     </div>
                                 </div>
                             </div>
@@ -121,7 +121,7 @@
                                         <button
                                             class="px-1 bg-gray-300 border border-gray-300 border-opacity-50 bg-opacity-10 rounded-3xl"
                                         >
-                                            <HeartIcon />
+                                            <HeartIcon width="30" fill="text-gray-300" />
                                         </button>
                                     </div>
                                     <h3
@@ -174,7 +174,7 @@
                                 >
                                     <div class="flex flex-row items-center justify-center">
                                         <div>
-                                            <SaveIcon />
+                                            <SaveIcon class="mr-3" width="10" fill="fill-gray-100" />
                                         </div>
                                         <div>
                                             <div
@@ -197,7 +197,7 @@
                                     <div
                                         class="absolute text-lg transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2"
                                     >
-                                        <LeftArrowIcon />
+                                        <RightArrowIcon width="40" fill="text-white" />
                                     </div>
                                 </div>
                             </div>
@@ -216,10 +216,10 @@
                             </h2>
                             <div class="flex items-center justify-end space-x-2">
                                 <div>
-                                    <TwitterIcon />
+                                    <TwitterIcon width="20" fill="fill-gray-500" />
                                 </div>
                                 <div>
-                                    <GitHubIcon />
+                                    <GitHubIcon width="20" fill="fill-gray-500" />
                                 </div>
                                 <button
                                     class="w-full px-3 py-2 border border-gray-500 rounded-full"
@@ -252,15 +252,15 @@
 </template>
 
 <script>
-import GitHubIcon from '../shared/svg/GitHubIcon'
-import TwitterIcon from '../shared/svg/TwitterIcon'
-import SaveIcon from '../shared/svg/SaveIcon'
-import HeartIcon from '../shared/svg/HeartIcon'
-import LeftArrowIcon from '../shared/svg/LeftArrowIcon'
-import PlayIcon from '../shared/svg/PlayIcon'
-import ClockIcon from '../shared/svg/ClockIcon'
-import BookIcon from '../shared/svg/BookIcon'
-import RightArrowIcon from '../shared/svg/RightArrowIcon'
+import GitHubIcon from '@/shared/svg/GitHubIcon'
+import TwitterIcon from '@/shared/svg/TwitterIcon'
+import SaveIcon from '@/shared/svg/SaveIcon'
+import HeartIcon from '@/shared/svg/HeartIcon'
+import LeftArrowIcon from '@/shared/svg/LeftArrowIcon'
+import PlayIcon from '@/shared/svg/PlayIcon'
+import ClockIcon from '@/shared/svg/ClockIcon'
+import BookIcon from '@/shared/svg/BookIcon'
+import RightArrowIcon from '@/shared/svg/RightArrowIcon'
 import { Link } from "@inertiajs/inertia-vue3";
 export default {
     components: {
