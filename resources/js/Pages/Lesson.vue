@@ -135,7 +135,7 @@
                                             </svg>
                                         </button>
                                     </div>
-                                    <h3 class="text-3xl font-bold text-white">Lesson Title</h3>
+                                    <h3 class="ml-3 text-3xl font-bold text-white">Lesson Title</h3>
                                 </div>
                             </div>
                             <div class="flex flex-row justify-around">
@@ -245,6 +245,68 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- instructor -->
+                <div class="p-8">
+                    <div class="px-8 py-4 bg-white rounded-lg">
+                        <div class="flex justify-between mb-4">
+                            <h2 class="text-black">
+                                <span class="font-bold uppercase">your teacher</span>
+                                <span class="mx-2">|</span>
+                                <span class="capitalize">John Doe</span>
+                            </h2>
+                            <div class="flex items-center justify-end space-x-2">
+                                <div>
+                                    <svg
+                                        width="20"
+                                        class="transition-all text-grey-800 hover:text-blue"
+                                        viewBox="0 0 18 18"
+                                    >
+                                        <path
+                                            class="fill-gray-500"
+                                            fill-rule="nonzero"
+                                            d="M9 0C4.037 0 0 4.037 0 9c0 4.962 4.037 9 9 9 4.962 0 9-4.038 9-9 0-4.963-4.037-9-9-9zm4.015 6.94c.004.09.006.18.006.27 0 2.737-2.083 5.892-5.894 5.892a5.86 5.86 0 0 1-3.175-.93 4.158 4.158 0 0 0 3.067-.858 2.074 2.074 0 0 1-1.936-1.439 2.088 2.088 0 0 0 .936-.034 2.072 2.072 0 0 1-1.662-2.032v-.026c.28.155.6.249.938.26a2.07 2.07 0 0 1-.64-2.766 5.882 5.882 0 0 0 4.269 2.165 2.071 2.071 0 0 1 3.53-1.89 4.135 4.135 0 0 0 1.316-.503 2.08 2.08 0 0 1-.912 1.146c.419-.05.82-.16 1.19-.326-.277.415-.628.78-1.033 1.071z"
+                                        />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <svg
+                                        width="20"
+                                        viewBox="0 0 30 29"
+                                        class="transition-all text-grey-800 hover:text-blue"
+                                    >
+                                        <path
+                                            class="fill-gray-500"
+                                            fill-rule="nonzero"
+                                            d="M27.959 7.434a14.866 14.866 0 0 0-5.453-5.414C20.21.69 17.703.025 14.984.025c-2.718 0-5.226.665-7.521 1.995A14.864 14.864 0 0 0 2.01 7.434C.67 9.714 0 12.202 0 14.901c0 3.242.953 6.156 2.858 8.746 1.906 2.589 4.367 4.38 7.385 5.375.351.064.611.019.78-.136a.755.755 0 0 0 .254-.58l-.01-1.047c-.007-.658-.01-1.233-.01-1.723l-.448.077a5.765 5.765 0 0 1-1.083.068 8.308 8.308 0 0 1-1.356-.136 3.04 3.04 0 0 1-1.308-.58c-.403-.304-.689-.701-.858-1.192l-.195-.445a4.834 4.834 0 0 0-.614-.988c-.28-.362-.563-.607-.85-.736l-.136-.097a1.428 1.428 0 0 1-.253-.233 1.062 1.062 0 0 1-.176-.271c-.039-.09-.007-.165.098-.223.104-.059.292-.087.566-.087l.39.058c.26.052.582.206.965.465.384.258.7.594.947 1.007.299.53.66.933 1.082 1.21.423.278.85.417 1.278.417.43 0 .8-.032 1.112-.097a3.9 3.9 0 0 0 .878-.29c.117-.866.436-1.53.956-1.996a13.447 13.447 0 0 1-2-.348 7.995 7.995 0 0 1-1.833-.756 5.244 5.244 0 0 1-1.571-1.298c-.416-.516-.758-1.195-1.024-2.034-.267-.84-.4-1.808-.4-2.905 0-1.563.514-2.893 1.541-3.99-.481-1.176-.436-2.493.137-3.952.377-.116.936-.03 1.678.261.741.291 1.284.54 1.629.746.345.207.621.381.83.523a13.948 13.948 0 0 1 3.745-.503c1.288 0 2.537.168 3.747.503l.741-.464c.507-.31 1.106-.595 1.795-.853.69-.258 1.216-.33 1.58-.213.586 1.46.638 2.777.156 3.951 1.028 1.098 1.542 2.428 1.542 3.99 0 1.099-.134 2.07-.4 2.916-.267.846-.611 1.524-1.034 2.034-.423.51-.95.94-1.58 1.288a8.01 8.01 0 0 1-1.834.756c-.592.155-1.259.271-2 .349.676.58 1.014 1.498 1.014 2.75v4.087c0 .232.081.426.244.58.163.155.42.2.77.136 3.019-.994 5.48-2.786 7.386-5.375 1.905-2.59 2.858-5.504 2.858-8.746 0-2.698-.671-5.187-2.01-7.466z"
+                                        />
+                                    </svg>
+                                </div>
+                                <button
+                                    class="w-full px-3 py-2 border border-gray-500 rounded-full"
+                                >
+                                    <div
+                                        class="font-extrabold text-gray-500 uppercase text-2xs"
+                                    >visit website</div>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="flex flex-row">
+                            <div
+                                class="mr-6 overflow-hidden border-4 border-blue-400 border-solid rounded-full"
+                            >
+                                <img
+                                    class="w-16 h-16"
+                                    src="https://cswnn.edu.in/system/files/2021-02/avatar-png-1-original.png"
+                                    alt="avatar"
+                                />
+                            </div>
+                            <div
+                                class="w-9/12"
+                            >Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates deserunt ipsam, itaque distinctio cum debitis nihil aliquid qui maiores eos.</div>
                         </div>
                     </div>
                 </div>
