@@ -77,7 +77,7 @@
                         class="w-full px-4 py-2 mr-3 text-black bg-gray-100 border border-transparent rounded-full hover:border-blue-400 hover:text-blue-400 hover:transition-all"
                     >
                         <Link
-                            :href="`courses/${course.slug}`"
+                            :href="`/courses/${course.slug}`"
                             class="flex flex-row items-center justify-center"
                         >
                             <div>

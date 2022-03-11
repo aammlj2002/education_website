@@ -96,7 +96,7 @@
                                     </svg>
                                 </div>
                                 <div>
-                                    <div class="text-sm">Begin Series</div>
+                                    <div class="text-sm">Begin Courses</div>
                                 </div>
                             </Link>
                         </button>
