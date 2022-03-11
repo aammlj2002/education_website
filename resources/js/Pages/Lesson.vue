@@ -34,7 +34,7 @@
                     </div>
                     <div class="text-xs font-bold capitalize">course overview</div>
                 </Link>
-                <div>Edu</div>
+                <Link href="/courses">Edu</Link>
             </div>
             <div class="px-2 py-4">
                 <div class="flex flex-row justify-evenly">
@@ -97,28 +97,74 @@
                     </div>
                 </div>
             </div>
-            <div class="flex flex-col" v-for="lesson in lessons" :key="lesson.id">
-                <a
-                    class="flex items-center mb-3 text-gray-800 transition-colors duration-200 bg-gray-100 rounded-lg hover:text-gray-800 hover:bg-gray-100 dark:hover:text-white dark:hover:bg-gray-600 dark:text-gray-100 dark:bg-gray-600"
-                    href="#"
-                >
-                    <svg
-                        width="20"
-                        height="20"
-                        fill="currentColor"
-                        class="m-auto"
-                        viewBox="0 0 2048 1792"
-                        xmlns="http://www.w3.org/2000/svg"
+            <div class="flex flex-col space-y-3">
+                <template v-for="lesson in lessons" :key="lesson.id">
+                    <div
+                        class="flex flex-row content-center px-1 py-2 border border-transparent rounded-md hover:border-blue-500 hover:border-opacity-20"
                     >
-                        <path
-                            d="M685 483q16 0 27.5-11.5t11.5-27.5-11.5-27.5-27.5-11.5-27 11.5-11 27.5 11 27.5 27 11.5zm422 0q16 0 27-11.5t11-27.5-11-27.5-27-11.5-27.5 11.5-11.5 27.5 11.5 27.5 27.5 11.5zm-812 184q42 0 72 30t30 72v430q0 43-29.5 73t-72.5 30-73-30-30-73v-430q0-42 30-72t73-30zm1060 19v666q0 46-32 78t-77 32h-75v227q0 43-30 73t-73 30-73-30-30-73v-227h-138v227q0 43-30 73t-73 30q-42 0-72-30t-30-73l-1-227h-74q-46 0-78-32t-32-78v-666h918zm-232-405q107 55 171 153.5t64 215.5h-925q0-117 64-215.5t172-153.5l-71-131q-7-13 5-20 13-6 20 6l72 132q95-42 201-42t201 42l72-132q7-12 20-6 12 7 5 20zm477 488v430q0 43-30 73t-73 30q-42 0-72-30t-30-73v-430q0-43 30-72.5t72-29.5q43 0 73 29.5t30 72.5z"
-                        />
-                    </svg>
-                    <span class="mx-4 text-lg font-normal">{{lesson.title}}</span>
-                    <span class="flex-grow text-right"></span>
-                </a>
+                        <div class="relative w-3/12">
+                            <div
+                                class="absolute transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2"
+                            >
+                                <div class="grid w-8 h-8 grid-cols-1 bg-blue-500 rounded-full">
+                                    <div class="relative">
+                                        <div
+                                            class="absolute text-lg transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2"
+                                        >
+                                            <svg
+                                                width="9"
+                                                viewBox="0 0 17 19"
+                                                class="inline-block"
+                                                style="margin-bottom: 2px; margin-left:1px"
+                                            >
+                                                <g fill="#FFF" fill-rule="evenodd">
+                                                    <path fill="none" d="M-7-4h27v27H-7z" />
+                                                    <path
+                                                        d="M16.043 10.283L1.873 18.38h-.001a.924.924 0 0 1-.915 0 .905.905 0 0 1-.457-.784V1.405C.5 1.08.675.783.957.62a.924.924 0 0 1 .915 0l14.17 8.096h.001c.282.161.457.46.457.783a.905.905 0 0 1-.457.783z"
+                                                    />
+                                                </g>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-9/12">
+                            <div class="flex flex-col justify-between">
+                                <div class="text-sm font-bold text-white">Lesson</div>
+                                <div class="flex flex-row space-x-5 text-gray-300">
+                                    <div class="text-2xs">Lesson 1</div>
+
+                                    <div class="flex flex-row items-center text-xs">
+                                        <div class="mr-1">
+                                            <svg width="9" viewBox="0 0 10 10">
+                                                <g fill="none" fill-rule="evenodd">
+                                                    <g>
+                                                        <g>
+                                                            <g>
+                                                                <g>
+                                                                    <path
+                                                                        class="fill-current"
+                                                                        d="M5 2C2.25 2 0 4.25 0 7s2.25 5 5 5 5-2.25 5-5-2.25-5-5-5zm2.282 6.923L4.615 7.318v-3.01h.77v2.608l2.307 1.355-.41.652z"
+                                                                        transform="translate(-978.000000, -378.000000) translate(330.000000, 364.000000) translate(444.000000, 8.000000) translate(204.000000, 4.000000)"
+                                                                    />
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <div class="text-2xs">11 minutes</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </template>
             </div>
         </div>
+        <!-- right section -->
         <div class="flex flex-col w-4/5 h-screen overflow-y-scroll">
             <!-- lesson video will be here -->
             <img
