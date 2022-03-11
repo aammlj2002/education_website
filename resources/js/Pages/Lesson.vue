@@ -1,35 +1,122 @@
 <template>
     <div class="flex flex-row bg-gray-100">
-        <div class="relative w-1/5 overflow-y-scroll bg-gray-800">
-            <div class="flex flex-col sm:flex-row sm:justify-around">
-                <div class="h-screen w-72">
-                    <nav class="px-6 mt-10">
-                        <div v-for="lesson in lessons" :key="lesson.id">
-                            <a
-                                class="flex items-center p-2 my-6 text-gray-800 transition-colors duration-200 bg-gray-100 rounded-lg hover:text-gray-800 hover:bg-gray-100 dark:hover:text-white dark:hover:bg-gray-600 dark:text-gray-100 dark:bg-gray-600"
-                                href="#"
-                            >
-                                <svg
-                                    width="20"
-                                    height="20"
-                                    fill="currentColor"
-                                    class="m-auto"
-                                    viewBox="0 0 2048 1792"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                        d="M685 483q16 0 27.5-11.5t11.5-27.5-11.5-27.5-27.5-11.5-27 11.5-11 27.5 11 27.5 27 11.5zm422 0q16 0 27-11.5t11-27.5-11-27.5-27-11.5-27.5 11.5-11.5 27.5 11.5 27.5 27.5 11.5zm-812 184q42 0 72 30t30 72v430q0 43-29.5 73t-72.5 30-73-30-30-73v-430q0-42 30-72t73-30zm1060 19v666q0 46-32 78t-77 32h-75v227q0 43-30 73t-73 30-73-30-30-73v-227h-138v227q0 43-30 73t-73 30q-42 0-72-30t-30-73l-1-227h-74q-46 0-78-32t-32-78v-666h918zm-232-405q107 55 171 153.5t64 215.5h-925q0-117 64-215.5t172-153.5l-71-131q-7-13 5-20 13-6 20 6l72 132q95-42 201-42t201 42l72-132q7-12 20-6 12 7 5 20zm477 488v430q0 43-30 73t-73 30q-42 0-72-30t-30-73v-430q0-43 30-72.5t72-29.5q43 0 73 29.5t30 72.5z"
-                                    />
-                                </svg>
-                                <span class="mx-4 text-lg font-normal">{{lesson.title}}</span>
-                                <span class="flex-grow text-right"></span>
-                            </a>
+        <div class="relative w-1/5 h-screen px-3 overflow-y-scroll bg-gray-800">
+            <div class="flex flex-row items-center justify-between px-2 py-4 text-white">
+                <button class="flex flex-row items-center justify-between hover:text-blue-500">
+                    <div>
+                        <svg viewBox="0.75 0.75 32.5 32.5" width="30">
+                            <g fill="none" fill-rule="evenodd">
+                                <g>
+                                    <g>
+                                        <g>
+                                            <g>
+                                                <path
+                                                    stroke="#000"
+                                                    stroke-opacity="0.012"
+                                                    stroke-width=".5"
+                                                    d="M0 0L32 0 32 32 0 32z"
+                                                    transform="translate(-969.000000, -1039.000000) translate(965.000000, 1038.000000) translate(5.000000, 2.000000) translate(16.000000, 16.000000) rotate(-270.000000) translate(-16.000000, -16.000000)"
+                                                />
+                                                <path
+                                                    class="fill-current"
+                                                    d="M9.88 11.342L16 17.449 22.12 11.342 24 13.222 16 21.222 8 13.222z"
+                                                    transform="translate(-969.000000, -1039.000000) translate(965.000000, 1038.000000) translate(5.000000, 2.000000) translate(16.000000, 16.000000) rotate(-270.000000) translate(-16.000000, -16.000000)"
+                                                />
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="text-xs font-bold capitalize">course overview</div>
+                </button>
+                <div>Edu</div>
+            </div>
+            <div class="px-2 py-4">
+                <div class="flex flex-row justify-evenly">
+                    <div class="w-4/12">
+                        <img
+                            class="rounded-full w-14 h-14"
+                            :src="lesson.instructor.profile_photo_url"
+                            alt="avatar"
+                        />
+                    </div>
+                    <div class="w-8/12">
+                        <div class="flex flex-col">
+                            <div class="mb-2 text-sm font-bold text-white">Laravel 8 from scratch</div>
+                            <div class="flex flex-row mb-5 space-x-5 text-gray-300">
+                                <div class="flex flex-row items-center">
+                                    <div class="mr-2">
+                                        <svg width="9" viewBox="0 0 9 12">
+                                            <g fill="none" fill-rule="evenodd">
+                                                <g class="fill-current">
+                                                    <g>
+                                                        <g>
+                                                            <g>
+                                                                <path
+                                                                    d="M2.858 5.15v4.415c0 .197-.11.371-.273.436-.231.092-.51.14-.808.14-.855 0-1.775-.396-1.775-1.266v-5.65c-.02-.389.1-1.074.676-1.445C.945 1.607 2.348.589 3.052.074c.125-.092.286-.098.417-.018.132.081.214.237.214.406v.669c0 .255-.183.462-.41.462-.175 0-.325-.125-.383-.302-.636.462-1.574 1.14-1.806 1.29-.21.136-.255.385-.264.52 0 .151.029.27.081.335.145.18.63.068 1.157-.29C2.566 2.802 5.067.92 5.092.902c.126-.095.287-.104.42-.023.133.08.216.237.216.408v.052c0 .155-.068.299-.182.385 0 0-1.736 1.31-1.89 1.42-.589.428-.798.953-.798 2.005zM9 2.92v5.998c0 .158-.072.306-.191.39 0 0-2.385 2.092-2.869 2.425-.254.175-.578.267-.936.267-.85 0-1.73-.52-1.73-1.389V4.878l.001-.006c.008-.338.078-.82.635-1.285.334-.278 2.321-1.809 2.406-1.873.125-.097.288-.107.421-.027.134.08.218.237.218.408v.67c0 .254-.183.461-.409.461-.169 0-.314-.115-.376-.28-.635.49-1.566 1.212-1.775 1.385-.263.22-.298.365-.303.551.001.138.034.243.101.313.209.216.77.125 1.324-.25.41-.278 2.176-1.819 2.822-2.389.124-.108.29-.128.431-.05.14.077.23.237.23.414zm-.818 2.059L6.137 6.77v.924l2.045-1.792v-.924z"
+                                                                    transform="translate(-890.000000, -316.000000) translate(774.000000, 311.000000) translate(116.000000, 4.000000) translate(0.000000, 1.000000)"
+                                                                />
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                    <div class="text-2xs">1 Lessons</div>
+                                </div>
+                                <div class="flex flex-row items-center text-xs">
+                                    <div class="mr-2">
+                                        <svg width="9" viewBox="0 0 10 10">
+                                            <g fill="none" fill-rule="evenodd">
+                                                <g>
+                                                    <g>
+                                                        <g>
+                                                            <g>
+                                                                <path
+                                                                    class="fill-current"
+                                                                    d="M5 2C2.25 2 0 4.25 0 7s2.25 5 5 5 5-2.25 5-5-2.25-5-5-5zm2.282 6.923L4.615 7.318v-3.01h.77v2.608l2.307 1.355-.41.652z"
+                                                                    transform="translate(-978.000000, -378.000000) translate(330.000000, 364.000000) translate(444.000000, 8.000000) translate(204.000000, 4.000000)"
+                                                                />
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                    <div class="text-2xs">2 minutes</div>
+                                </div>
+                            </div>
                         </div>
-                    </nav>
+                    </div>
                 </div>
             </div>
+            <div class="flex flex-col" v-for="lesson in lessons" :key="lesson.id">
+                <a
+                    class="flex items-center mb-3 text-gray-800 transition-colors duration-200 bg-gray-100 rounded-lg hover:text-gray-800 hover:bg-gray-100 dark:hover:text-white dark:hover:bg-gray-600 dark:text-gray-100 dark:bg-gray-600"
+                    href="#"
+                >
+                    <svg
+                        width="20"
+                        height="20"
+                        fill="currentColor"
+                        class="m-auto"
+                        viewBox="0 0 2048 1792"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M685 483q16 0 27.5-11.5t11.5-27.5-11.5-27.5-27.5-11.5-27 11.5-11 27.5 11 27.5 27 11.5zm422 0q16 0 27-11.5t11-27.5-11-27.5-27-11.5-27.5 11.5-11.5 27.5 11.5 27.5 27.5 11.5zm-812 184q42 0 72 30t30 72v430q0 43-29.5 73t-72.5 30-73-30-30-73v-430q0-42 30-72t73-30zm1060 19v666q0 46-32 78t-77 32h-75v227q0 43-30 73t-73 30-73-30-30-73v-227h-138v227q0 43-30 73t-73 30q-42 0-72-30t-30-73l-1-227h-74q-46 0-78-32t-32-78v-666h918zm-232-405q107 55 171 153.5t64 215.5h-925q0-117 64-215.5t172-153.5l-71-131q-7-13 5-20 13-6 20 6l72 132q95-42 201-42t201 42l72-132q7-12 20-6 12 7 5 20zm477 488v430q0 43-30 73t-73 30q-42 0-72-30t-30-73v-430q0-43 30-72.5t72-29.5q43 0 73 29.5t30 72.5z"
+                        />
+                    </svg>
+                    <span class="mx-4 text-lg font-normal">{{lesson.title}}</span>
+                    <span class="flex-grow text-right"></span>
+                </a>
+            </div>
         </div>
-        <div class="flex flex-col w-4/5">
+        <div class="flex flex-col w-4/5 h-screen overflow-y-scroll">
             <!-- lesson video will be here -->
             <img
                 src="https://www.unfe.org/wp-content/uploads/2019/04/SM-placeholder.png"
