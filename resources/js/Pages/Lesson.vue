@@ -4,51 +4,27 @@
             <div class="flex flex-col sm:flex-row sm:justify-around">
                 <div class="h-screen w-72">
                     <nav class="px-6 mt-10">
-                        <a
-                            class="flex items-center p-2 my-6 text-gray-800 transition-colors duration-200 bg-gray-100 rounded-lg hover:text-gray-800 hover:bg-gray-100 dark:hover:text-white dark:hover:bg-gray-600 dark:text-gray-100 dark:bg-gray-600"
-                            href="#"
-                        >
-                            <svg
-                                width="20"
-                                height="20"
-                                fill="currentColor"
-                                class="m-auto"
-                                viewBox="0 0 2048 1792"
-                                xmlns="http://www.w3.org/2000/svg"
+                        <div v-for="lesson in lessons" :key="lesson.id">
+                            <a
+                                class="flex items-center p-2 my-6 text-gray-800 transition-colors duration-200 bg-gray-100 rounded-lg hover:text-gray-800 hover:bg-gray-100 dark:hover:text-white dark:hover:bg-gray-600 dark:text-gray-100 dark:bg-gray-600"
+                                href="#"
                             >
-                                <path
-                                    d="M685 483q16 0 27.5-11.5t11.5-27.5-11.5-27.5-27.5-11.5-27 11.5-11 27.5 11 27.5 27 11.5zm422 0q16 0 27-11.5t11-27.5-11-27.5-27-11.5-27.5 11.5-11.5 27.5 11.5 27.5 27.5 11.5zm-812 184q42 0 72 30t30 72v430q0 43-29.5 73t-72.5 30-73-30-30-73v-430q0-42 30-72t73-30zm1060 19v666q0 46-32 78t-77 32h-75v227q0 43-30 73t-73 30-73-30-30-73v-227h-138v227q0 43-30 73t-73 30q-42 0-72-30t-30-73l-1-227h-74q-46 0-78-32t-32-78v-666h918zm-232-405q107 55 171 153.5t64 215.5h-925q0-117 64-215.5t172-153.5l-71-131q-7-13 5-20 13-6 20 6l72 132q95-42 201-42t201 42l72-132q7-12 20-6 12 7 5 20zm477 488v430q0 43-30 73t-73 30q-42 0-72-30t-30-73v-430q0-43 30-72.5t72-29.5q43 0 73 29.5t30 72.5z"
-                                />
-                            </svg>
-                            <span class="mx-4 text-lg font-normal">Form</span>
-                            <span class="flex-grow text-right"></span>
-                        </a>
-                        <a
-                            class="flex items-center p-2 my-6 text-gray-600 transition-colors duration-200 rounded-lg hover:text-gray-800 hover:bg-gray-100 dark:hover:text-white dark:hover:bg-gray-600 dark:text-gray-400"
-                            href="#"
-                        >
-                            <svg
-                                width="20"
-                                height="20"
-                                fill="currentColor"
-                                class="m-auto"
-                                viewBox="0 0 2048 1792"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                    d="M960 0l960 384v128h-128q0 26-20.5 45t-48.5 19h-1526q-28 0-48.5-19t-20.5-45h-128v-128zm-704 640h256v768h128v-768h256v768h128v-768h256v768h128v-768h256v768h59q28 0 48.5 19t20.5 45v64h-1664v-64q0-26 20.5-45t48.5-19h59v-768zm1595 960q28 0 48.5 19t20.5 45v128h-1920v-128q0-26 20.5-45t48.5-19h1782z"
-                                />
-                            </svg>
-                            <span class="mx-4 text-lg font-normal">Commerce</span>
-                            <span class="flex-grow text-right">
-                                <button
-                                    type="button"
-                                    class="w-6 h-6 text-xs text-white bg-red-500 rounded-full"
+                                <svg
+                                    width="20"
+                                    height="20"
+                                    fill="currentColor"
+                                    class="m-auto"
+                                    viewBox="0 0 2048 1792"
+                                    xmlns="http://www.w3.org/2000/svg"
                                 >
-                                    <span class="p-1">7</span>
-                                </button>
-                            </span>
-                        </a>
+                                    <path
+                                        d="M685 483q16 0 27.5-11.5t11.5-27.5-11.5-27.5-27.5-11.5-27 11.5-11 27.5 11 27.5 27 11.5zm422 0q16 0 27-11.5t11-27.5-11-27.5-27-11.5-27.5 11.5-11.5 27.5 11.5 27.5 27.5 11.5zm-812 184q42 0 72 30t30 72v430q0 43-29.5 73t-72.5 30-73-30-30-73v-430q0-42 30-72t73-30zm1060 19v666q0 46-32 78t-77 32h-75v227q0 43-30 73t-73 30-73-30-30-73v-227h-138v227q0 43-30 73t-73 30q-42 0-72-30t-30-73l-1-227h-74q-46 0-78-32t-32-78v-666h918zm-232-405q107 55 171 153.5t64 215.5h-925q0-117 64-215.5t172-153.5l-71-131q-7-13 5-20 13-6 20 6l72 132q95-42 201-42t201 42l72-132q7-12 20-6 12 7 5 20zm477 488v430q0 43-30 73t-73 30q-42 0-72-30t-30-73v-430q0-43 30-72.5t72-29.5q43 0 73 29.5t30 72.5z"
+                                    />
+                                </svg>
+                                <span class="mx-4 text-lg font-normal">{{lesson.title}}</span>
+                                <span class="flex-grow text-right"></span>
+                            </a>
+                        </div>
                     </nav>
                 </div>
             </div>
@@ -135,25 +111,27 @@
                                             </svg>
                                         </button>
                                     </div>
-                                    <h3 class="ml-3 text-3xl font-bold text-white">Lesson Title</h3>
+                                    <h3 class="ml-3 text-3xl font-bold text-white">{{lesson.title}}</h3>
                                 </div>
                             </div>
                             <div class="flex flex-row justify-around">
                                 <div class="pr-3 border-r border-gray-300">
                                     <div class="mb-3 text-xs text-gray-200 capitalize">episode</div>
-                                    <div class="text-sm text-white">1</div>
+                                    <div class="text-sm text-white">{{lesson.episode}}</div>
                                 </div>
                                 <div class="px-3 border-r border-gray-300">
                                     <div class="mb-3 text-xs text-gray-200 capitalize">run time</div>
-                                    <div class="text-sm text-white">1:36 minutes</div>
+                                    <div class="text-sm text-white">{{lesson.duration}}</div>
                                 </div>
                                 <div class="px-3 border-r border-gray-300">
                                     <div class="mb-3 text-xs text-gray-200 capitalize">published</div>
-                                    <div class="text-sm text-white">Feb 9th, 2021</div>
+                                    <div
+                                        class="text-sm text-white"
+                                    >{{new Date(lesson.created_at).toISOString().slice(0, 10)}}</div>
                                 </div>
                                 <div class="px-3 border-r border-gray-300">
                                     <div class="mb-3 text-xs text-gray-200 capitalize">topic</div>
-                                    <div class="text-sm text-white">Laravel</div>
+                                    <div class="text-sm text-white">{{lesson.topic.name}}</div>
                                 </div>
                                 <div class="px-3 border-r border-gray-300">
                                     <div
@@ -256,7 +234,7 @@
                             <h2 class="text-black">
                                 <span class="font-bold uppercase">your teacher</span>
                                 <span class="mx-2">|</span>
-                                <span class="capitalize">John Doe</span>
+                                <span class="capitalize">{{lesson.instructor.name}}</span>
                             </h2>
                             <div class="flex items-center justify-end space-x-2">
                                 <div>
@@ -300,7 +278,7 @@
                             >
                                 <img
                                     class="w-16 h-16"
-                                    src="https://cswnn.edu.in/system/files/2021-02/avatar-png-1-original.png"
+                                    :src="lesson.instructor.profile_photo_url"
                                     alt="avatar"
                                 />
                             </div>
@@ -317,6 +295,7 @@
 
 <script>
 export default {
+    props: { lessons: Object, lesson: Object },
     layout: null
 }
 </script>

@@ -190,7 +190,10 @@
                 </div>
                 <div class="flex flex-col justify-between w-10/12 pl-1">
                     <div>
-                        <h1 class="text-2xl font-bold text-gray-900">{{lesson.title}}</h1>
+                        <Link
+                            :href="`${course.slug}/lessons/${itemObjKey+1}`"
+                            class="text-2xl font-bold text-gray-900"
+                        >{{lesson.title}}</Link>
                         <p class="mt-2 text-sm text-gray-600">{{lesson.description}}</p>
                     </div>
                     <div class="text-xs text-gray-500">
@@ -224,8 +227,9 @@
 
 <script>
 import CourseCard from '@/shared/CourseCard'
+import { Link } from "@inertiajs/inertia-vue3"
 export default {
-    components: { CourseCard },
+    components: { CourseCard, Link },
     props: { courses: Object, lessons: Object, course: Object },
 }
 </script>

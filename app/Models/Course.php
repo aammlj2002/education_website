@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Course extends Model
 {
     use HasFactory;
-    public function Topic()
+    public function topic()
     {
         return $this->belongsTo(Topic::class);
     }

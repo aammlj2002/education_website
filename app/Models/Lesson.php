@@ -16,7 +16,7 @@ class Lesson extends Model
     {
         return $this->belongsTo(Course::class);
     }
-    public function teacher()
+    public function instructor()
     {
         return $this->belongsTo(User::class, "user_id");
     }

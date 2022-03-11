@@ -53,8 +53,15 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
             "course"=>$course
         ]);
     });
-    Route::get("/courses/laravel-8/lessons/1", function () {
-        return inertia("Lesson");
+    Route::get("/courses/{course:slug}/lessons/{episode}", function (Course $course, $episode) {
+        $lesson = $course->lessons[$episode-1]; //current lesson
+        $lesson["topic"] = $lesson->topic->name; // current lesson topic
+        $lesson["episode"]= $episode;
+        $lesson["instructor"]= $lesson->instructor;
+        return inertia("Lesson", [
+            "lessons"=>$course->lessons,
+            "lesson"=>$lesson
+        ]);
     });
     Route::get('/bits', function () {
         return inertia('Bits');

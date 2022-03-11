@@ -20493,10 +20493,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _shared_CourseCard__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/shared/CourseCard */ "./resources/js/shared/CourseCard.vue");
+/* harmony import */ var _inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia-vue3 */ "./node_modules/@inertiajs/inertia-vue3/dist/index.js");
+
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
-    CourseCard: _shared_CourseCard__WEBPACK_IMPORTED_MODULE_0__["default"]
+    CourseCard: _shared_CourseCard__WEBPACK_IMPORTED_MODULE_0__["default"],
+    Link: _inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_1__.Link
   },
   props: {
     courses: Object,
@@ -20536,6 +20539,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  props: {
+    lessons: Object,
+    lesson: Object
+  },
   layout: null
 });
 
@@ -23526,19 +23533,16 @@ var _hoisted_28 = {
   "class": "flex flex-col justify-between w-10/12 pl-1"
 };
 var _hoisted_29 = {
-  "class": "text-2xl font-bold text-gray-900"
-};
-var _hoisted_30 = {
   "class": "mt-2 text-sm text-gray-600"
 };
-var _hoisted_31 = {
+var _hoisted_30 = {
   "class": "text-xs text-gray-500"
 };
-var _hoisted_32 = {
+var _hoisted_31 = {
   "class": "inline-block mr-3"
 };
 
-var _hoisted_33 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+var _hoisted_32 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
   "class": "inline-block mr-1"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
   width: "10",
@@ -23555,7 +23559,7 @@ var _hoisted_33 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
-var _hoisted_34 = {
+var _hoisted_33 = {
   "class": "inline-block"
 };
 function render(_ctx, _cache, $props, $setup, $data, $options) {
@@ -23605,13 +23609,25 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       key: lesson.id
     }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_22, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_23, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_24, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_25, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_26, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_27, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(itemObjKey + 1), 1
     /* TEXT */
-    )])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_28, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h1", _hoisted_29, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(lesson.title), 1
+    )])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_28, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
+      href: "".concat($props.course.slug, "/lessons/").concat(itemObjKey + 1),
+      "class": "text-2xl font-bold text-gray-900"
+    }, {
+      "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+        return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)((0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(lesson.title), 1
+        /* TEXT */
+        )];
+      }),
+      _: 2
+      /* DYNAMIC */
+
+    }, 1032
+    /* PROPS, DYNAMIC_SLOTS */
+    , ["href"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_29, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(lesson.description), 1
     /* TEXT */
-    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_30, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(lesson.description), 1
+    )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_30, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_31, "episode " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(itemObjKey + 1), 1
     /* TEXT */
-    )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_31, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_32, "episode " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(itemObjKey + 1), 1
-    /* TEXT */
-    ), _hoisted_33, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_34, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(lesson.duration) + " minutes", 1
+    ), _hoisted_32, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_33, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(lesson.duration) + " minutes", 1
     /* TEXT */
     )])])])]);
   }), 128
@@ -23688,12 +23704,219 @@ __webpack_require__.r(__webpack_exports__);
 var _hoisted_1 = {
   "class": "flex flex-row bg-gray-100"
 };
+var _hoisted_2 = {
+  "class": "relative w-1/5 overflow-y-scroll bg-gray-800"
+};
+var _hoisted_3 = {
+  "class": "flex flex-col sm:flex-row sm:justify-around"
+};
+var _hoisted_4 = {
+  "class": "h-screen w-72"
+};
+var _hoisted_5 = {
+  "class": "px-6 mt-10"
+};
+var _hoisted_6 = {
+  "class": "flex items-center p-2 my-6 text-gray-800 transition-colors duration-200 bg-gray-100 rounded-lg hover:text-gray-800 hover:bg-gray-100 dark:hover:text-white dark:hover:bg-gray-600 dark:text-gray-100 dark:bg-gray-600",
+  href: "#"
+};
 
-var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"relative w-1/5 overflow-y-scroll bg-gray-800\"><div class=\"flex flex-col sm:flex-row sm:justify-around\"><div class=\"h-screen w-72\"><nav class=\"px-6 mt-10\"><a class=\"flex items-center p-2 my-6 text-gray-800 transition-colors duration-200 bg-gray-100 rounded-lg hover:text-gray-800 hover:bg-gray-100 dark:hover:text-white dark:hover:bg-gray-600 dark:text-gray-100 dark:bg-gray-600\" href=\"#\"><svg width=\"20\" height=\"20\" fill=\"currentColor\" class=\"m-auto\" viewBox=\"0 0 2048 1792\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M685 483q16 0 27.5-11.5t11.5-27.5-11.5-27.5-27.5-11.5-27 11.5-11 27.5 11 27.5 27 11.5zm422 0q16 0 27-11.5t11-27.5-11-27.5-27-11.5-27.5 11.5-11.5 27.5 11.5 27.5 27.5 11.5zm-812 184q42 0 72 30t30 72v430q0 43-29.5 73t-72.5 30-73-30-30-73v-430q0-42 30-72t73-30zm1060 19v666q0 46-32 78t-77 32h-75v227q0 43-30 73t-73 30-73-30-30-73v-227h-138v227q0 43-30 73t-73 30q-42 0-72-30t-30-73l-1-227h-74q-46 0-78-32t-32-78v-666h918zm-232-405q107 55 171 153.5t64 215.5h-925q0-117 64-215.5t172-153.5l-71-131q-7-13 5-20 13-6 20 6l72 132q95-42 201-42t201 42l72-132q7-12 20-6 12 7 5 20zm477 488v430q0 43-30 73t-73 30q-42 0-72-30t-30-73v-430q0-43 30-72.5t72-29.5q43 0 73 29.5t30 72.5z\"></path></svg><span class=\"mx-4 text-lg font-normal\">Form</span><span class=\"flex-grow text-right\"></span></a><a class=\"flex items-center p-2 my-6 text-gray-600 transition-colors duration-200 rounded-lg hover:text-gray-800 hover:bg-gray-100 dark:hover:text-white dark:hover:bg-gray-600 dark:text-gray-400\" href=\"#\"><svg width=\"20\" height=\"20\" fill=\"currentColor\" class=\"m-auto\" viewBox=\"0 0 2048 1792\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M960 0l960 384v128h-128q0 26-20.5 45t-48.5 19h-1526q-28 0-48.5-19t-20.5-45h-128v-128zm-704 640h256v768h128v-768h256v768h128v-768h256v768h128v-768h256v768h59q28 0 48.5 19t20.5 45v64h-1664v-64q0-26 20.5-45t48.5-19h59v-768zm1595 960q28 0 48.5 19t20.5 45v128h-1920v-128q0-26 20.5-45t48.5-19h1782z\"></path></svg><span class=\"mx-4 text-lg font-normal\">Commerce</span><span class=\"flex-grow text-right\"><button type=\"button\" class=\"w-6 h-6 text-xs text-white bg-red-500 rounded-full\"><span class=\"p-1\">7</span></button></span></a></nav></div></div></div><div class=\"flex flex-col w-4/5\"><!-- lesson video will be here --><img src=\"https://www.unfe.org/wp-content/uploads/2019/04/SM-placeholder.png\" alt=\"palce holder\"><div class=\"px-8 pt-4\"><div class=\"relative flex flex-row justify-between w-full px-4 bg-blue-400 shadow-sm py-7 rounded-2xl\"><div class=\"relative flex w-1/12 p-5\"><div class=\"absolute transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2\"><div class=\"grid w-12 h-12 grid-cols-1 border border-gray-200 rounded-full\"><div class=\"relative\"><div class=\"absolute text-lg transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2\"><svg viewBox=\"0.75 0.75 32.5 32.5\" width=\"40\" class=\"text-white\"><g fill=\"none\" fill-rule=\"evenodd\"><g><g><g><g><path stroke=\"#000\" stroke-opacity=\"0.012\" stroke-width=\".5\" d=\"M0 0L32 0 32 32 0 32z\" transform=\"translate(-969.000000, -1039.000000) translate(965.000000, 1038.000000) translate(5.000000, 2.000000) translate(16.000000, 16.000000) rotate(-270.000000) translate(-16.000000, -16.000000)\"></path><path class=\"fill-current\" d=\"M9.88 11.342L16 17.449 22.12 11.342 24 13.222 16 21.222 8 13.222z\" transform=\"translate(-969.000000, -1039.000000) translate(965.000000, 1038.000000) translate(5.000000, 2.000000) translate(16.000000, 16.000000) rotate(-270.000000) translate(-16.000000, -16.000000)\"></path></g></g></g></g></g></svg></div></div></div></div></div><div class=\"flex flex-row justify-between w-10/12 mx-5 grow\"><div class=\"w-8/12\"><div class=\"mb-8\"><div class=\"flex flex-row\"><div class=\"p-1\"><button class=\"px-1 bg-gray-300 border border-gray-300 border-opacity-50 bg-opacity-10 rounded-3xl\"><svg viewBox=\"0 0 32 32\" width=\"30\" height=\"30\" class=\"text-white/25\"><g stroke=\"none\" stroke-width=\"1.2\" class=\"fill-current\" fill-rule=\"evenodd\"><path class=\"fill-current\" d=\"M13.6196,11.2 C11.6246857,11.2 10.4,12.85425 10.4,14.2106375 C10.4,17.143925 13.9170286,19.8671 16.4,21.6 C18.8829714,19.86645 22.4,17.143925 22.4,14.2106375 C22.4,12.8541363 21.1758971,11.2 19.1804,11.2 C18.0661143,11.2 17.1138286,12.042335 16.4,12.8420625 C15.6854857,12.0422538 14.73392,11.2 13.6196,11.2 Z\"></path></g></svg></button></div><h3 class=\"ml-3 text-3xl font-bold text-white\">Lesson Title</h3></div></div><div class=\"flex flex-row justify-around\"><div class=\"pr-3 border-r border-gray-300\"><div class=\"mb-3 text-xs text-gray-200 capitalize\">episode</div><div class=\"text-sm text-white\">1</div></div><div class=\"px-3 border-r border-gray-300\"><div class=\"mb-3 text-xs text-gray-200 capitalize\">run time</div><div class=\"text-sm text-white\">1:36 minutes</div></div><div class=\"px-3 border-r border-gray-300\"><div class=\"mb-3 text-xs text-gray-200 capitalize\">published</div><div class=\"text-sm text-white\">Feb 9th, 2021</div></div><div class=\"px-3 border-r border-gray-300\"><div class=\"mb-3 text-xs text-gray-200 capitalize\">topic</div><div class=\"text-sm text-white\">Laravel</div></div><div class=\"px-3 border-r border-gray-300\"><div class=\"mb-3 text-xs text-gray-200 capitalize\">course progress</div><div class=\"text-sm text-white\">10%</div></div><div class=\"pl-3\"><div class=\"mb-3 text-xs text-gray-200 capitalize\">version</div><div class=\"text-sm text-white\">Laravel breeze version 1</div></div></div></div><div class=\"flex flex-col w-4/12 pl-5\"><div class=\"flex flex-col my-auto contents-center gap-y-3\"><button class=\"w-full px-4 py-2 bg-gray-300 border border-gray-300 border-opacity-50 rounded-full bg-opacity-10\"><div class=\"text-sm font-bold text-white uppercase\">mark as complete</div></button><button class=\"w-full px-4 py-2 bg-gray-300 border border-gray-300 border-opacity-50 rounded-full bg-opacity-10\"><div class=\"flex flex-row items-center justify-center\"><div><svg width=\"8\" height=\"10\" viewBox=\"0 0 8 10\" class=\"inline-block mr-2 fill-white\"><path fill-rule=\"nonzero\" d=\"M7.092 0H.941C.44 0 0 .389 0 .849v8.583c0 .154.045.282.119.381a.469.469 0 0 0 .38.187c.143 0 .295-.06.435-.173l2.753-2.204a.54.54 0 0 1 .334-.108.54.54 0 0 1 .334.108l2.743 2.203a.683.683 0 0 0 .425.174C7.765 10 8 9.824 8 9.432V.849C8 .389 7.593 0 7.092 0z\"></path></svg></div><div><div class=\"text-sm font-bold text-white uppercase\">add to watchlist</div></div></div></button></div></div></div><div class=\"relative flex w-1/12 p-5\"><div class=\"absolute transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2\"><div class=\"grid w-12 h-12 grid-cols-1 border border-gray-200 rounded-full\"><div class=\"relative\"><div class=\"absolute text-lg transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2\"><svg viewBox=\"0.75 0.75 32.5 32.5\" width=\"40\" class=\"text-white\"><g fill=\"none\" fill-rule=\"evenodd\"><g><g><g><g><path stroke=\"#000\" stroke-opacity=\"0.012\" stroke-width=\".5\" d=\"M0 0L32 0 32 32 0 32z\" transform=\"translate(-1339.000000, -1039.000000) translate(965.000000, 1038.000000) translate(391.000000, 18.000000) rotate(-180.000000) translate(-391.000000, -18.000000) translate(375.000000, 2.000000) translate(16.000000, 16.000000) rotate(-270.000000) translate(-16.000000, -16.000000)\"></path><path class=\"fill-current\" d=\"M9.88 11.342L16 17.449 22.12 11.342 24 13.222 16 21.222 8 13.222z\" transform=\"translate(-1339.000000, -1039.000000) translate(965.000000, 1038.000000) translate(391.000000, 18.000000) rotate(-180.000000) translate(-391.000000, -18.000000) translate(375.000000, 2.000000) translate(16.000000, 16.000000) rotate(-270.000000) translate(-16.000000, -16.000000)\"></path></g></g></g></g></g></svg></div></div></div></div></div></div><!-- instructor --><div class=\"p-8\"><div class=\"px-8 py-4 bg-white rounded-lg\"><div class=\"flex justify-between mb-4\"><h2 class=\"text-black\"><span class=\"font-bold uppercase\">your teacher</span><span class=\"mx-2\">|</span><span class=\"capitalize\">John Doe</span></h2><div class=\"flex items-center justify-end space-x-2\"><div><svg width=\"20\" class=\"transition-all text-grey-800 hover:text-blue\" viewBox=\"0 0 18 18\"><path class=\"fill-gray-500\" fill-rule=\"nonzero\" d=\"M9 0C4.037 0 0 4.037 0 9c0 4.962 4.037 9 9 9 4.962 0 9-4.038 9-9 0-4.963-4.037-9-9-9zm4.015 6.94c.004.09.006.18.006.27 0 2.737-2.083 5.892-5.894 5.892a5.86 5.86 0 0 1-3.175-.93 4.158 4.158 0 0 0 3.067-.858 2.074 2.074 0 0 1-1.936-1.439 2.088 2.088 0 0 0 .936-.034 2.072 2.072 0 0 1-1.662-2.032v-.026c.28.155.6.249.938.26a2.07 2.07 0 0 1-.64-2.766 5.882 5.882 0 0 0 4.269 2.165 2.071 2.071 0 0 1 3.53-1.89 4.135 4.135 0 0 0 1.316-.503 2.08 2.08 0 0 1-.912 1.146c.419-.05.82-.16 1.19-.326-.277.415-.628.78-1.033 1.071z\"></path></svg></div><div><svg width=\"20\" viewBox=\"0 0 30 29\" class=\"transition-all text-grey-800 hover:text-blue\"><path class=\"fill-gray-500\" fill-rule=\"nonzero\" d=\"M27.959 7.434a14.866 14.866 0 0 0-5.453-5.414C20.21.69 17.703.025 14.984.025c-2.718 0-5.226.665-7.521 1.995A14.864 14.864 0 0 0 2.01 7.434C.67 9.714 0 12.202 0 14.901c0 3.242.953 6.156 2.858 8.746 1.906 2.589 4.367 4.38 7.385 5.375.351.064.611.019.78-.136a.755.755 0 0 0 .254-.58l-.01-1.047c-.007-.658-.01-1.233-.01-1.723l-.448.077a5.765 5.765 0 0 1-1.083.068 8.308 8.308 0 0 1-1.356-.136 3.04 3.04 0 0 1-1.308-.58c-.403-.304-.689-.701-.858-1.192l-.195-.445a4.834 4.834 0 0 0-.614-.988c-.28-.362-.563-.607-.85-.736l-.136-.097a1.428 1.428 0 0 1-.253-.233 1.062 1.062 0 0 1-.176-.271c-.039-.09-.007-.165.098-.223.104-.059.292-.087.566-.087l.39.058c.26.052.582.206.965.465.384.258.7.594.947 1.007.299.53.66.933 1.082 1.21.423.278.85.417 1.278.417.43 0 .8-.032 1.112-.097a3.9 3.9 0 0 0 .878-.29c.117-.866.436-1.53.956-1.996a13.447 13.447 0 0 1-2-.348 7.995 7.995 0 0 1-1.833-.756 5.244 5.244 0 0 1-1.571-1.298c-.416-.516-.758-1.195-1.024-2.034-.267-.84-.4-1.808-.4-2.905 0-1.563.514-2.893 1.541-3.99-.481-1.176-.436-2.493.137-3.952.377-.116.936-.03 1.678.261.741.291 1.284.54 1.629.746.345.207.621.381.83.523a13.948 13.948 0 0 1 3.745-.503c1.288 0 2.537.168 3.747.503l.741-.464c.507-.31 1.106-.595 1.795-.853.69-.258 1.216-.33 1.58-.213.586 1.46.638 2.777.156 3.951 1.028 1.098 1.542 2.428 1.542 3.99 0 1.099-.134 2.07-.4 2.916-.267.846-.611 1.524-1.034 2.034-.423.51-.95.94-1.58 1.288a8.01 8.01 0 0 1-1.834.756c-.592.155-1.259.271-2 .349.676.58 1.014 1.498 1.014 2.75v4.087c0 .232.081.426.244.58.163.155.42.2.77.136 3.019-.994 5.48-2.786 7.386-5.375 1.905-2.59 2.858-5.504 2.858-8.746 0-2.698-.671-5.187-2.01-7.466z\"></path></svg></div><button class=\"w-full px-3 py-2 border border-gray-500 rounded-full\"><div class=\"font-extrabold text-gray-500 uppercase text-2xs\">visit website</div></button></div></div><div class=\"flex flex-row\"><div class=\"mr-6 overflow-hidden border-4 border-blue-400 border-solid rounded-full\"><img class=\"w-16 h-16\" src=\"https://cswnn.edu.in/system/files/2021-02/avatar-png-1-original.png\" alt=\"avatar\"></div><div class=\"w-9/12\">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates deserunt ipsam, itaque distinctio cum debitis nihil aliquid qui maiores eos.</div></div></div></div></div></div>", 2);
+var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
+  width: "20",
+  height: "20",
+  fill: "currentColor",
+  "class": "m-auto",
+  viewBox: "0 0 2048 1792",
+  xmlns: "http://www.w3.org/2000/svg"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("path", {
+  d: "M685 483q16 0 27.5-11.5t11.5-27.5-11.5-27.5-27.5-11.5-27 11.5-11 27.5 11 27.5 27 11.5zm422 0q16 0 27-11.5t11-27.5-11-27.5-27-11.5-27.5 11.5-11.5 27.5 11.5 27.5 27.5 11.5zm-812 184q42 0 72 30t30 72v430q0 43-29.5 73t-72.5 30-73-30-30-73v-430q0-42 30-72t73-30zm1060 19v666q0 46-32 78t-77 32h-75v227q0 43-30 73t-73 30-73-30-30-73v-227h-138v227q0 43-30 73t-73 30q-42 0-72-30t-30-73l-1-227h-74q-46 0-78-32t-32-78v-666h918zm-232-405q107 55 171 153.5t64 215.5h-925q0-117 64-215.5t172-153.5l-71-131q-7-13 5-20 13-6 20 6l72 132q95-42 201-42t201 42l72-132q7-12 20-6 12 7 5 20zm477 488v430q0 43-30 73t-73 30q-42 0-72-30t-30-73v-430q0-43 30-72.5t72-29.5q43 0 73 29.5t30 72.5z"
+})], -1
+/* HOISTED */
+);
 
-var _hoisted_4 = [_hoisted_2];
+var _hoisted_8 = {
+  "class": "mx-4 text-lg font-normal"
+};
+
+var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+  "class": "flex-grow text-right"
+}, null, -1
+/* HOISTED */
+);
+
+var _hoisted_10 = {
+  "class": "flex flex-col w-4/5"
+};
+
+var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+  src: "https://www.unfe.org/wp-content/uploads/2019/04/SM-placeholder.png",
+  alt: "palce holder"
+}, null, -1
+/* HOISTED */
+);
+
+var _hoisted_12 = {
+  "class": "px-8 pt-4"
+};
+var _hoisted_13 = {
+  "class": "relative flex flex-row justify-between w-full px-4 bg-blue-400 shadow-sm py-7 rounded-2xl"
+};
+
+var _hoisted_14 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"relative flex w-1/12 p-5\"><div class=\"absolute transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2\"><div class=\"grid w-12 h-12 grid-cols-1 border border-gray-200 rounded-full\"><div class=\"relative\"><div class=\"absolute text-lg transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2\"><svg viewBox=\"0.75 0.75 32.5 32.5\" width=\"40\" class=\"text-white\"><g fill=\"none\" fill-rule=\"evenodd\"><g><g><g><g><path stroke=\"#000\" stroke-opacity=\"0.012\" stroke-width=\".5\" d=\"M0 0L32 0 32 32 0 32z\" transform=\"translate(-969.000000, -1039.000000) translate(965.000000, 1038.000000) translate(5.000000, 2.000000) translate(16.000000, 16.000000) rotate(-270.000000) translate(-16.000000, -16.000000)\"></path><path class=\"fill-current\" d=\"M9.88 11.342L16 17.449 22.12 11.342 24 13.222 16 21.222 8 13.222z\" transform=\"translate(-969.000000, -1039.000000) translate(965.000000, 1038.000000) translate(5.000000, 2.000000) translate(16.000000, 16.000000) rotate(-270.000000) translate(-16.000000, -16.000000)\"></path></g></g></g></g></g></svg></div></div></div></div></div>", 1);
+
+var _hoisted_15 = {
+  "class": "flex flex-row justify-between w-10/12 mx-5 grow"
+};
+var _hoisted_16 = {
+  "class": "w-8/12"
+};
+var _hoisted_17 = {
+  "class": "mb-8"
+};
+var _hoisted_18 = {
+  "class": "flex flex-row"
+};
+
+var _hoisted_19 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"p-1\"><button class=\"px-1 bg-gray-300 border border-gray-300 border-opacity-50 bg-opacity-10 rounded-3xl\"><svg viewBox=\"0 0 32 32\" width=\"30\" height=\"30\" class=\"text-white/25\"><g stroke=\"none\" stroke-width=\"1.2\" class=\"fill-current\" fill-rule=\"evenodd\"><path class=\"fill-current\" d=\"M13.6196,11.2 C11.6246857,11.2 10.4,12.85425 10.4,14.2106375 C10.4,17.143925 13.9170286,19.8671 16.4,21.6 C18.8829714,19.86645 22.4,17.143925 22.4,14.2106375 C22.4,12.8541363 21.1758971,11.2 19.1804,11.2 C18.0661143,11.2 17.1138286,12.042335 16.4,12.8420625 C15.6854857,12.0422538 14.73392,11.2 13.6196,11.2 Z\"></path></g></svg></button></div>", 1);
+
+var _hoisted_20 = {
+  "class": "ml-3 text-3xl font-bold text-white"
+};
+var _hoisted_21 = {
+  "class": "flex flex-row justify-around"
+};
+var _hoisted_22 = {
+  "class": "pr-3 border-r border-gray-300"
+};
+
+var _hoisted_23 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "mb-3 text-xs text-gray-200 capitalize"
+}, "episode", -1
+/* HOISTED */
+);
+
+var _hoisted_24 = {
+  "class": "text-sm text-white"
+};
+var _hoisted_25 = {
+  "class": "px-3 border-r border-gray-300"
+};
+
+var _hoisted_26 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "mb-3 text-xs text-gray-200 capitalize"
+}, "run time", -1
+/* HOISTED */
+);
+
+var _hoisted_27 = {
+  "class": "text-sm text-white"
+};
+var _hoisted_28 = {
+  "class": "px-3 border-r border-gray-300"
+};
+
+var _hoisted_29 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "mb-3 text-xs text-gray-200 capitalize"
+}, "published", -1
+/* HOISTED */
+);
+
+var _hoisted_30 = {
+  "class": "text-sm text-white"
+};
+var _hoisted_31 = {
+  "class": "px-3 border-r border-gray-300"
+};
+
+var _hoisted_32 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "mb-3 text-xs text-gray-200 capitalize"
+}, "topic", -1
+/* HOISTED */
+);
+
+var _hoisted_33 = {
+  "class": "text-sm text-white"
+};
+
+var _hoisted_34 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"px-3 border-r border-gray-300\"><div class=\"mb-3 text-xs text-gray-200 capitalize\">course progress</div><div class=\"text-sm text-white\">10%</div></div><div class=\"pl-3\"><div class=\"mb-3 text-xs text-gray-200 capitalize\">version</div><div class=\"text-sm text-white\">Laravel breeze version 1</div></div>", 2);
+
+var _hoisted_36 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"flex flex-col w-4/12 pl-5\"><div class=\"flex flex-col my-auto contents-center gap-y-3\"><button class=\"w-full px-4 py-2 bg-gray-300 border border-gray-300 border-opacity-50 rounded-full bg-opacity-10\"><div class=\"text-sm font-bold text-white uppercase\">mark as complete</div></button><button class=\"w-full px-4 py-2 bg-gray-300 border border-gray-300 border-opacity-50 rounded-full bg-opacity-10\"><div class=\"flex flex-row items-center justify-center\"><div><svg width=\"8\" height=\"10\" viewBox=\"0 0 8 10\" class=\"inline-block mr-2 fill-white\"><path fill-rule=\"nonzero\" d=\"M7.092 0H.941C.44 0 0 .389 0 .849v8.583c0 .154.045.282.119.381a.469.469 0 0 0 .38.187c.143 0 .295-.06.435-.173l2.753-2.204a.54.54 0 0 1 .334-.108.54.54 0 0 1 .334.108l2.743 2.203a.683.683 0 0 0 .425.174C7.765 10 8 9.824 8 9.432V.849C8 .389 7.593 0 7.092 0z\"></path></svg></div><div><div class=\"text-sm font-bold text-white uppercase\">add to watchlist</div></div></div></button></div></div>", 1);
+
+var _hoisted_37 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"relative flex w-1/12 p-5\"><div class=\"absolute transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2\"><div class=\"grid w-12 h-12 grid-cols-1 border border-gray-200 rounded-full\"><div class=\"relative\"><div class=\"absolute text-lg transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2\"><svg viewBox=\"0.75 0.75 32.5 32.5\" width=\"40\" class=\"text-white\"><g fill=\"none\" fill-rule=\"evenodd\"><g><g><g><g><path stroke=\"#000\" stroke-opacity=\"0.012\" stroke-width=\".5\" d=\"M0 0L32 0 32 32 0 32z\" transform=\"translate(-1339.000000, -1039.000000) translate(965.000000, 1038.000000) translate(391.000000, 18.000000) rotate(-180.000000) translate(-391.000000, -18.000000) translate(375.000000, 2.000000) translate(16.000000, 16.000000) rotate(-270.000000) translate(-16.000000, -16.000000)\"></path><path class=\"fill-current\" d=\"M9.88 11.342L16 17.449 22.12 11.342 24 13.222 16 21.222 8 13.222z\" transform=\"translate(-1339.000000, -1039.000000) translate(965.000000, 1038.000000) translate(391.000000, 18.000000) rotate(-180.000000) translate(-391.000000, -18.000000) translate(375.000000, 2.000000) translate(16.000000, 16.000000) rotate(-270.000000) translate(-16.000000, -16.000000)\"></path></g></g></g></g></g></svg></div></div></div></div></div>", 1);
+
+var _hoisted_38 = {
+  "class": "p-8"
+};
+var _hoisted_39 = {
+  "class": "px-8 py-4 bg-white rounded-lg"
+};
+var _hoisted_40 = {
+  "class": "flex justify-between mb-4"
+};
+var _hoisted_41 = {
+  "class": "text-black"
+};
+
+var _hoisted_42 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+  "class": "font-bold uppercase"
+}, "your teacher", -1
+/* HOISTED */
+);
+
+var _hoisted_43 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+  "class": "mx-2"
+}, "|", -1
+/* HOISTED */
+);
+
+var _hoisted_44 = {
+  "class": "capitalize"
+};
+
+var _hoisted_45 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"flex items-center justify-end space-x-2\"><div><svg width=\"20\" class=\"transition-all text-grey-800 hover:text-blue\" viewBox=\"0 0 18 18\"><path class=\"fill-gray-500\" fill-rule=\"nonzero\" d=\"M9 0C4.037 0 0 4.037 0 9c0 4.962 4.037 9 9 9 4.962 0 9-4.038 9-9 0-4.963-4.037-9-9-9zm4.015 6.94c.004.09.006.18.006.27 0 2.737-2.083 5.892-5.894 5.892a5.86 5.86 0 0 1-3.175-.93 4.158 4.158 0 0 0 3.067-.858 2.074 2.074 0 0 1-1.936-1.439 2.088 2.088 0 0 0 .936-.034 2.072 2.072 0 0 1-1.662-2.032v-.026c.28.155.6.249.938.26a2.07 2.07 0 0 1-.64-2.766 5.882 5.882 0 0 0 4.269 2.165 2.071 2.071 0 0 1 3.53-1.89 4.135 4.135 0 0 0 1.316-.503 2.08 2.08 0 0 1-.912 1.146c.419-.05.82-.16 1.19-.326-.277.415-.628.78-1.033 1.071z\"></path></svg></div><div><svg width=\"20\" viewBox=\"0 0 30 29\" class=\"transition-all text-grey-800 hover:text-blue\"><path class=\"fill-gray-500\" fill-rule=\"nonzero\" d=\"M27.959 7.434a14.866 14.866 0 0 0-5.453-5.414C20.21.69 17.703.025 14.984.025c-2.718 0-5.226.665-7.521 1.995A14.864 14.864 0 0 0 2.01 7.434C.67 9.714 0 12.202 0 14.901c0 3.242.953 6.156 2.858 8.746 1.906 2.589 4.367 4.38 7.385 5.375.351.064.611.019.78-.136a.755.755 0 0 0 .254-.58l-.01-1.047c-.007-.658-.01-1.233-.01-1.723l-.448.077a5.765 5.765 0 0 1-1.083.068 8.308 8.308 0 0 1-1.356-.136 3.04 3.04 0 0 1-1.308-.58c-.403-.304-.689-.701-.858-1.192l-.195-.445a4.834 4.834 0 0 0-.614-.988c-.28-.362-.563-.607-.85-.736l-.136-.097a1.428 1.428 0 0 1-.253-.233 1.062 1.062 0 0 1-.176-.271c-.039-.09-.007-.165.098-.223.104-.059.292-.087.566-.087l.39.058c.26.052.582.206.965.465.384.258.7.594.947 1.007.299.53.66.933 1.082 1.21.423.278.85.417 1.278.417.43 0 .8-.032 1.112-.097a3.9 3.9 0 0 0 .878-.29c.117-.866.436-1.53.956-1.996a13.447 13.447 0 0 1-2-.348 7.995 7.995 0 0 1-1.833-.756 5.244 5.244 0 0 1-1.571-1.298c-.416-.516-.758-1.195-1.024-2.034-.267-.84-.4-1.808-.4-2.905 0-1.563.514-2.893 1.541-3.99-.481-1.176-.436-2.493.137-3.952.377-.116.936-.03 1.678.261.741.291 1.284.54 1.629.746.345.207.621.381.83.523a13.948 13.948 0 0 1 3.745-.503c1.288 0 2.537.168 3.747.503l.741-.464c.507-.31 1.106-.595 1.795-.853.69-.258 1.216-.33 1.58-.213.586 1.46.638 2.777.156 3.951 1.028 1.098 1.542 2.428 1.542 3.99 0 1.099-.134 2.07-.4 2.916-.267.846-.611 1.524-1.034 2.034-.423.51-.95.94-1.58 1.288a8.01 8.01 0 0 1-1.834.756c-.592.155-1.259.271-2 .349.676.58 1.014 1.498 1.014 2.75v4.087c0 .232.081.426.244.58.163.155.42.2.77.136 3.019-.994 5.48-2.786 7.386-5.375 1.905-2.59 2.858-5.504 2.858-8.746 0-2.698-.671-5.187-2.01-7.466z\"></path></svg></div><button class=\"w-full px-3 py-2 border border-gray-500 rounded-full\"><div class=\"font-extrabold text-gray-500 uppercase text-2xs\">visit website</div></button></div>", 1);
+
+var _hoisted_46 = {
+  "class": "flex flex-row"
+};
+var _hoisted_47 = {
+  "class": "mr-6 overflow-hidden border-4 border-blue-400 border-solid rounded-full"
+};
+var _hoisted_48 = ["src"];
+
+var _hoisted_49 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "w-9/12"
+}, "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates deserunt ipsam, itaque distinctio cum debitis nihil aliquid qui maiores eos.", -1
+/* HOISTED */
+);
+
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, _hoisted_4);
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("nav", _hoisted_5, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($props.lessons, function (lesson) {
+    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
+      key: lesson.id
+    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", _hoisted_6, [_hoisted_7, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_8, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(lesson.title), 1
+    /* TEXT */
+    ), _hoisted_9])]);
+  }), 128
+  /* KEYED_FRAGMENT */
+  ))])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" lesson video will be here "), _hoisted_11, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_13, [_hoisted_14, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_15, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_16, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_17, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_18, [_hoisted_19, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h3", _hoisted_20, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.lesson.title), 1
+  /* TEXT */
+  )])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_21, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_22, [_hoisted_23, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_24, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.lesson.episode), 1
+  /* TEXT */
+  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_25, [_hoisted_26, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_27, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.lesson.duration), 1
+  /* TEXT */
+  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_28, [_hoisted_29, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_30, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(new Date($props.lesson.created_at).toISOString().slice(0, 10)), 1
+  /* TEXT */
+  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_31, [_hoisted_32, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_33, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.lesson.topic.name), 1
+  /* TEXT */
+  )]), _hoisted_34])]), _hoisted_36]), _hoisted_37]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" instructor "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_38, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_39, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_40, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h2", _hoisted_41, [_hoisted_42, _hoisted_43, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_44, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.lesson.instructor.name), 1
+  /* TEXT */
+  )]), _hoisted_45]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_46, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_47, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+    "class": "w-16 h-16",
+    src: $props.lesson.instructor.profile_photo_url,
+    alt: "avatar"
+  }, null, 8
+  /* PROPS */
+  , _hoisted_48)]), _hoisted_49])])])])])]);
 }
 
 /***/ }),
