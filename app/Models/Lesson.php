@@ -20,4 +20,8 @@ class Lesson extends Model
     {
         return $this->belongsTo(User::class, "user_id");
     }
+    public function complete()
+    {
+        return $this->belongsToMany(user::class);
+    }
 }
