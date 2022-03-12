@@ -3,7 +3,9 @@
         <LessonsLeftSideBar :lessons="lessons" :currentLesson="currentLesson" />
         <!-- Main section -->
         <main class="flex flex-col w-4/5 h-screen overflow-y-scroll">
-            <Video />
+            <div class="w-full">
+                <Video :currentLesson="currentLesson" />
+            </div>
             <div class="px-8 pt-4">
                 <LessonDetailCard :currentLesson="currentLesson" />
                 <InstructtorCard :instructor="currentLesson.instructor" />

@@ -43,7 +43,7 @@ export default {
     components: {
         PlayIcon, ClockIcon, Link
     },
-    props: { itemObjKey: String, lesson: Object, currentLesson: Object }
+    props: { itemObjKey: Number, lesson: Object, currentLesson: Object }
 }
 </script>
 

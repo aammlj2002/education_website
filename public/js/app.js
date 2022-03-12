@@ -27059,7 +27059,7 @@ __webpack_require__.r(__webpack_exports__);
     Link: _inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_1__.Link
   },
   props: {
-    itemObjKey: String,
+    itemObjKey: Number,
     lesson: Object,
     currentLesson: Object
   }
@@ -27218,7 +27218,32 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var video_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! video.js */ "./node_modules/video.js/dist/video.es.js");
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  name: "VideoPlayer",
+  props: {
+    currentLesson: Object,
+    options: {
+      type: Object,
+      "default": function _default() {
+        return {};
+      }
+    }
+  },
+  data: function data() {
+    return {
+      player: null
+    };
+  },
+  mounted: function mounted() {
+    this.player = (0,video_js__WEBPACK_IMPORTED_MODULE_0__["default"])(this.$refs.videoPlayer, this.options, function onPlayerReady() {// console.log('onPlayerReady', this);
+    });
+  },
+  beforeDestroy: function beforeDestroy() {
+    if (this.player) {
+      this.player.dispose();
+    }
+  }
+});
 
 /***/ }),
 
@@ -30054,6 +30079,9 @@ var _hoisted_2 = {
   "class": "flex flex-col w-4/5 h-screen overflow-y-scroll"
 };
 var _hoisted_3 = {
+  "class": "w-full"
+};
+var _hoisted_4 = {
   "class": "px-8 pt-4"
 };
 function render(_ctx, _cache, $props, $setup, $data, $options) {
@@ -30072,7 +30100,11 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     currentLesson: $props.currentLesson
   }, null, 8
   /* PROPS */
-  , ["lessons", "currentLesson"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Main section "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("main", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Video), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_LessonDetailCard, {
+  , ["lessons", "currentLesson"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Main section "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("main", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Video, {
+    currentLesson: $props.currentLesson
+  }, null, 8
+  /* PROPS */
+  , ["currentLesson"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_LessonDetailCard, {
     currentLesson: $props.currentLesson
   }, null, 8
   /* PROPS */
@@ -31793,7 +31825,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_TikCircleIcon = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("TikCircleIcon");
 
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [_hoisted_3, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", _hoisted_4, [_hoisted_5, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_TikCircleIcon, {
-    width: 20,
+    width: "20",
     fill: "fill-blue-500"
   })]), _hoisted_8]), _hoisted_9])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, [_hoisted_11, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_12, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.currentLesson.description), 1
   /* TEXT */
@@ -32368,14 +32400,41 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
 var _hoisted_1 = {
-  "class": "w-full"
+  ref: "videoPlayer",
+  id: "my-video",
+  "class": "w-full video-js",
+  controls: "",
+  preload: "auto",
+  poster: "",
+  "data-setup": "{}"
 };
+var _hoisted_2 = ["src"];
 
-var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<video id=\"my-video\" class=\"w-full video-js\" controls preload=\"auto\" poster=\"MY_VIDEO_POSTER.jpg\" data-setup=\"{}\"><source src=\"https://vjs.zencdn.net/v/oceans.mp4\" type=\"video/mp4\"><source src=\"https://vjs.zencdn.net/v/oceans.webm\" type=\"video/webm\"><p class=\"vjs-no-js\"> To view this video please enable JavaScript, and consider upgrading to a web browser that <a href=\"https://videojs.com/html5-video-support/\" target=\"_blank\">supports HTML5 video</a></p></video>", 1);
+var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("source", {
+  src: "https://vjs.zencdn.net/v/oceans.webm",
+  type: "video/webm"
+}, null, -1
+/* HOISTED */
+);
 
-var _hoisted_3 = [_hoisted_2];
+var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+  "class": "vjs-no-js"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" To view this video please enable JavaScript, and consider upgrading to a web browser that "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+  href: "https://videojs.com/html5-video-support/",
+  target: "_blank"
+}, "supports HTML5 video")], -1
+/* HOISTED */
+);
+
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, _hoisted_3);
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("video", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("source", {
+    src: $props.currentLesson.video,
+    type: "video/mp4"
+  }, null, 8
+  /* PROPS */
+  , _hoisted_2), _hoisted_3, _hoisted_4], 512
+  /* NEED_PATCH */
+  );
 }
 
 /***/ }),

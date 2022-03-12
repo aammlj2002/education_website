@@ -1221,17 +1221,17 @@ select {
 .w-4\/5 {
   width: 80%;
 }
-.w-2\/5 {
-  width: 40%;
-}
-.w-3\/5 {
-  width: 60%;
-}
 .w-9\/12 {
   width: 75%;
 }
 .w-3\/12 {
   width: 25%;
+}
+.w-2\/5 {
+  width: 40%;
+}
+.w-3\/5 {
+  width: 60%;
 }
 .w-1\/12 {
   width: 8.333333%;
@@ -1422,11 +1422,6 @@ select {
   margin-right: calc(0.25rem * var(--tw-space-x-reverse));
   margin-left: calc(0.25rem * calc(1 - var(--tw-space-x-reverse)));
 }
-.space-y-3 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
-}
 .space-x-4 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(1rem * var(--tw-space-x-reverse));
@@ -1436,6 +1431,11 @@ select {
   --tw-space-x-reverse: 0;
   margin-right: calc(0.5rem * var(--tw-space-x-reverse));
   margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+.space-y-3 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
 }
 .overflow-hidden {
   overflow: hidden;
@@ -1649,9 +1649,6 @@ select {
 .fill-current {
   fill: currentColor;
 }
-.fill-blue-500 {
-  fill: #3b82f6;
-}
 .fill-gray-500 {
   fill: #6b7280;
 }
@@ -1660,6 +1657,9 @@ select {
 }
 .fill-gray-300 {
   fill: #d1d5db;
+}
+.fill-blue-500 {
+  fill: #3b82f6;
 }
 .fill-gray-100 {
   fill: #f3f4f6;

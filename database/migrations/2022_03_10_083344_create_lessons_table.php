@@ -15,6 +15,7 @@ return new class extends Migration {
         Schema::create('lessons', function (Blueprint $table) {
             $table->id();
             $table->string("title");
+            $table->string("video");
             $table->text("description");
             $table->string("duration");
             $table->integer("progress");

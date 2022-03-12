@@ -18,6 +18,7 @@ class LessonFactory extends Factory
     {
         return [
             "title"=>$this->faker->word(),
+            "video"=>"https://vjs.zencdn.net/v/oceans.mp4",
             "description"=>$this->faker->paragraph(),
             "duration"=>$this->faker->randomNumber(1, 100),
             "progress"=>$this->faker->randomNumber(1, 100),

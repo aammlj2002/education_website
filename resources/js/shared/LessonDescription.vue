@@ -21,7 +21,7 @@
                 </li>
                 <li class="flex flex-row items-center justify-start">
                     <div class="w-1/7">
-                        <TikCircleIcon :width="20" fill="fill-blue-500" />
+                        <TikCircleIcon width="20" fill="fill-blue-500" />
                     </div>
                     <p class="ml-3">adipisicing elit.</p>
                 </li>
