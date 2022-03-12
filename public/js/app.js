@@ -20538,38 +20538,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _shared_svg_GitHubIcon__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/shared/svg/GitHubIcon */ "./resources/js/shared/svg/GitHubIcon.vue");
-/* harmony import */ var _shared_svg_TwitterIcon__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/shared/svg/TwitterIcon */ "./resources/js/shared/svg/TwitterIcon.vue");
-/* harmony import */ var _shared_svg_SaveIcon__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/shared/svg/SaveIcon */ "./resources/js/shared/svg/SaveIcon.vue");
-/* harmony import */ var _shared_svg_HeartIcon__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/shared/svg/HeartIcon */ "./resources/js/shared/svg/HeartIcon.vue");
-/* harmony import */ var _shared_svg_LeftArrowIcon__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/shared/svg/LeftArrowIcon */ "./resources/js/shared/svg/LeftArrowIcon.vue");
-/* harmony import */ var _shared_svg_PlayIcon__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/shared/svg/PlayIcon */ "./resources/js/shared/svg/PlayIcon.vue");
-/* harmony import */ var _shared_svg_ClockIcon__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @/shared/svg/ClockIcon */ "./resources/js/shared/svg/ClockIcon.vue");
-/* harmony import */ var _shared_svg_BookIcon__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @/shared/svg/BookIcon */ "./resources/js/shared/svg/BookIcon.vue");
-/* harmony import */ var _shared_svg_RightArrowIcon__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @/shared/svg/RightArrowIcon */ "./resources/js/shared/svg/RightArrowIcon.vue");
-/* harmony import */ var _inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @inertiajs/inertia-vue3 */ "./node_modules/@inertiajs/inertia-vue3/dist/index.js");
-
-
-
-
-
-
+/* harmony import */ var _shared_svg_TikCircleIcon__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../shared/svg/TikCircleIcon */ "./resources/js/shared/svg/TikCircleIcon.vue");
+/* harmony import */ var _shared_InstructtorCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../shared/InstructtorCard */ "./resources/js/shared/InstructtorCard.vue");
+/* harmony import */ var _shared_LessonDetailCard__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/shared/LessonDetailCard */ "./resources/js/shared/LessonDetailCard.vue");
+/* harmony import */ var _shared_LessonsLeftSideBar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/shared/LessonsLeftSideBar */ "./resources/js/shared/LessonsLeftSideBar.vue");
 
 
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
-    GitHubIcon: _shared_svg_GitHubIcon__WEBPACK_IMPORTED_MODULE_0__["default"],
-    TwitterIcon: _shared_svg_TwitterIcon__WEBPACK_IMPORTED_MODULE_1__["default"],
-    SaveIcon: _shared_svg_SaveIcon__WEBPACK_IMPORTED_MODULE_2__["default"],
-    HeartIcon: _shared_svg_HeartIcon__WEBPACK_IMPORTED_MODULE_3__["default"],
-    LeftArrowIcon: _shared_svg_LeftArrowIcon__WEBPACK_IMPORTED_MODULE_4__["default"],
-    PlayIcon: _shared_svg_PlayIcon__WEBPACK_IMPORTED_MODULE_5__["default"],
-    ClockIcon: _shared_svg_ClockIcon__WEBPACK_IMPORTED_MODULE_6__["default"],
-    BookIcon: _shared_svg_BookIcon__WEBPACK_IMPORTED_MODULE_7__["default"],
-    RightArrowIcon: _shared_svg_RightArrowIcon__WEBPACK_IMPORTED_MODULE_8__["default"],
-    Link: _inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_9__.Link
+    TikCircleIcon: _shared_svg_TikCircleIcon__WEBPACK_IMPORTED_MODULE_0__["default"],
+    InstructtorCard: _shared_InstructtorCard__WEBPACK_IMPORTED_MODULE_1__["default"],
+    LessonDetailCard: _shared_LessonDetailCard__WEBPACK_IMPORTED_MODULE_2__["default"],
+    LessonsLeftSideBar: _shared_LessonsLeftSideBar__WEBPACK_IMPORTED_MODULE_3__["default"]
   },
   props: {
     lessons: Object,
@@ -21164,6 +21146,135 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/shared/InstructtorCard.vue?vue&type=script&lang=js":
+/*!*****************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/shared/InstructtorCard.vue?vue&type=script&lang=js ***!
+  \*****************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _shared_svg_GitHubIcon__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/shared/svg/GitHubIcon */ "./resources/js/shared/svg/GitHubIcon.vue");
+/* harmony import */ var _shared_svg_TwitterIcon__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/shared/svg/TwitterIcon */ "./resources/js/shared/svg/TwitterIcon.vue");
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  components: {
+    GitHubIcon: _shared_svg_GitHubIcon__WEBPACK_IMPORTED_MODULE_0__["default"],
+    TwitterIcon: _shared_svg_TwitterIcon__WEBPACK_IMPORTED_MODULE_1__["default"]
+  },
+  props: {
+    instructor: Object
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/shared/LessonCardSmall.vue?vue&type=script&lang=js":
+/*!*****************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/shared/LessonCardSmall.vue?vue&type=script&lang=js ***!
+  \*****************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _svg_PlayIcon__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./svg/PlayIcon */ "./resources/js/shared/svg/PlayIcon.vue");
+/* harmony import */ var _inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia-vue3 */ "./node_modules/@inertiajs/inertia-vue3/dist/index.js");
+/* harmony import */ var _svg_ClockIcon__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./svg/ClockIcon */ "./resources/js/shared/svg/ClockIcon.vue");
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  components: {
+    PlayIcon: _svg_PlayIcon__WEBPACK_IMPORTED_MODULE_0__["default"],
+    ClockIcon: _svg_ClockIcon__WEBPACK_IMPORTED_MODULE_2__["default"],
+    Link: _inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_1__.Link
+  },
+  props: {
+    itemObjKey: String,
+    lesson: Object,
+    currentLesson: Object
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/shared/LessonDetailCard.vue?vue&type=script&lang=js":
+/*!******************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/shared/LessonDetailCard.vue?vue&type=script&lang=js ***!
+  \******************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _svg_HeartIcon__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./svg/HeartIcon */ "./resources/js/shared/svg/HeartIcon.vue");
+/* harmony import */ var _svg_SaveIcon__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./svg/SaveIcon */ "./resources/js/shared/svg/SaveIcon.vue");
+/* harmony import */ var _svg_LeftArrowIcon__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./svg/LeftArrowIcon */ "./resources/js/shared/svg/LeftArrowIcon.vue");
+/* harmony import */ var _svg_RightArrowIcon__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./svg/RightArrowIcon */ "./resources/js/shared/svg/RightArrowIcon.vue");
+
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  components: {
+    HeartIcon: _svg_HeartIcon__WEBPACK_IMPORTED_MODULE_0__["default"],
+    SaveIcon: _svg_SaveIcon__WEBPACK_IMPORTED_MODULE_1__["default"],
+    LeftArrowIcon: _svg_LeftArrowIcon__WEBPACK_IMPORTED_MODULE_2__["default"],
+    RightArrowIcon: _svg_RightArrowIcon__WEBPACK_IMPORTED_MODULE_3__["default"]
+  },
+  props: {
+    currentLesson: Object
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/shared/LessonsLeftSideBar.vue?vue&type=script&lang=js":
+/*!********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/shared/LessonsLeftSideBar.vue?vue&type=script&lang=js ***!
+  \********************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _shared_LessonCardSmall__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/shared/LessonCardSmall */ "./resources/js/shared/LessonCardSmall.vue");
+/* harmony import */ var _inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia-vue3 */ "./node_modules/@inertiajs/inertia-vue3/dist/index.js");
+/* harmony import */ var _shared_svg_LeftArrowIcon__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/shared/svg/LeftArrowIcon */ "./resources/js/shared/svg/LeftArrowIcon.vue");
+/* harmony import */ var _shared_svg_ClockIcon__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/shared/svg/ClockIcon */ "./resources/js/shared/svg/ClockIcon.vue");
+/* harmony import */ var _shared_svg_BookIcon__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/shared/svg/BookIcon */ "./resources/js/shared/svg/BookIcon.vue");
+
+
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  components: {
+    LessonCardSmall: _shared_LessonCardSmall__WEBPACK_IMPORTED_MODULE_0__["default"],
+    LeftArrowIcon: _shared_svg_LeftArrowIcon__WEBPACK_IMPORTED_MODULE_2__["default"],
+    ClockIcon: _shared_svg_ClockIcon__WEBPACK_IMPORTED_MODULE_3__["default"],
+    BookIcon: _shared_svg_BookIcon__WEBPACK_IMPORTED_MODULE_4__["default"],
+    Link: _inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_1__.Link
+  },
+  props: {
+    lessons: Object,
+    currentLesson: Object
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/shared/Nav.vue?vue&type=script&setup=true&lang=js":
 /*!****************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/shared/Nav.vue?vue&type=script&setup=true&lang=js ***!
@@ -21422,6 +21533,36 @@ __webpack_require__.r(__webpack_exports__);
 /*!**************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/shared/svg/SaveIcon.vue?vue&type=script&lang=js ***!
   \**************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  props: {
+    fill: {
+      "default": "fill-current",
+      type: String
+    },
+    width: {
+      "default": "10",
+      type: String
+    },
+    height: {
+      "default": "auto",
+      type: String
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/shared/svg/TikCircleIcon.vue?vue&type=script&lang=js":
+/*!*******************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/shared/svg/TikCircleIcon.vue?vue&type=script&lang=js ***!
+  \*******************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -24007,435 +24148,40 @@ var _hoisted_1 = {
   "class": "flex flex-row bg-gray-100"
 };
 var _hoisted_2 = {
-  "class": "relative w-1/5 h-screen px-3 overflow-y-scroll bg-gray-800"
-};
-var _hoisted_3 = {
-  "class": "flex flex-row items-center justify-between px-2 py-4 text-white"
-};
-
-var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "text-xs font-bold capitalize"
-}, "course overview", -1
-/* HOISTED */
-);
-
-var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Edu");
-
-var _hoisted_6 = {
-  "class": "px-2 py-4"
-};
-var _hoisted_7 = {
-  "class": "flex flex-row justify-evenly"
-};
-var _hoisted_8 = {
-  "class": "w-4/12"
-};
-var _hoisted_9 = ["src"];
-var _hoisted_10 = {
-  "class": "w-8/12"
-};
-var _hoisted_11 = {
-  "class": "flex flex-col"
-};
-var _hoisted_12 = {
-  "class": "mb-2 text-sm font-bold text-white"
-};
-var _hoisted_13 = {
-  "class": "flex flex-row mb-5 space-x-5 text-gray-300"
-};
-var _hoisted_14 = {
-  "class": "flex flex-row items-center"
-};
-var _hoisted_15 = {
-  "class": "mr-2"
-};
-var _hoisted_16 = {
-  "class": "text-2xs"
-};
-var _hoisted_17 = {
-  "class": "flex flex-row items-center text-xs"
-};
-var _hoisted_18 = {
-  "class": "mr-2"
-};
-var _hoisted_19 = {
-  "class": "text-2xs"
-};
-var _hoisted_20 = {
-  "class": "flex flex-col space-y-3"
-};
-var _hoisted_21 = {
-  "class": "relative w-3/12"
-};
-var _hoisted_22 = {
-  "class": "absolute transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2"
-};
-var _hoisted_23 = {
-  "class": "grid w-8 h-8 grid-cols-1 bg-blue-500 rounded-full"
-};
-var _hoisted_24 = {
-  "class": "relative"
-};
-var _hoisted_25 = {
-  "class": "absolute text-lg transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2"
-};
-var _hoisted_26 = {
-  "class": "w-9/12"
-};
-var _hoisted_27 = {
-  "class": "flex flex-col justify-between"
-};
-var _hoisted_28 = {
-  "class": "flex flex-row space-x-5 text-gray-300"
-};
-var _hoisted_29 = {
-  "class": "text-2xs"
-};
-var _hoisted_30 = {
-  "class": "flex flex-row items-center text-xs"
-};
-var _hoisted_31 = {
-  "class": "mr-1"
-};
-var _hoisted_32 = {
-  "class": "text-2xs"
-};
-var _hoisted_33 = {
   "class": "flex flex-col w-4/5 h-screen overflow-y-scroll"
 };
 
-var _hoisted_34 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
   src: "https://www.unfe.org/wp-content/uploads/2019/04/SM-placeholder.png",
   alt: "palce holder"
 }, null, -1
 /* HOISTED */
 );
 
-var _hoisted_35 = {
+var _hoisted_4 = {
   "class": "px-8 pt-4"
 };
-var _hoisted_36 = {
-  "class": "relative flex flex-row justify-between w-full px-4 bg-blue-400 shadow-sm py-7 rounded-2xl"
-};
-var _hoisted_37 = {
-  "class": "relative flex w-1/12 p-5"
-};
-var _hoisted_38 = {
-  "class": "absolute transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2"
-};
-var _hoisted_39 = {
-  "class": "grid w-12 h-12 grid-cols-1 border border-gray-200 rounded-full"
-};
-var _hoisted_40 = {
-  "class": "relative"
-};
-var _hoisted_41 = {
-  "class": "absolute text-lg transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2"
-};
-var _hoisted_42 = {
-  "class": "flex flex-row justify-between w-10/12 mx-5 grow"
-};
-var _hoisted_43 = {
-  "class": "w-8/12"
-};
-var _hoisted_44 = {
-  "class": "mb-8"
-};
-var _hoisted_45 = {
-  "class": "flex flex-row"
-};
-var _hoisted_46 = {
-  "class": "p-1"
-};
-var _hoisted_47 = {
-  "class": "px-1 bg-gray-300 border border-gray-300 border-opacity-50 bg-opacity-10 rounded-3xl"
-};
-var _hoisted_48 = {
-  "class": "ml-3 text-3xl font-bold text-white"
-};
-var _hoisted_49 = {
-  "class": "flex flex-row justify-around"
-};
-var _hoisted_50 = {
-  "class": "pr-3 border-r border-gray-300"
-};
-
-var _hoisted_51 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "mb-3 text-xs text-gray-200 capitalize"
-}, "episode", -1
-/* HOISTED */
-);
-
-var _hoisted_52 = {
-  "class": "text-sm text-white"
-};
-var _hoisted_53 = {
-  "class": "px-3 border-r border-gray-300"
-};
-
-var _hoisted_54 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "mb-3 text-xs text-gray-200 capitalize"
-}, "run time", -1
-/* HOISTED */
-);
-
-var _hoisted_55 = {
-  "class": "text-sm text-white"
-};
-var _hoisted_56 = {
-  "class": "px-3 border-r border-gray-300"
-};
-
-var _hoisted_57 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "mb-3 text-xs text-gray-200 capitalize"
-}, "published", -1
-/* HOISTED */
-);
-
-var _hoisted_58 = {
-  "class": "text-sm text-white"
-};
-var _hoisted_59 = {
-  "class": "px-3 border-r border-gray-300"
-};
-
-var _hoisted_60 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "mb-3 text-xs text-gray-200 capitalize"
-}, "topic", -1
-/* HOISTED */
-);
-
-var _hoisted_61 = {
-  "class": "text-sm text-white"
-};
-
-var _hoisted_62 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"px-3 border-r border-gray-300\"><div class=\"mb-3 text-xs text-gray-200 capitalize\">course progress</div><div class=\"text-sm text-white\">10%</div></div><div class=\"pl-3\"><div class=\"mb-3 text-xs text-gray-200 capitalize\">version</div><div class=\"text-sm text-white\">Laravel breeze version 1</div></div>", 2);
-
-var _hoisted_64 = {
-  "class": "flex flex-col w-4/12 pl-5"
-};
-var _hoisted_65 = {
-  "class": "flex flex-col my-auto contents-center gap-y-3"
-};
-
-var _hoisted_66 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
-  "class": "w-full px-4 py-2 bg-gray-300 border border-gray-300 border-opacity-50 rounded-full bg-opacity-10"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "text-sm font-bold text-white uppercase"
-}, "mark as complete")], -1
-/* HOISTED */
-);
-
-var _hoisted_67 = {
-  "class": "w-full px-4 py-2 bg-gray-300 border border-gray-300 border-opacity-50 rounded-full bg-opacity-10"
-};
-var _hoisted_68 = {
-  "class": "flex flex-row items-center justify-center"
-};
-
-var _hoisted_69 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "text-sm font-bold text-white uppercase"
-}, "add to watchlist")], -1
-/* HOISTED */
-);
-
-var _hoisted_70 = {
-  "class": "relative flex w-1/12 p-5"
-};
-var _hoisted_71 = {
-  "class": "absolute transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2"
-};
-var _hoisted_72 = {
-  "class": "grid w-12 h-12 grid-cols-1 border border-gray-200 rounded-full"
-};
-var _hoisted_73 = {
-  "class": "relative"
-};
-var _hoisted_74 = {
-  "class": "absolute text-lg transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2"
-};
-var _hoisted_75 = {
-  "class": "p-8"
-};
-var _hoisted_76 = {
-  "class": "px-8 py-4 bg-white rounded-lg"
-};
-var _hoisted_77 = {
-  "class": "flex justify-between mb-4"
-};
-var _hoisted_78 = {
-  "class": "text-black"
-};
-
-var _hoisted_79 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
-  "class": "font-bold uppercase"
-}, "your teacher", -1
-/* HOISTED */
-);
-
-var _hoisted_80 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
-  "class": "mx-2"
-}, "|", -1
-/* HOISTED */
-);
-
-var _hoisted_81 = {
-  "class": "capitalize"
-};
-var _hoisted_82 = {
-  "class": "flex items-center justify-end space-x-2"
-};
-
-var _hoisted_83 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
-  "class": "w-full px-3 py-2 border border-gray-500 rounded-full"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "font-extrabold text-gray-500 uppercase text-2xs"
-}, "visit website")], -1
-/* HOISTED */
-);
-
-var _hoisted_84 = {
-  "class": "flex flex-row"
-};
-var _hoisted_85 = {
-  "class": "mr-6 overflow-hidden border-4 border-blue-400 border-solid rounded-full"
-};
-var _hoisted_86 = ["src"];
-
-var _hoisted_87 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "w-9/12"
-}, "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates deserunt ipsam, itaque distinctio cum debitis nihil aliquid qui maiores eos.", -1
-/* HOISTED */
-);
-
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  var _component_LeftArrowIcon = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("LeftArrowIcon");
+  var _component_LessonsLeftSideBar = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("LessonsLeftSideBar");
 
-  var _component_Link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Link");
+  var _component_LessonDetailCard = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("LessonDetailCard");
 
-  var _component_BookIcon = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("BookIcon");
+  var _component_InstructtorCard = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("InstructtorCard");
 
-  var _component_ClockIcon = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("ClockIcon");
-
-  var _component_PlayIcon = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("PlayIcon");
-
-  var _component_HeartIcon = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("HeartIcon");
-
-  var _component_SaveIcon = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("SaveIcon");
-
-  var _component_RightArrowIcon = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("RightArrowIcon");
-
-  var _component_TwitterIcon = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("TwitterIcon");
-
-  var _component_GitHubIcon = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("GitHubIcon");
-
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
-    href: "/courses/".concat($props.currentLesson.course.slug),
-    "class": "flex flex-row items-center justify-between hover:text-blue-500"
-  }, {
-    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_LeftArrowIcon, {
-        width: "26"
-      }), _hoisted_4];
-    }),
-    _: 1
-    /* STABLE */
-
-  }, 8
-  /* PROPS */
-  , ["href"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
-    href: "/courses"
-  }, {
-    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [_hoisted_5];
-    }),
-    _: 1
-    /* STABLE */
-
-  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
-    "class": "rounded-full w-14 h-14",
-    src: $props.currentLesson.instructor.profile_photo_url,
-    alt: "avatar"
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_LessonsLeftSideBar, {
+    lessons: $props.lessons,
+    currentLesson: $props.currentLesson
   }, null, 8
   /* PROPS */
-  , _hoisted_9)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.currentLesson.course.name), 1
-  /* TEXT */
-  ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_15, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_BookIcon, {
-    fill: "fill-gray-300"
-  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_16, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.lessons.length) + " Lessons", 1
-  /* TEXT */
-  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_17, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_18, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_ClockIcon, {
-    fill: "fill-gray-300"
-  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_19, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.currentLesson.course.duration), 1
-  /* TEXT */
-  )])])])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_20, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($props.lessons, function (lesson, itemObjKey) {
-    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
-      key: lesson.id,
-      "class": "flex flex-row content-center px-1 py-2 border border-transparent rounded-md hover:border-blue-500 hover:border-opacity-20"
-    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_21, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_22, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_23, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_24, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_25, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_PlayIcon, {
-      width: "10",
-      fill: "fill-white"
-    })])])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_26, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_27, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
-      href: "/courses/".concat($props.currentLesson.course.slug, "/lessons/").concat(itemObjKey + 1),
-      "class": "text-sm font-bold text-white hover:text-blue-500"
-    }, {
-      "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-        return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)((0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(lesson.title), 1
-        /* TEXT */
-        )];
-      }),
-      _: 2
-      /* DYNAMIC */
-
-    }, 1032
-    /* PROPS, DYNAMIC_SLOTS */
-    , ["href"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_28, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_29, "Lesson " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(itemObjKey + 1), 1
-    /* TEXT */
-    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_30, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_31, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_ClockIcon, {
-      fill: "fill-gray-300"
-    })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_32, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(lesson.duration), 1
-    /* TEXT */
-    )])])])])]);
-  }), 128
-  /* KEYED_FRAGMENT */
-  ))])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" right section "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_33, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" lesson video will be here "), _hoisted_34, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_35, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_36, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_37, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_38, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_39, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_40, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_41, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_LeftArrowIcon, {
-    width: "40",
-    fill: "text-white"
-  })])])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_42, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_43, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_44, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_45, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_46, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", _hoisted_47, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_HeartIcon, {
-    width: "30",
-    fill: "text-gray-300"
-  })])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h3", _hoisted_48, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.currentLesson.title), 1
-  /* TEXT */
-  )])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_49, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_50, [_hoisted_51, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_52, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.currentLesson.episode), 1
-  /* TEXT */
-  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_53, [_hoisted_54, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_55, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.currentLesson.duration), 1
-  /* TEXT */
-  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_56, [_hoisted_57, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_58, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(new Date($props.currentLesson.created_at).toISOString().slice(0, 10)), 1
-  /* TEXT */
-  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_59, [_hoisted_60, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_61, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.currentLesson.topic.name), 1
-  /* TEXT */
-  )]), _hoisted_62])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_64, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_65, [_hoisted_66, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", _hoisted_67, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_68, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_SaveIcon, {
-    "class": "mr-3",
-    width: "10",
-    fill: "fill-gray-100"
-  })]), _hoisted_69])])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_70, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_71, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_72, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_73, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_74, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_RightArrowIcon, {
-    width: "40",
-    fill: "text-white"
-  })])])])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" instructor "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_75, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_76, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_77, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h2", _hoisted_78, [_hoisted_79, _hoisted_80, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_81, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.currentLesson.instructor.name), 1
-  /* TEXT */
-  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_82, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_TwitterIcon, {
-    width: "20",
-    fill: "fill-gray-500"
-  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_GitHubIcon, {
-    width: "20",
-    fill: "fill-gray-500"
-  })]), _hoisted_83])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_84, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_85, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
-    "class": "w-16 h-16",
-    src: $props.currentLesson.instructor.profile_photo_url,
-    alt: "avatar"
+  , ["lessons", "currentLesson"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Main section "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("main", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" lesson video will be here "), _hoisted_3, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_LessonDetailCard, {
+    currentLesson: $props.currentLesson
   }, null, 8
   /* PROPS */
-  , _hoisted_86)]), _hoisted_87])])])])])]);
+  , ["currentLesson"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_InstructtorCard, {
+    instructor: $props.currentLesson.instructor
+  }, null, 8
+  /* PROPS */
+  , ["instructor"])])])]);
 }
 
 /***/ }),
@@ -25902,6 +25648,511 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/shared/InstructtorCard.vue?vue&type=template&id=a9d1497e":
+/*!*********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/shared/InstructtorCard.vue?vue&type=template&id=a9d1497e ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render)
+/* harmony export */ });
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
+
+var _hoisted_1 = {
+  "class": "p-8"
+};
+var _hoisted_2 = {
+  "class": "px-8 py-4 bg-white rounded-lg"
+};
+var _hoisted_3 = {
+  "class": "flex justify-between mb-4"
+};
+var _hoisted_4 = {
+  "class": "text-black"
+};
+
+var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+  "class": "font-bold uppercase"
+}, "your teacher", -1
+/* HOISTED */
+);
+
+var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+  "class": "mx-2"
+}, "|", -1
+/* HOISTED */
+);
+
+var _hoisted_7 = {
+  "class": "capitalize"
+};
+var _hoisted_8 = {
+  "class": "flex items-center justify-end space-x-2"
+};
+
+var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+  "class": "w-full px-3 py-2 border border-gray-500 rounded-full"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "font-extrabold text-gray-500 uppercase text-2xs"
+}, "visit website")], -1
+/* HOISTED */
+);
+
+var _hoisted_10 = {
+  "class": "flex flex-row"
+};
+var _hoisted_11 = {
+  "class": "mr-6 overflow-hidden border-4 border-blue-400 border-solid rounded-full"
+};
+var _hoisted_12 = ["src"];
+
+var _hoisted_13 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "w-9/12"
+}, "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates deserunt ipsam, itaque distinctio cum debitis nihil aliquid qui maiores eos.", -1
+/* HOISTED */
+);
+
+function render(_ctx, _cache, $props, $setup, $data, $options) {
+  var _component_TwitterIcon = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("TwitterIcon");
+
+  var _component_GitHubIcon = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("GitHubIcon");
+
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h2", _hoisted_4, [_hoisted_5, _hoisted_6, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_7, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.instructor.name), 1
+  /* TEXT */
+  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_TwitterIcon, {
+    width: "20",
+    fill: "fill-gray-500"
+  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_GitHubIcon, {
+    width: "20",
+    fill: "fill-gray-500"
+  })]), _hoisted_9])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+    "class": "w-16 h-16",
+    src: $props.instructor.profile_photo_url,
+    alt: "avatar"
+  }, null, 8
+  /* PROPS */
+  , _hoisted_12)]), _hoisted_13])])]);
+}
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/shared/LessonCardSmall.vue?vue&type=template&id=101b2933":
+/*!*********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/shared/LessonCardSmall.vue?vue&type=template&id=101b2933 ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render)
+/* harmony export */ });
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
+
+var _hoisted_1 = {
+  "class": "flex flex-row content-center px-1 py-2 border border-transparent rounded-md hover:border-blue-500 hover:border-opacity-20"
+};
+var _hoisted_2 = {
+  "class": "relative w-3/12"
+};
+var _hoisted_3 = {
+  "class": "absolute transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2"
+};
+var _hoisted_4 = {
+  "class": "grid w-8 h-8 grid-cols-1 bg-blue-500 rounded-full"
+};
+var _hoisted_5 = {
+  "class": "relative"
+};
+var _hoisted_6 = {
+  "class": "absolute text-lg transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2"
+};
+var _hoisted_7 = {
+  "class": "w-9/12"
+};
+var _hoisted_8 = {
+  "class": "flex flex-col justify-between"
+};
+var _hoisted_9 = {
+  "class": "flex flex-row space-x-5 text-gray-300"
+};
+var _hoisted_10 = {
+  "class": "text-2xs"
+};
+var _hoisted_11 = {
+  "class": "flex flex-row items-center text-xs"
+};
+var _hoisted_12 = {
+  "class": "mr-1"
+};
+var _hoisted_13 = {
+  "class": "text-2xs"
+};
+function render(_ctx, _cache, $props, $setup, $data, $options) {
+  var _component_PlayIcon = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("PlayIcon");
+
+  var _component_Link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Link");
+
+  var _component_ClockIcon = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("ClockIcon");
+
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_PlayIcon, {
+    width: "10",
+    fill: "fill-white"
+  })])])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
+    href: "/courses/".concat($props.currentLesson.course.slug, "/lessons/").concat($props.itemObjKey + 1),
+    "class": "text-sm font-bold text-white hover:text-blue-500"
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)((0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.lesson.title), 1
+      /* TEXT */
+      )];
+    }),
+    _: 1
+    /* STABLE */
+
+  }, 8
+  /* PROPS */
+  , ["href"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, "Lesson " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.itemObjKey + 1), 1
+  /* TEXT */
+  ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_ClockIcon, {
+    fill: "fill-gray-300"
+  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_13, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.lesson.duration), 1
+  /* TEXT */
+  )])])])])]);
+}
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/shared/LessonDetailCard.vue?vue&type=template&id=367c3956":
+/*!**********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/shared/LessonDetailCard.vue?vue&type=template&id=367c3956 ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render)
+/* harmony export */ });
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
+
+var _hoisted_1 = {
+  "class": "relative flex flex-row justify-between w-full px-4 bg-blue-400 shadow-sm py-7 rounded-2xl"
+};
+var _hoisted_2 = {
+  "class": "relative flex w-1/12 p-5"
+};
+var _hoisted_3 = {
+  "class": "absolute transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2"
+};
+var _hoisted_4 = {
+  "class": "grid w-12 h-12 grid-cols-1 border border-gray-200 rounded-full"
+};
+var _hoisted_5 = {
+  "class": "relative"
+};
+var _hoisted_6 = {
+  "class": "absolute text-lg transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2"
+};
+var _hoisted_7 = {
+  "class": "flex flex-row justify-between w-10/12 mx-5 grow"
+};
+var _hoisted_8 = {
+  "class": "w-8/12"
+};
+var _hoisted_9 = {
+  "class": "mb-8"
+};
+var _hoisted_10 = {
+  "class": "flex flex-row"
+};
+var _hoisted_11 = {
+  "class": "p-1"
+};
+var _hoisted_12 = {
+  "class": "px-1 bg-gray-300 border border-gray-300 border-opacity-50 bg-opacity-10 rounded-3xl"
+};
+var _hoisted_13 = {
+  "class": "ml-3 text-3xl font-bold text-white"
+};
+var _hoisted_14 = {
+  "class": "flex flex-row justify-around"
+};
+var _hoisted_15 = {
+  "class": "pr-3 border-r border-gray-300"
+};
+
+var _hoisted_16 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "mb-3 text-xs text-gray-200 capitalize"
+}, "episode", -1
+/* HOISTED */
+);
+
+var _hoisted_17 = {
+  "class": "text-sm text-white"
+};
+var _hoisted_18 = {
+  "class": "px-3 border-r border-gray-300"
+};
+
+var _hoisted_19 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "mb-3 text-xs text-gray-200 capitalize"
+}, "run time", -1
+/* HOISTED */
+);
+
+var _hoisted_20 = {
+  "class": "text-sm text-white"
+};
+var _hoisted_21 = {
+  "class": "px-3 border-r border-gray-300"
+};
+
+var _hoisted_22 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "mb-3 text-xs text-gray-200 capitalize"
+}, "published", -1
+/* HOISTED */
+);
+
+var _hoisted_23 = {
+  "class": "text-sm text-white"
+};
+var _hoisted_24 = {
+  "class": "px-3 border-r border-gray-300"
+};
+
+var _hoisted_25 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "mb-3 text-xs text-gray-200 capitalize"
+}, "topic", -1
+/* HOISTED */
+);
+
+var _hoisted_26 = {
+  "class": "text-sm text-white"
+};
+
+var _hoisted_27 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"px-3 border-r border-gray-300\"><div class=\"mb-3 text-xs text-gray-200 capitalize\">course progress</div><div class=\"text-sm text-white\">10%</div></div><div class=\"pl-3\"><div class=\"mb-3 text-xs text-gray-200 capitalize\">version</div><div class=\"text-sm text-white\">Laravel breeze version 1</div></div>", 2);
+
+var _hoisted_29 = {
+  "class": "flex flex-col w-4/12 pl-5"
+};
+var _hoisted_30 = {
+  "class": "flex flex-col my-auto contents-center gap-y-3"
+};
+
+var _hoisted_31 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+  "class": "w-full px-4 py-2 bg-gray-300 border border-gray-300 border-opacity-50 rounded-full bg-opacity-10"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "text-sm font-bold text-white uppercase"
+}, "mark as complete")], -1
+/* HOISTED */
+);
+
+var _hoisted_32 = {
+  "class": "w-full px-4 py-2 bg-gray-300 border border-gray-300 border-opacity-50 rounded-full bg-opacity-10"
+};
+var _hoisted_33 = {
+  "class": "flex flex-row items-center justify-center"
+};
+
+var _hoisted_34 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "text-sm font-bold text-white uppercase"
+}, "add to watchlist")], -1
+/* HOISTED */
+);
+
+var _hoisted_35 = {
+  "class": "relative flex w-1/12 p-5"
+};
+var _hoisted_36 = {
+  "class": "absolute transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2"
+};
+var _hoisted_37 = {
+  "class": "grid w-12 h-12 grid-cols-1 border border-gray-200 rounded-full"
+};
+var _hoisted_38 = {
+  "class": "relative"
+};
+var _hoisted_39 = {
+  "class": "absolute text-lg transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2"
+};
+function render(_ctx, _cache, $props, $setup, $data, $options) {
+  var _component_LeftArrowIcon = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("LeftArrowIcon");
+
+  var _component_HeartIcon = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("HeartIcon");
+
+  var _component_SaveIcon = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("SaveIcon");
+
+  var _component_RightArrowIcon = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("RightArrowIcon");
+
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_LeftArrowIcon, {
+    width: "40",
+    fill: "text-white"
+  })])])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_HeartIcon, {
+    width: "30",
+    fill: "text-gray-300"
+  })])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h3", _hoisted_13, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.currentLesson.title), 1
+  /* TEXT */
+  )])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_15, [_hoisted_16, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_17, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.currentLesson.episode), 1
+  /* TEXT */
+  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_18, [_hoisted_19, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_20, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.currentLesson.duration), 1
+  /* TEXT */
+  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_21, [_hoisted_22, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_23, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(new Date($props.currentLesson.created_at).toISOString().slice(0, 10)), 1
+  /* TEXT */
+  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_24, [_hoisted_25, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_26, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.currentLesson.topic.name), 1
+  /* TEXT */
+  )]), _hoisted_27])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_29, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_30, [_hoisted_31, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", _hoisted_32, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_33, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_SaveIcon, {
+    "class": "mr-3",
+    width: "10",
+    fill: "fill-gray-100"
+  })]), _hoisted_34])])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_35, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_36, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_37, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_38, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_39, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_RightArrowIcon, {
+    width: "40",
+    fill: "text-white"
+  })])])])])])]);
+}
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/shared/LessonsLeftSideBar.vue?vue&type=template&id=c1251114":
+/*!************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/shared/LessonsLeftSideBar.vue?vue&type=template&id=c1251114 ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render)
+/* harmony export */ });
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
+
+var _hoisted_1 = {
+  "class": "relative w-1/5 h-screen px-3 overflow-y-scroll bg-gray-800"
+};
+var _hoisted_2 = {
+  "class": "flex flex-row items-center justify-between px-2 py-4 text-white"
+};
+
+var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "text-xs font-bold capitalize"
+}, "course overview", -1
+/* HOISTED */
+);
+
+var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Edu");
+
+var _hoisted_5 = {
+  "class": "px-2 py-4"
+};
+var _hoisted_6 = {
+  "class": "flex flex-row justify-evenly"
+};
+var _hoisted_7 = {
+  "class": "w-4/12"
+};
+var _hoisted_8 = ["src"];
+var _hoisted_9 = {
+  "class": "w-8/12"
+};
+var _hoisted_10 = {
+  "class": "flex flex-col"
+};
+var _hoisted_11 = {
+  "class": "mb-2 text-sm font-bold text-white"
+};
+var _hoisted_12 = {
+  "class": "flex flex-row mb-5 space-x-5 text-gray-300"
+};
+var _hoisted_13 = {
+  "class": "flex flex-row items-center"
+};
+var _hoisted_14 = {
+  "class": "mr-2"
+};
+var _hoisted_15 = {
+  "class": "text-2xs"
+};
+var _hoisted_16 = {
+  "class": "flex flex-row items-center text-xs"
+};
+var _hoisted_17 = {
+  "class": "mr-2"
+};
+var _hoisted_18 = {
+  "class": "text-2xs"
+};
+var _hoisted_19 = {
+  "class": "flex flex-col space-y-3"
+};
+function render(_ctx, _cache, $props, $setup, $data, $options) {
+  var _component_LeftArrowIcon = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("LeftArrowIcon");
+
+  var _component_Link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Link");
+
+  var _component_BookIcon = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("BookIcon");
+
+  var _component_ClockIcon = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("ClockIcon");
+
+  var _component_LessonCardSmall = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("LessonCardSmall");
+
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
+    href: "/courses/".concat($props.currentLesson.course.slug),
+    "class": "flex flex-row items-center justify-between hover:text-blue-500"
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_LeftArrowIcon, {
+        width: "26"
+      }), _hoisted_3];
+    }),
+    _: 1
+    /* STABLE */
+
+  }, 8
+  /* PROPS */
+  , ["href"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
+    href: "/courses"
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [_hoisted_4];
+    }),
+    _: 1
+    /* STABLE */
+
+  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+    "class": "rounded-full w-14 h-14",
+    src: $props.currentLesson.instructor.profile_photo_url,
+    alt: "avatar"
+  }, null, 8
+  /* PROPS */
+  , _hoisted_8)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_11, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.currentLesson.course.name), 1
+  /* TEXT */
+  ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_BookIcon, {
+    fill: "fill-gray-300"
+  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_15, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.lessons.length) + " Lessons", 1
+  /* TEXT */
+  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_16, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_17, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_ClockIcon, {
+    fill: "fill-gray-300"
+  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_18, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.currentLesson.course.duration), 1
+  /* TEXT */
+  )])])])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_19, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($props.lessons, function (lesson, itemObjKey) {
+    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_LessonCardSmall, {
+      key: lesson.id,
+      lesson: lesson,
+      itemObjKey: itemObjKey,
+      currentLesson: $props.currentLesson
+    }, null, 8
+    /* PROPS */
+    , ["lesson", "itemObjKey", "currentLesson"]);
+  }), 128
+  /* KEYED_FRAGMENT */
+  ))])]);
+}
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/shared/Nav.vue?vue&type=template&id=7eb004d7":
 /*!*********************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/shared/Nav.vue?vue&type=template&id=7eb004d7 ***!
@@ -26441,6 +26692,43 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     height: $props.height,
     "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)($props.fill),
     viewBox: "0 0 8 10"
+  }, _hoisted_3, 10
+  /* CLASS, PROPS */
+  , _hoisted_1);
+}
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/shared/svg/TikCircleIcon.vue?vue&type=template&id=b9158730":
+/*!***********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/shared/svg/TikCircleIcon.vue?vue&type=template&id=b9158730 ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render)
+/* harmony export */ });
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
+
+var _hoisted_1 = ["width", "height"];
+
+var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("path", {
+  d: "M1412 734q0-28-18-46l-91-90q-19-19-45-19t-45 19l-408 407-226-226q-19-19-45-19t-45 19l-91 90q-18 18-18 46 0 27 18 45l362 362q19 19 45 19 27 0 46-19l543-543q18-18 18-45zm252 162q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z"
+}, null, -1
+/* HOISTED */
+);
+
+var _hoisted_3 = [_hoisted_2];
+function render(_ctx, _cache, $props, $setup, $data, $options) {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: $props.width,
+    height: $props.height,
+    "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)($props.fill),
+    stroke: "currentColor",
+    viewBox: "0 0 1792 1792"
   }, _hoisted_3, 10
   /* CLASS, PROPS */
   , _hoisted_1);
@@ -34459,6 +34747,118 @@ if (false) {}
 
 /***/ }),
 
+/***/ "./resources/js/shared/InstructtorCard.vue":
+/*!*************************************************!*\
+  !*** ./resources/js/shared/InstructtorCard.vue ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _InstructtorCard_vue_vue_type_template_id_a9d1497e__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./InstructtorCard.vue?vue&type=template&id=a9d1497e */ "./resources/js/shared/InstructtorCard.vue?vue&type=template&id=a9d1497e");
+/* harmony import */ var _InstructtorCard_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./InstructtorCard.vue?vue&type=script&lang=js */ "./resources/js/shared/InstructtorCard.vue?vue&type=script&lang=js");
+/* harmony import */ var _Users_aammlj2002_Desktop_education_website_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+
+
+
+
+;
+const __exports__ = /*#__PURE__*/(0,_Users_aammlj2002_Desktop_education_website_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_InstructtorCard_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_InstructtorCard_vue_vue_type_template_id_a9d1497e__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/shared/InstructtorCard.vue"]])
+/* hot reload */
+if (false) {}
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__exports__);
+
+/***/ }),
+
+/***/ "./resources/js/shared/LessonCardSmall.vue":
+/*!*************************************************!*\
+  !*** ./resources/js/shared/LessonCardSmall.vue ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _LessonCardSmall_vue_vue_type_template_id_101b2933__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./LessonCardSmall.vue?vue&type=template&id=101b2933 */ "./resources/js/shared/LessonCardSmall.vue?vue&type=template&id=101b2933");
+/* harmony import */ var _LessonCardSmall_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./LessonCardSmall.vue?vue&type=script&lang=js */ "./resources/js/shared/LessonCardSmall.vue?vue&type=script&lang=js");
+/* harmony import */ var _Users_aammlj2002_Desktop_education_website_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+
+
+
+
+;
+const __exports__ = /*#__PURE__*/(0,_Users_aammlj2002_Desktop_education_website_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_LessonCardSmall_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_LessonCardSmall_vue_vue_type_template_id_101b2933__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/shared/LessonCardSmall.vue"]])
+/* hot reload */
+if (false) {}
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__exports__);
+
+/***/ }),
+
+/***/ "./resources/js/shared/LessonDetailCard.vue":
+/*!**************************************************!*\
+  !*** ./resources/js/shared/LessonDetailCard.vue ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _LessonDetailCard_vue_vue_type_template_id_367c3956__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./LessonDetailCard.vue?vue&type=template&id=367c3956 */ "./resources/js/shared/LessonDetailCard.vue?vue&type=template&id=367c3956");
+/* harmony import */ var _LessonDetailCard_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./LessonDetailCard.vue?vue&type=script&lang=js */ "./resources/js/shared/LessonDetailCard.vue?vue&type=script&lang=js");
+/* harmony import */ var _Users_aammlj2002_Desktop_education_website_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+
+
+
+
+;
+const __exports__ = /*#__PURE__*/(0,_Users_aammlj2002_Desktop_education_website_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_LessonDetailCard_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_LessonDetailCard_vue_vue_type_template_id_367c3956__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/shared/LessonDetailCard.vue"]])
+/* hot reload */
+if (false) {}
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__exports__);
+
+/***/ }),
+
+/***/ "./resources/js/shared/LessonsLeftSideBar.vue":
+/*!****************************************************!*\
+  !*** ./resources/js/shared/LessonsLeftSideBar.vue ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _LessonsLeftSideBar_vue_vue_type_template_id_c1251114__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./LessonsLeftSideBar.vue?vue&type=template&id=c1251114 */ "./resources/js/shared/LessonsLeftSideBar.vue?vue&type=template&id=c1251114");
+/* harmony import */ var _LessonsLeftSideBar_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./LessonsLeftSideBar.vue?vue&type=script&lang=js */ "./resources/js/shared/LessonsLeftSideBar.vue?vue&type=script&lang=js");
+/* harmony import */ var _Users_aammlj2002_Desktop_education_website_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+
+
+
+
+;
+const __exports__ = /*#__PURE__*/(0,_Users_aammlj2002_Desktop_education_website_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_LessonsLeftSideBar_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_LessonsLeftSideBar_vue_vue_type_template_id_c1251114__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/shared/LessonsLeftSideBar.vue"]])
+/* hot reload */
+if (false) {}
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__exports__);
+
+/***/ }),
+
 /***/ "./resources/js/shared/Nav.vue":
 /*!*************************************!*\
   !*** ./resources/js/shared/Nav.vue ***!
@@ -34703,6 +35103,34 @@ __webpack_require__.r(__webpack_exports__);
 
 ;
 const __exports__ = /*#__PURE__*/(0,_Users_aammlj2002_Desktop_education_website_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_SaveIcon_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_SaveIcon_vue_vue_type_template_id_3a3cb446__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/shared/svg/SaveIcon.vue"]])
+/* hot reload */
+if (false) {}
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__exports__);
+
+/***/ }),
+
+/***/ "./resources/js/shared/svg/TikCircleIcon.vue":
+/*!***************************************************!*\
+  !*** ./resources/js/shared/svg/TikCircleIcon.vue ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _TikCircleIcon_vue_vue_type_template_id_b9158730__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./TikCircleIcon.vue?vue&type=template&id=b9158730 */ "./resources/js/shared/svg/TikCircleIcon.vue?vue&type=template&id=b9158730");
+/* harmony import */ var _TikCircleIcon_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./TikCircleIcon.vue?vue&type=script&lang=js */ "./resources/js/shared/svg/TikCircleIcon.vue?vue&type=script&lang=js");
+/* harmony import */ var _Users_aammlj2002_Desktop_education_website_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+
+
+
+
+;
+const __exports__ = /*#__PURE__*/(0,_Users_aammlj2002_Desktop_education_website_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_TikCircleIcon_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_TikCircleIcon_vue_vue_type_template_id_b9158730__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/shared/svg/TikCircleIcon.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -35363,6 +35791,70 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/shared/InstructtorCard.vue?vue&type=script&lang=js":
+/*!*************************************************************************!*\
+  !*** ./resources/js/shared/InstructtorCard.vue?vue&type=script&lang=js ***!
+  \*************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_InstructtorCard_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_InstructtorCard_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./InstructtorCard.vue?vue&type=script&lang=js */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/shared/InstructtorCard.vue?vue&type=script&lang=js");
+ 
+
+/***/ }),
+
+/***/ "./resources/js/shared/LessonCardSmall.vue?vue&type=script&lang=js":
+/*!*************************************************************************!*\
+  !*** ./resources/js/shared/LessonCardSmall.vue?vue&type=script&lang=js ***!
+  \*************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_LessonCardSmall_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_LessonCardSmall_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./LessonCardSmall.vue?vue&type=script&lang=js */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/shared/LessonCardSmall.vue?vue&type=script&lang=js");
+ 
+
+/***/ }),
+
+/***/ "./resources/js/shared/LessonDetailCard.vue?vue&type=script&lang=js":
+/*!**************************************************************************!*\
+  !*** ./resources/js/shared/LessonDetailCard.vue?vue&type=script&lang=js ***!
+  \**************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_LessonDetailCard_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_LessonDetailCard_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./LessonDetailCard.vue?vue&type=script&lang=js */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/shared/LessonDetailCard.vue?vue&type=script&lang=js");
+ 
+
+/***/ }),
+
+/***/ "./resources/js/shared/LessonsLeftSideBar.vue?vue&type=script&lang=js":
+/*!****************************************************************************!*\
+  !*** ./resources/js/shared/LessonsLeftSideBar.vue?vue&type=script&lang=js ***!
+  \****************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_LessonsLeftSideBar_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_LessonsLeftSideBar_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./LessonsLeftSideBar.vue?vue&type=script&lang=js */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/shared/LessonsLeftSideBar.vue?vue&type=script&lang=js");
+ 
+
+/***/ }),
+
 /***/ "./resources/js/shared/Nav.vue?vue&type=script&setup=true&lang=js":
 /*!************************************************************************!*\
   !*** ./resources/js/shared/Nav.vue?vue&type=script&setup=true&lang=js ***!
@@ -35503,6 +35995,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_SaveIcon_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__["default"])
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_SaveIcon_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./SaveIcon.vue?vue&type=script&lang=js */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/shared/svg/SaveIcon.vue?vue&type=script&lang=js");
+ 
+
+/***/ }),
+
+/***/ "./resources/js/shared/svg/TikCircleIcon.vue?vue&type=script&lang=js":
+/*!***************************************************************************!*\
+  !*** ./resources/js/shared/svg/TikCircleIcon.vue?vue&type=script&lang=js ***!
+  \***************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_TikCircleIcon_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_TikCircleIcon_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./TikCircleIcon.vue?vue&type=script&lang=js */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/shared/svg/TikCircleIcon.vue?vue&type=script&lang=js");
  
 
 /***/ }),
@@ -36259,6 +36767,70 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/shared/InstructtorCard.vue?vue&type=template&id=a9d1497e":
+/*!*******************************************************************************!*\
+  !*** ./resources/js/shared/InstructtorCard.vue?vue&type=template&id=a9d1497e ***!
+  \*******************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_InstructtorCard_vue_vue_type_template_id_a9d1497e__WEBPACK_IMPORTED_MODULE_0__.render)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_InstructtorCard_vue_vue_type_template_id_a9d1497e__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./InstructtorCard.vue?vue&type=template&id=a9d1497e */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/shared/InstructtorCard.vue?vue&type=template&id=a9d1497e");
+
+
+/***/ }),
+
+/***/ "./resources/js/shared/LessonCardSmall.vue?vue&type=template&id=101b2933":
+/*!*******************************************************************************!*\
+  !*** ./resources/js/shared/LessonCardSmall.vue?vue&type=template&id=101b2933 ***!
+  \*******************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_LessonCardSmall_vue_vue_type_template_id_101b2933__WEBPACK_IMPORTED_MODULE_0__.render)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_LessonCardSmall_vue_vue_type_template_id_101b2933__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./LessonCardSmall.vue?vue&type=template&id=101b2933 */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/shared/LessonCardSmall.vue?vue&type=template&id=101b2933");
+
+
+/***/ }),
+
+/***/ "./resources/js/shared/LessonDetailCard.vue?vue&type=template&id=367c3956":
+/*!********************************************************************************!*\
+  !*** ./resources/js/shared/LessonDetailCard.vue?vue&type=template&id=367c3956 ***!
+  \********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_LessonDetailCard_vue_vue_type_template_id_367c3956__WEBPACK_IMPORTED_MODULE_0__.render)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_LessonDetailCard_vue_vue_type_template_id_367c3956__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./LessonDetailCard.vue?vue&type=template&id=367c3956 */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/shared/LessonDetailCard.vue?vue&type=template&id=367c3956");
+
+
+/***/ }),
+
+/***/ "./resources/js/shared/LessonsLeftSideBar.vue?vue&type=template&id=c1251114":
+/*!**********************************************************************************!*\
+  !*** ./resources/js/shared/LessonsLeftSideBar.vue?vue&type=template&id=c1251114 ***!
+  \**********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_LessonsLeftSideBar_vue_vue_type_template_id_c1251114__WEBPACK_IMPORTED_MODULE_0__.render)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_LessonsLeftSideBar_vue_vue_type_template_id_c1251114__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./LessonsLeftSideBar.vue?vue&type=template&id=c1251114 */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/shared/LessonsLeftSideBar.vue?vue&type=template&id=c1251114");
+
+
+/***/ }),
+
 /***/ "./resources/js/shared/Nav.vue?vue&type=template&id=7eb004d7":
 /*!*******************************************************************!*\
   !*** ./resources/js/shared/Nav.vue?vue&type=template&id=7eb004d7 ***!
@@ -36399,6 +36971,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_SaveIcon_vue_vue_type_template_id_3a3cb446__WEBPACK_IMPORTED_MODULE_0__.render)
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_SaveIcon_vue_vue_type_template_id_3a3cb446__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./SaveIcon.vue?vue&type=template&id=3a3cb446 */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/shared/svg/SaveIcon.vue?vue&type=template&id=3a3cb446");
+
+
+/***/ }),
+
+/***/ "./resources/js/shared/svg/TikCircleIcon.vue?vue&type=template&id=b9158730":
+/*!*********************************************************************************!*\
+  !*** ./resources/js/shared/svg/TikCircleIcon.vue?vue&type=template&id=b9158730 ***!
+  \*********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_TikCircleIcon_vue_vue_type_template_id_b9158730__WEBPACK_IMPORTED_MODULE_0__.render)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_TikCircleIcon_vue_vue_type_template_id_b9158730__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./TikCircleIcon.vue?vue&type=template&id=b9158730 */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/shared/svg/TikCircleIcon.vue?vue&type=template&id=b9158730");
 
 
 /***/ }),
