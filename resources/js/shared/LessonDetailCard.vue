@@ -4,14 +4,22 @@
     >
         <div class="relative flex w-1/12 p-5">
             <div class="absolute transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2">
-                <div class="grid w-12 h-12 grid-cols-1 border border-gray-200 rounded-full">
-                    <div class="relative">
+                <div
+                    class="grid w-12 h-12 grid-cols-1 border border-gray-200 rounded-full hover:bg-gray-300 hover:bg-opacity-10"
+                >
+                    <Link
+                        as="button"
+                        :class="{'cursor-not-allowed' : !currentLesson.previous}"
+                        :disabled="currentLesson.previous ? false : true"
+                        :href="currentLesson.previous ?? null"
+                        class="relative"
+                    >
                         <div
                             class="absolute text-lg transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2"
                         >
                             <LeftArrowIcon width="40" fill="text-white" />
                         </div>
-                    </div>
+                    </Link>
                 </div>
             </div>
         </div>
@@ -82,14 +90,22 @@
         </div>
         <div class="relative flex w-1/12 p-5">
             <div class="absolute transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2">
-                <div class="grid w-12 h-12 grid-cols-1 border border-gray-200 rounded-full">
-                    <div class="relative">
+                <div
+                    class="grid w-12 h-12 grid-cols-1 border border-gray-200 rounded-full hover:bg-gray-300 hover:bg-opacity-10"
+                >
+                    <Link
+                        as="button"
+                        :class="{'cursor-not-allowed' : !currentLesson.next}"
+                        :disabled="currentLesson.next ? false : true"
+                        :href="currentLesson.next ?? null"
+                        class="relative"
+                    >
                         <div
                             class="absolute text-lg transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2"
                         >
                             <RightArrowIcon width="40" fill="text-white" />
                         </div>
-                    </div>
+                    </Link>
                 </div>
             </div>
         </div>
@@ -97,15 +113,16 @@
 </template>
 
 <script>
-import HeartIcon from './svg/HeartIcon'
-import SaveIcon from './svg/SaveIcon'
-import LeftArrowIcon from './svg/LeftArrowIcon'
-import RightArrowIcon from './svg/RightArrowIcon'
+import { Link } from "@inertiajs/inertia-vue3"
+import HeartIcon from '@/shared/svg/HeartIcon'
+import SaveIcon from '@/shared/svg/SaveIcon'
+import LeftArrowIcon from '@/shared/svg/LeftArrowIcon'
+import RightArrowIcon from '@/shared/svg/RightArrowIcon'
 export default {
     components: {
         HeartIcon,
         SaveIcon,
-        LeftArrowIcon, RightArrowIcon
+        LeftArrowIcon, RightArrowIcon, Link
     },
     props: { currentLesson: Object }
 }

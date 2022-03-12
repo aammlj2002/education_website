@@ -56,9 +56,15 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get("/courses/{course:slug}/lessons/{episode}", function (Course $course, $episode) {
         $lesson = $course->lessons[$episode-1]; //current lesson
         $lesson["topic"] = $lesson->topic->name; // current lesson topic
-        $lesson["episode"]= $episode;
-        $lesson["course"]=$lesson->course;
-        $lesson["instructor"]= $lesson->instructor;
+        $lesson["episode"]= $episode; // episode number
+        $lesson["course"]=$lesson->course; // related course
+        $lesson["instructor"]= $lesson->instructor; // lesson instructor
+        if ($episode > 1) {
+            $lesson["previous"]= "/courses/$course->slug/lessons/". $episode - 1;
+        } // previous lesson
+        if ($episode < $course->lessons->count()) {
+            $lesson["next"]= "/courses/$course->slug/lessons/". $episode + 1;
+        } // next lesson
         return inertia("Lesson", [
             "lessons"=>$course->lessons,
             "currentLesson"=>$lesson
