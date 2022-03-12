@@ -4,10 +4,27 @@
         <!-- Main section -->
         <main class="flex flex-col w-4/5 h-screen overflow-y-scroll">
             <!-- lesson video will be here -->
-            <img
-                src="https://www.unfe.org/wp-content/uploads/2019/04/SM-placeholder.png"
-                alt="palce holder"
-            />
+            <div class="w-full">
+                <video
+                    id="my-video"
+                    class="w-full video-js"
+                    controls
+                    preload="auto"
+                    poster="MY_VIDEO_POSTER.jpg"
+                    data-setup="{}"
+                >
+                    <source src="https://vjs.zencdn.net/v/oceans.mp4" type="video/mp4" />
+                    <source src="https://vjs.zencdn.net/v/oceans.webm" type="video/webm" />
+                    <p class="vjs-no-js">
+                        To view this video please enable JavaScript, and consider upgrading to a
+                        web browser that
+                        <a
+                            href="https://videojs.com/html5-video-support/"
+                            target="_blank"
+                        >supports HTML5 video</a>
+                    </p>
+                </video>
+            </div>
             <div class="px-8 pt-4">
                 <LessonDetailCard :currentLesson="currentLesson" />
 
@@ -68,6 +85,7 @@
 </template>
 
 <script>
+import videojs from "video.js"
 import TikCircleIcon from '../shared/svg/TikCircleIcon'
 import InstructtorCard from '../shared/InstructtorCard'
 import LessonDetailCard from '@/shared/LessonDetailCard'
@@ -79,7 +97,9 @@ export default {
         LessonDetailCard,
         LessonsLeftSideBar,
     },
-    props: { lessons: Object, currentLesson: Object },
-    layout: null
+    layout: null,
+    props: {
+        lessons: Object, currentLesson: Object
+    }
 }
 </script>
