@@ -24161,12 +24161,61 @@ var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementV
 var _hoisted_4 = {
   "class": "px-8 pt-4"
 };
+var _hoisted_5 = {
+  "class": "flex flex-row items-stretch justify-between gap-4 px-8"
+};
+var _hoisted_6 = {
+  "class": "w-2/5 p-4 bg-white rounded-lg shadow-sm"
+};
+
+var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h2", {
+  "class": "mb-3 text-lg font-bold capitalize"
+}, "Things you'll learn", -1
+/* HOISTED */
+);
+
+var _hoisted_8 = {
+  "class": "w-full space-y-3 text-sm text-gray-900"
+};
+
+var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<li class=\"flex flex-row items-center justify-start\"><div class=\"w-1/7\"><svg class=\"fill-blue-500\" xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" stroke=\"currentColor\" viewBox=\"0 0 1792 1792\"><path d=\"M1412 734q0-28-18-46l-91-90q-19-19-45-19t-45 19l-408 407-226-226q-19-19-45-19t-45 19l-91 90q-18 18-18 46 0 27 18 45l362 362q19 19 45 19 27 0 46-19l543-543q18-18 18-45zm252 162q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z\"></path></svg></div><p class=\"ml-3\">adipisicing elit. lorem8</p></li>", 1);
+
+var _hoisted_10 = {
+  "class": "flex flex-row items-center justify-start"
+};
+var _hoisted_11 = {
+  "class": "w-1/7"
+};
+
+var _hoisted_12 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+  "class": "ml-3"
+}, "adipisicing elit.", -1
+/* HOISTED */
+);
+
+var _hoisted_13 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<li class=\"flex flex-row items-center justify-start\"><div class=\"w-1/7\"><svg class=\"fill-blue-500\" xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" stroke=\"currentColor\" viewBox=\"0 0 1792 1792\"><path d=\"M1412 734q0-28-18-46l-91-90q-19-19-45-19t-45 19l-408 407-226-226q-19-19-45-19t-45 19l-91 90q-18 18-18 46 0 27 18 45l362 362q19 19 45 19 27 0 46-19l543-543q18-18 18-45zm252 162q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z\"></path></svg></div><p class=\"ml-3\">adipisicing elit.</p></li>", 1);
+
+var _hoisted_14 = {
+  "class": "w-3/5 p-4 bg-white rounded-lg shadow-sm"
+};
+
+var _hoisted_15 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h2", {
+  "class": "mb-3 text-lg font-bold capitalize"
+}, "about this lesson", -1
+/* HOISTED */
+);
+
+var _hoisted_16 = {
+  "class": "w-full text-sm text-gray-900"
+};
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_LessonsLeftSideBar = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("LessonsLeftSideBar");
 
   var _component_LessonDetailCard = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("LessonDetailCard");
 
   var _component_InstructtorCard = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("InstructtorCard");
+
+  var _component_TikCircleIcon = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("TikCircleIcon");
 
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_LessonsLeftSideBar, {
     lessons: $props.lessons,
@@ -24181,7 +24230,12 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     instructor: $props.currentLesson.instructor
   }, null, 8
   /* PROPS */
-  , ["instructor"])])])]);
+  , ["instructor"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [_hoisted_7, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", _hoisted_8, [_hoisted_9, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_TikCircleIcon, {
+    width: 20,
+    fill: "fill-blue-500"
+  })]), _hoisted_12]), _hoisted_13])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, [_hoisted_15, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_16, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.currentLesson.description), 1
+  /* TEXT */
+  )])])])])]);
 }
 
 /***/ }),
