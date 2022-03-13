@@ -31950,38 +31950,37 @@ var _hoisted_28 = {
 var _hoisted_29 = {
   "class": "flex flex-col my-auto contents-center gap-y-3"
 };
-
-var _hoisted_30 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
-  "class": "w-full px-4 py-2 bg-gray-300 border border-gray-300 border-opacity-50 rounded-full bg-opacity-10"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "text-sm font-bold text-white uppercase"
-}, "mark as complete")], -1
-/* HOISTED */
-);
-
+var _hoisted_30 = {
+  key: 0,
+  "class": "text-sm font-bold uppercase"
+};
 var _hoisted_31 = {
-  "class": "w-full px-4 py-2 bg-gray-300 border border-gray-300 border-opacity-50 rounded-full bg-opacity-10"
+  key: 1,
+  "class": "text-sm font-bold uppercase"
 };
 var _hoisted_32 = {
+  "class": "w-full px-4 py-2 text-white transition-all bg-gray-300 border border-gray-300 border-opacity-50 rounded-full fill-gray-100 bg-opacity-10 hover:bg-white hover:text-blue-500 hover:border-blue-500"
+};
+var _hoisted_33 = {
   "class": "flex flex-row items-center justify-center"
 };
 
-var _hoisted_33 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "text-sm font-bold text-white uppercase"
+var _hoisted_34 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "text-sm font-bold uppercase"
 }, "add to watchlist")], -1
 /* HOISTED */
 );
 
-var _hoisted_34 = {
+var _hoisted_35 = {
   "class": "relative flex w-1/12 p-5"
 };
-var _hoisted_35 = {
+var _hoisted_36 = {
   "class": "absolute transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2"
 };
-var _hoisted_36 = {
+var _hoisted_37 = {
   "class": "grid w-12 h-12 grid-cols-1 border border-gray-200 rounded-full hover:bg-gray-300 hover:bg-opacity-10"
 };
-var _hoisted_37 = {
+var _hoisted_38 = {
   "class": "absolute text-lg transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2"
 };
 function render(_ctx, _cache, $props, $setup, $data, $options) {
@@ -32029,11 +32028,17 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   /* TEXT */
   )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_23, [_hoisted_24, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_25, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.currentLesson.topic.name), 1
   /* TEXT */
-  )]), _hoisted_26])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_28, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_29, [_hoisted_30, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", _hoisted_31, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_32, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_SaveIcon, {
+  )]), _hoisted_26])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_28, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_29, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+    "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)([{
+      'bg-opacity-100 border-opacity-100 bg-white text-blue-500 border-blue-500': $props.currentLesson.complete,
+      'bg-opacity-10 border-opacity-30 bg-gray-300 text-white border-gray-300': !$props.currentLesson.complete
+    }, "w-full px-4 py-2 transition-all border rounded-full hover:bg-white hover:text-blue-500 hover:border-blue-500"])
+  }, [$props.currentLesson.complete ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_30, "lesson completed")) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_31, "mark as complete"))], 2
+  /* CLASS */
+  ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", _hoisted_32, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_33, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_SaveIcon, {
     "class": "mr-3",
-    width: "10",
-    fill: "fill-gray-100"
-  })]), _hoisted_33])])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_34, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_35, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_36, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
+    width: "10"
+  })]), _hoisted_34])])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_35, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_36, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_37, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
     as: "button",
     "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)([{
       'cursor-not-allowed': !$props.currentLesson.next
@@ -32042,7 +32047,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     href: (_$props$currentLesson2 = $props.currentLesson.next) !== null && _$props$currentLesson2 !== void 0 ? _$props$currentLesson2 : null
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_37, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_RightArrowIcon, {
+      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_38, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_RightArrowIcon, {
         width: "40",
         fill: "text-white"
       })])];

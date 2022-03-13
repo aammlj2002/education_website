@@ -69,19 +69,25 @@
             <div class="flex flex-col w-4/12 pl-5">
                 <div class="flex flex-col my-auto contents-center gap-y-3">
                     <button
-                        class="w-full px-4 py-2 bg-gray-300 border border-gray-300 border-opacity-50 rounded-full bg-opacity-10"
+                        :class="{'bg-opacity-100 border-opacity-100 bg-white text-blue-500 border-blue-500' : currentLesson.complete, 'bg-opacity-10 border-opacity-30 bg-gray-300 text-white border-gray-300' : !currentLesson.complete}"
+                        class="w-full px-4 py-2 transition-all border rounded-full hover:bg-white hover:text-blue-500 hover:border-blue-500"
                     >
-                        <div class="text-sm font-bold text-white uppercase">mark as complete</div>
+                        <template v-if="currentLesson.complete">
+                            <div class="text-sm font-bold uppercase">lesson completed</div>
+                        </template>
+                        <template v-else>
+                            <div class="text-sm font-bold uppercase">mark as complete</div>
+                        </template>
                     </button>
                     <button
-                        class="w-full px-4 py-2 bg-gray-300 border border-gray-300 border-opacity-50 rounded-full bg-opacity-10"
+                        class="w-full px-4 py-2 text-white transition-all bg-gray-300 border border-gray-300 border-opacity-50 rounded-full fill-gray-100 bg-opacity-10 hover:bg-white hover:text-blue-500 hover:border-blue-500"
                     >
                         <div class="flex flex-row items-center justify-center">
                             <div>
-                                <SaveIcon class="mr-3" width="10" fill="fill-gray-100" />
+                                <SaveIcon class="mr-3" width="10" />
                             </div>
                             <div>
-                                <div class="text-sm font-bold text-white uppercase">add to watchlist</div>
+                                <div class="text-sm font-bold uppercase">add to watchlist</div>
                             </div>
                         </div>
                     </button>
