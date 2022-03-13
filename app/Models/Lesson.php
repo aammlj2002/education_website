@@ -28,4 +28,12 @@ class Lesson extends Model
     {
         return $this->belongsToMany(user::class, "likes", "lesson_id", "user_id");
     }
+    public function unlike()
+    {
+        $this->likes()->detach(auth()->id());
+    }
+    public function like()
+    {
+        $this->likes()->attach(auth()->id());
+    }
 }

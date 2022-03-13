@@ -28,12 +28,15 @@
                 <div class="mb-8">
                     <div class="flex flex-row">
                         <div class="p-1">
-                            <button
-                                :class="{'bg-opacity-10  text-white bg-gray-100 ': currentLesson.like, 'text-gray-300 bg-gray-300  bg-opacity-10 border-opacity-50': !currentLesson.like}"
-                                class="px-1 border border-gray-300 border-opacity-100 rounded-3xl hover:text-white hover:bg-gray-100 hover:bg-opacity-10 hover:border-gray-100"
-                            >
-                                <HeartIcon width="30" />
-                            </button>
+                            <form @submit.prevent="like">
+                                <button
+                                    type="submit"
+                                    :class="{'bg-opacity-10  text-white bg-white border-white border-opacity-100': currentLesson.like, 'text-gray-300 bg-gray-300  bg-opacity-10 border-opacity-50': !currentLesson.like}"
+                                    class="px-1 border border-gray-300 rounded-3xl hover:text-white hover:bg-white hover:bg-opacity-10 hover:border-white"
+                                >
+                                    <HeartIcon width="30" />
+                                </button>
+                            </form>
                         </div>
                         <h3 class="ml-3 text-3xl font-bold text-white">{{currentLesson.title}}</h3>
                     </div>
@@ -125,13 +128,20 @@ import HeartIcon from '@/shared/svg/HeartIcon'
 import SaveIcon from '@/shared/svg/SaveIcon'
 import LeftArrowIcon from '@/shared/svg/LeftArrowIcon'
 import RightArrowIcon from '@/shared/svg/RightArrowIcon'
+import { Inertia } from '@inertiajs/inertia'
 export default {
     components: {
         HeartIcon,
         SaveIcon,
         LeftArrowIcon, RightArrowIcon, Link
     },
-    props: { currentLesson: Object }
+    props: { currentLesson: Object },
+    setup(props) {
+        let like = () => {
+            Inertia.post(`/lessons/${props.currentLesson.id}/like`);
+        }
+        return { like };
+    }
 }
 </script>
 

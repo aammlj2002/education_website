@@ -2,8 +2,10 @@
 
 use App\Models\Category;
 use App\Models\Course;
+use App\Models\Lesson;
 use App\Models\Topic;
 use App\Models\User;
+use Faker\Core\Blood;
 use Illuminate\Console\Application;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -73,9 +75,17 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
             "currentLesson"=>[
                 ...$lesson->toArray(),
                 "complete" => $lesson->completes->contains("id", auth()->user()->id), // is complete
-                "like" => $lesson->likes->contains("id", auth()->user()->id), // is liked
+                "like" => auth()->user()->isLiked($lesson), // is liked
             ]
         ]);
+    });
+    Route::post("/lessons/{lesson}/like", function (Lesson $lesson) {
+        if (auth()->user()->isLiked($lesson)) {
+            $lesson->unlike();
+        } else {
+            $lesson->like();
+        }
+        return back();
     });
     Route::get('/bits', function () {
         return inertia('Bits');
