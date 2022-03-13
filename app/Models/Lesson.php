@@ -24,6 +24,14 @@ class Lesson extends Model
     {
         return $this->belongsToMany(user::class, "completes", "lesson_id", "user_id");
     }
+    public function uncomplete()
+    {
+        $this->completes()->detach(auth()->id());
+    }
+    public function complete()
+    {
+        $this->completes()->attach(auth()->id());
+    }
     public function likes()
     {
         return $this->belongsToMany(user::class, "likes", "lesson_id", "user_id");

@@ -62,9 +62,13 @@ class User extends Authenticatable
     {
         return $this->hasMany(Lesson::class);
     }
-    public function completes()
+    public function completedLessons()
     {
-        return $this->belongsToMany(Lesson::class, "completes", "lesson_id", "user_id");
+        return $this->belongsToMany(Lesson::class, "completes", "user_id", "lesson_id");
+    }
+    public function isCompleted($lesson)
+    {
+        return auth()->user()->completedLessons && auth()->user()->completedLessons->contains("id", $lesson->id);
     }
     public function likedLessons()
     {

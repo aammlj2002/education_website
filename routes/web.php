@@ -74,7 +74,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
             "lessons"=>$course->lessons,
             "currentLesson"=>[
                 ...$lesson->toArray(),
-                "complete" => $lesson->completes->contains("id", auth()->user()->id), // is complete
+                "complete" => auth()->user()->isCompleted($lesson), // is complete
                 "like" => auth()->user()->isLiked($lesson), // is liked
             ]
         ]);
@@ -84,6 +84,14 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
             $lesson->unlike();
         } else {
             $lesson->like();
+        }
+        return back();
+    });
+    Route::post("/lessons/{lesson}/complete", function (Lesson $lesson) {
+        if (auth()->user()->isCompleted($lesson)) {
+            $lesson->uncomplete();
+        } else {
+            $lesson->complete();
         }
         return back();
     });

@@ -72,17 +72,19 @@
             </div>
             <div class="flex flex-col w-4/12 pl-5">
                 <div class="flex flex-col my-auto contents-center gap-y-3">
-                    <button
-                        :class="{'bg-opacity-100 border-opacity-100 bg-white text-blue-500 border-blue-500' : currentLesson.complete, 'bg-opacity-10 border-opacity-30 bg-gray-300 text-white border-gray-300' : !currentLesson.complete}"
-                        class="w-full px-4 py-2 transition-all border rounded-full hover:bg-white hover:text-blue-500 hover:border-blue-500"
-                    >
-                        <template v-if="currentLesson.complete">
-                            <div class="text-sm font-bold uppercase">lesson completed</div>
-                        </template>
-                        <template v-else>
-                            <div class="text-sm font-bold uppercase">mark as complete</div>
-                        </template>
-                    </button>
+                    <form @submit.prevent="complete">
+                        <button
+                            :class="{'bg-opacity-100 border-opacity-100 bg-white text-blue-500 border-blue-500' : currentLesson.complete, 'bg-opacity-10 border-opacity-30 bg-gray-300 text-white border-gray-300' : !currentLesson.complete}"
+                            class="w-full px-4 py-2 transition-all border rounded-full hover:bg-white hover:text-blue-500 hover:border-blue-500"
+                        >
+                            <template v-if="currentLesson.complete">
+                                <div class="text-sm font-bold uppercase">lesson completed</div>
+                            </template>
+                            <template v-else>
+                                <div class="text-sm font-bold uppercase">mark as complete</div>
+                            </template>
+                        </button>
+                    </form>
                     <button
                         class="w-full px-4 py-2 text-white transition-all bg-gray-300 border border-gray-300 border-opacity-50 rounded-full fill-gray-100 bg-opacity-10 hover:bg-white hover:text-blue-500 hover:border-blue-500"
                     >
@@ -139,8 +141,11 @@ export default {
     setup(props) {
         let like = () => {
             Inertia.post(`/lessons/${props.currentLesson.id}/like`);
+        };
+        let complete = () => {
+            Inertia.post(`/lessons/${props.currentLesson.id}/complete`);
         }
-        return { like };
+        return { like, complete };
     }
 }
 </script>

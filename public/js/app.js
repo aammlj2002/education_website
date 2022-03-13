@@ -27130,8 +27130,13 @@ __webpack_require__.r(__webpack_exports__);
       _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_5__.Inertia.post("/lessons/".concat(props.currentLesson.id, "/like"));
     };
 
+    var complete = function complete() {
+      _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_5__.Inertia.post("/lessons/".concat(props.currentLesson.id, "/complete"));
+    };
+
     return {
-      like: like
+      like: like,
+      complete: complete
     };
   }
 });
@@ -32049,13 +32054,19 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   /* TEXT */
   )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_22, [_hoisted_23, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_24, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.currentLesson.topic.name), 1
   /* TEXT */
-  )]), _hoisted_25])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_27, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_28, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+  )]), _hoisted_25])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_27, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_28, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("form", {
+    onSubmit: _cache[1] || (_cache[1] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function () {
+      return $setup.complete && $setup.complete.apply($setup, arguments);
+    }, ["prevent"]))
+  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
     "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)([{
       'bg-opacity-100 border-opacity-100 bg-white text-blue-500 border-blue-500': $props.currentLesson.complete,
       'bg-opacity-10 border-opacity-30 bg-gray-300 text-white border-gray-300': !$props.currentLesson.complete
     }, "w-full px-4 py-2 transition-all border rounded-full hover:bg-white hover:text-blue-500 hover:border-blue-500"])
   }, [$props.currentLesson.complete ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_29, "lesson completed")) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_30, "mark as complete"))], 2
   /* CLASS */
+  )], 32
+  /* HYDRATE_EVENTS */
   ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", _hoisted_31, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_32, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_SaveIcon, {
     "class": "mr-3",
     width: "10"
