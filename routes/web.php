@@ -3,7 +3,9 @@
 use App\Models\Category;
 use App\Models\Course;
 use App\Models\Topic;
+use App\Models\User;
 use Illuminate\Console\Application;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -59,6 +61,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
         $lesson["episode"]= $episode; // episode number
         $lesson["course"]=$lesson->course; // related course
         $lesson["instructor"]= $lesson->instructor; // lesson instructor
+        
         if ($episode > 1) {
             $lesson["previous"]= "/courses/$course->slug/lessons/". $episode - 1;
         } // previous lesson
@@ -67,7 +70,10 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
         } // next lesson
         return inertia("Lesson", [
             "lessons"=>$course->lessons,
-            "currentLesson"=>$lesson
+            "currentLesson"=>[
+                ...$lesson->toArray(),
+                "complete" => $lesson->complete->contains("id", auth()->user()->id), // is complete
+            ]
         ]);
     });
     Route::get('/bits', function () {
