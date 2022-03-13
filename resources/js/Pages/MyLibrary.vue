@@ -13,10 +13,8 @@
             >
                 <div class="flex flex-col justify-between w-full col-span-5">
                     <div class="mt-2 ml-5 mr-10">
-                        <h2 class="mb-2 text-4xl font-semibold text-white">Laravel</h2>
-                        <p
-                            class="mb-4 text-base text-white"
-                        >Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim eveniet error velit cumque nobis est temporibus reprehenderit rerum obcaecati tempore.</p>
+                        <h2 class="mb-2 text-4xl font-semibold text-white">{{lesson.course.name}}</h2>
+                        <p class="mb-4 text-base text-white">{{lesson.course.description}}</p>
                     </div>
                     <div class="flex flex-col justify-between mt-2 ml-5 mr-10">
                         <div class="flex flex-row mb-5 space-x-5">
@@ -39,7 +37,7 @@
                                         </g>
                                     </svg>
                                 </div>
-                                <div>3 Lessons</div>
+                                <div>{{lesson.course.lesson_count}} Lessons</div>
                             </div>
                             <div class="flex flex-row items-center text-xs text-white">
                                 <div class="mr-2">
@@ -61,7 +59,7 @@
                                         </g>
                                     </svg>
                                 </div>
-                                <div>4 minutes</div>
+                                <div>{{lesson.course.duration}}</div>
                             </div>
                             <div class="flex flex-row items-center text-xs text-white">
                                 <div class="mr-2">
@@ -80,7 +78,7 @@
                                         ></span>
                                     </div>
                                 </div>
-                                <div>advanced</div>
+                                <div>{{lesson.course.level}}</div>
                             </div>
                         </div>
                         <div class="flex flex-row">
@@ -134,7 +132,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="w-full col-span-3 p-6 bg-gray-900 rounded-3xl">
+                <div class="w-full col-span-3 p-6 bg-gray-800 rounded-3xl">
                     <div class="grid mb-8 text-white place-content-center">
                         <div
                             class="grid w-40 h-40 grid-cols-1 p-10 border-2 border-gray-400 rounded-full"
@@ -147,19 +145,14 @@
                         </div>
                     </div>
                     <div
-                        class="text-xs text-center text-gray-300 uppercase"
-                    >last episode in this course</div>
-                    <div
                         class="mb-3 text-xs text-center text-gray-300 capitalize"
-                    >added mar 1st, 2022</div>
-                    <div
-                        class="mb-2 text-lg text-center text-white capitalize"
-                    >Notification Tests and Fakes</div>
+                    >{{new Date(lesson.created_at).toISOString().slice(0, 10)}}</div>
+                    <div class="mb-2 text-lg text-center text-white capitalize">{{lesson.title}}</div>
                     <div
                         class="mb-5 text-xs text-center text-gray-300"
                     >Let's wrap up this mini-series by demonstrating how we might test our SendInvoice job.</div>
                     <button
-                        class="w-full px-4 py-2 mr-3 text-base text-white bg-gray-800 border border-transparent rounded-full hover:border-blue-400 hover:text-blue-400 hover:transition-all"
+                        class="w-full px-4 py-2 mr-3 text-base text-white bg-gray-700 border border-transparent rounded-full hover:border-blue-400 hover:text-blue-400 hover:transition-all"
                     >
                         <div class="flex flex-row items-center justify-center">
                             <div>

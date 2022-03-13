@@ -16,8 +16,15 @@ Route::get('/', function () {
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('/me', function () {
+        $lessons = auth()->user()->watchlist->map(function ($lesson) {
+            return [
+                ...$lesson->toArray(),
+                "topic"=>$lesson->topic,
+                "course"=>$lesson->course
+            ];
+        });
         return inertia('MyLibrary', [
-            "watchlistedLessons"=>auth()->user()->watchlist
+            "watchlistedLessons"=>$lessons
         ]);
     })->name('myLibrary');
     Route::get('/browse/all', function () {
