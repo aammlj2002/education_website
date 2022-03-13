@@ -4,10 +4,7 @@ use App\Models\Category;
 use App\Models\Course;
 use App\Models\Lesson;
 use App\Models\Topic;
-use App\Models\User;
-use Faker\Core\Blood;
 use Illuminate\Console\Application;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -74,8 +71,8 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
             "lessons"=>$course->lessons,
             "currentLesson"=>[
                 ...$lesson->toArray(),
-                "complete" => auth()->user()->isCompleted($lesson), // is complete
-                "like" => auth()->user()->isLiked($lesson), // is liked
+                "completed" => auth()->user()->isCompleted($lesson), // is complete
+                "liked" => auth()->user()->isLiked($lesson), // is liked
             ]
         ]);
     });

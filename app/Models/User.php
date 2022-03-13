@@ -78,4 +78,12 @@ class User extends Authenticatable
     {
         return auth()->user()->likedLessons && auth()->user()->likedLessons->contains("id", $lesson->id);
     }
+    public function watchList()
+    {
+        return $this->belongsToMany(Lesson::class, "watch_list", "user_id", "lesson_id");
+    }
+    public function isWatchListed($lesson)
+    {
+        return auth()->user()->watchList && auth()->user()->watchList->contains("id", $lesson->id);
+    }
 }

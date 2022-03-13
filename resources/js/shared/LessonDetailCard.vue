@@ -31,7 +31,7 @@
                             <form @submit.prevent="like">
                                 <button
                                     type="submit"
-                                    :class="{'bg-opacity-10  text-white bg-white border-white border-opacity-100': currentLesson.like, 'text-gray-300 bg-gray-300  bg-opacity-10 border-opacity-50': !currentLesson.like}"
+                                    :class="{'bg-opacity-10  text-white bg-white border-white border-opacity-100': currentLesson.liked, 'text-gray-300 bg-gray-300  bg-opacity-10 border-opacity-50': !currentLesson.liked}"
                                     class="px-1 border border-gray-300 rounded-3xl hover:text-white hover:bg-white hover:bg-opacity-10 hover:border-white"
                                 >
                                     <HeartIcon width="30" />
@@ -74,10 +74,10 @@
                 <div class="flex flex-col my-auto contents-center gap-y-3">
                     <form @submit.prevent="complete">
                         <button
-                            :class="{'bg-opacity-100 border-opacity-100 bg-white text-blue-500 border-blue-500' : currentLesson.complete, 'bg-opacity-10 border-opacity-30 bg-gray-300 text-white border-gray-300' : !currentLesson.complete}"
+                            :class="{'bg-opacity-100 border-opacity-100 bg-white text-blue-500 border-blue-500' : currentLesson.completed, 'bg-opacity-10 border-opacity-30 bg-gray-300 text-white border-gray-300' : !currentLesson.completed}"
                             class="w-full px-4 py-2 transition-all border rounded-full hover:bg-white hover:text-blue-500 hover:border-blue-500"
                         >
-                            <template v-if="currentLesson.complete">
+                            <template v-if="currentLesson.completed">
                                 <div class="text-sm font-bold uppercase">lesson completed</div>
                             </template>
                             <template v-else>

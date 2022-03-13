@@ -32035,8 +32035,8 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
     type: "submit",
     "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)([{
-      'bg-opacity-10  text-white bg-white border-white border-opacity-100': $props.currentLesson.like,
-      'text-gray-300 bg-gray-300  bg-opacity-10 border-opacity-50': !$props.currentLesson.like
+      'bg-opacity-10  text-white bg-white border-white border-opacity-100': $props.currentLesson.liked,
+      'text-gray-300 bg-gray-300  bg-opacity-10 border-opacity-50': !$props.currentLesson.liked
     }, "px-1 border border-gray-300 rounded-3xl hover:text-white hover:bg-white hover:bg-opacity-10 hover:border-white"])
   }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_HeartIcon, {
     width: "30"
@@ -32060,10 +32060,10 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     }, ["prevent"]))
   }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
     "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)([{
-      'bg-opacity-100 border-opacity-100 bg-white text-blue-500 border-blue-500': $props.currentLesson.complete,
-      'bg-opacity-10 border-opacity-30 bg-gray-300 text-white border-gray-300': !$props.currentLesson.complete
+      'bg-opacity-100 border-opacity-100 bg-white text-blue-500 border-blue-500': $props.currentLesson.completed,
+      'bg-opacity-10 border-opacity-30 bg-gray-300 text-white border-gray-300': !$props.currentLesson.completed
     }, "w-full px-4 py-2 transition-all border rounded-full hover:bg-white hover:text-blue-500 hover:border-blue-500"])
-  }, [$props.currentLesson.complete ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_29, "lesson completed")) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_30, "mark as complete"))], 2
+  }, [$props.currentLesson.completed ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_29, "lesson completed")) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_30, "mark as complete"))], 2
   /* CLASS */
   )], 32
   /* HYDRATE_EVENTS */
