@@ -12,7 +12,7 @@ return new class extends Migration {
      */
     public function up()
     {
-        Schema::create('lesson_user', function (Blueprint $table) {
+        Schema::create('complete', function (Blueprint $table) {
             $table->primary(["user_id", "lesson_id"]);
             $table->foreignId("user_id");
             $table->foreignId("lesson_id");

@@ -22,6 +22,6 @@ class Lesson extends Model
     }
     public function complete()
     {
-        return $this->belongsToMany(user::class);
+        return $this->belongsToMany(user::class, "complete", "lesson_id", "user_id");
     }
 }
