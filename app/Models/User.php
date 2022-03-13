@@ -62,8 +62,12 @@ class User extends Authenticatable
     {
         return $this->hasMany(Lesson::class);
     }
-    public function complete()
+    public function completes()
     {
-        return $this->belongsToMany(user::class, "complete", "lesson_id", "user_id");
+        return $this->belongsToMany(user::class, "completes", "lesson_id", "user_id");
+    }
+    public function likes()
+    {
+        return $this->belongsToMany(user::class, "likes", "lesson_id", "user_id");
     }
 }

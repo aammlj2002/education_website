@@ -72,7 +72,8 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
             "lessons"=>$course->lessons,
             "currentLesson"=>[
                 ...$lesson->toArray(),
-                "complete" => $lesson->complete->contains("id", auth()->user()->id), // is complete
+                "complete" => $lesson->completes->contains("id", auth()->user()->id), // is complete
+                "like" => $lesson->likes->contains("id", auth()->user()->id), // is liked
             ]
         ]);
     });

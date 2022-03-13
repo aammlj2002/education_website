@@ -29,9 +29,10 @@
                     <div class="flex flex-row">
                         <div class="p-1">
                             <button
-                                class="px-1 bg-gray-300 border border-gray-300 border-opacity-50 bg-opacity-10 rounded-3xl"
+                                :class="{'bg-opacity-10  text-white bg-gray-100 ': currentLesson.like, 'text-gray-300 bg-gray-300  bg-opacity-10 border-opacity-50': !currentLesson.like}"
+                                class="px-1 border border-gray-300 border-opacity-100 rounded-3xl hover:text-white hover:bg-gray-100 hover:bg-opacity-10 hover:border-gray-100"
                             >
-                                <HeartIcon width="30" fill="text-gray-300" />
+                                <HeartIcon width="30" />
                             </button>
                         </div>
                         <h3 class="ml-3 text-3xl font-bold text-white">{{currentLesson.title}}</h3>
