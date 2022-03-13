@@ -26380,7 +26380,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var _inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @inertiajs/inertia-vue3 */ "./node_modules/@inertiajs/inertia-vue3/dist/index.js");
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  components: {
+    Link: _inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_0__.Link
+  },
   layout: null
 });
 
@@ -30096,8 +30101,33 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
+var _hoisted_1 = {
+  "class": "max-w-screen-xl px-4 py-12 mx-auto bg-gray-800 sm:py-16 sm:px-6 lg:px-8 lg:py-20"
+};
+
+var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"max-w-4xl mx-auto text-center\"><h2 class=\"text-5xl font-extrabold leading-9 text-white\">welcome to our website</h2><p class=\"text-base leading-7 text-white mt-7\">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore rerum beatae earum laborum illo itaque laudantium accusantium deleniti labore et laboriosam quidem veritatis quibusdam fugit consequatur, ipsa adipisci minus nihil.</p></div><div class=\"mt-10 text-center sm:max-w-3xl sm:mx-auto sm:grid sm:grid-cols-3 sm:gap-8\"><div><p class=\"text-5xl font-extrabold leading-none text-white\">100+</p><p class=\"mt-2 text-base font-medium leading-6 text-white\">Lessons</p></div><div class=\"mt-10 sm:mt-0\"><p class=\"text-5xl font-extrabold leading-none text-white\">600hours+</p><p class=\"mt-2 text-base font-medium leading-6 text-white\">Run Time</p></div><div class=\"mt-10 sm:mt-0\"><p class=\"text-5xl font-extrabold leading-none text-white\">30+</p><p class=\"mt-2 text-base font-medium leading-6 text-white\">Instructors</p></div></div>", 2);
+
+var _hoisted_4 = {
+  "class": "flex p-4 mx-auto mt-16 w-52"
+};
+
+var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Browse Course");
+
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("h1", null, "Home");
+  var _component_Link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Link");
+
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("section", _hoisted_1, [_hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
+    href: "/courses",
+    as: "button",
+    "class": "w-full px-4 py-2 text-base font-semibold text-center text-white transition duration-200 ease-in rounded-lg shadow-md bg-gradient-to-r from-blue-500 to-blue-400 focus:outline-none focus:ring-2 focus:ring-offset-2"
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [_hoisted_5];
+    }),
+    _: 1
+    /* STABLE */
+
+  })])]);
 }
 
 /***/ }),
