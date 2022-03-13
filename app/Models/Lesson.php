@@ -44,16 +44,16 @@ class Lesson extends Model
     {
         $this->likes()->attach(auth()->id());
     }
-    public function watchList()
+    public function watchlist()
     {
-        return $this->belongsToMany(user::class, "likes", "lesson_id", "user_id");
+        return $this->belongsToMany(user::class, "watch_list", "lesson_id", "user_id");
     }
-    public function removeFromWatchList()
+    public function removeFromWatchlist()
     {
-        $this->watchList()->detach(auth()->id());
+        $this->watchlist()->detach(auth()->id());
     }
-    public function addToWatchList()
+    public function addToWatchlist()
     {
-        $this->watchList()->attach(auth()->id());
+        $this->watchlist()->attach(auth()->id());
     }
 }

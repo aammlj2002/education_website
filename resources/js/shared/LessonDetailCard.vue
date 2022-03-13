@@ -74,6 +74,7 @@
                 <div class="flex flex-col my-auto contents-center gap-y-3">
                     <form @submit.prevent="complete">
                         <button
+                            type="submit"
                             :class="{'bg-opacity-100 border-opacity-100 bg-white text-blue-500 border-blue-500' : currentLesson.completed, 'bg-opacity-10 border-opacity-30 bg-gray-300 text-white border-gray-300' : !currentLesson.completed}"
                             class="w-full px-4 py-2 transition-all border rounded-full hover:bg-white hover:text-blue-500 hover:border-blue-500"
                         >
@@ -85,18 +86,27 @@
                             </template>
                         </button>
                     </form>
-                    <button
-                        class="w-full px-4 py-2 text-white transition-all bg-gray-300 border border-gray-300 border-opacity-50 rounded-full fill-gray-100 bg-opacity-10 hover:bg-white hover:text-blue-500 hover:border-blue-500"
-                    >
-                        <div class="flex flex-row items-center justify-center">
-                            <div>
-                                <SaveIcon class="mr-3" width="10" />
+                    <form @submit.prevent="addToWatchList">
+                        <button
+                            type="submit"
+                            :class="{'bg-opacity-100 border-opacity-100 bg-white text-blue-500 border-blue-500' : currentLesson.watchlisted, 'bg-opacity-10 border-opacity-30 bg-gray-300 text-white border-gray-300' : !currentLesson.watchlisted}"
+                            class="w-full px-4 py-2 transition-all border rounded-full hover:bg-white hover:text-blue-500 hover:border-blue-500"
+                        >
+                            <div class="flex flex-row items-center justify-center">
+                                <div>
+                                    <SaveIcon class="mr-3" width="10" />
+                                </div>
+                                <div>
+                                    <template v-if="currentLesson.watchlisted">
+                                        <div class="text-sm font-bold uppercase">on watchlist</div>
+                                    </template>
+                                    <template v-else>
+                                        <div class="text-sm font-bold uppercase">add to watchlist</div>
+                                    </template>
+                                </div>
                             </div>
-                            <div>
-                                <div class="text-sm font-bold uppercase">add to watchlist</div>
-                            </div>
-                        </div>
-                    </button>
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -145,7 +155,10 @@ export default {
         let complete = () => {
             Inertia.post(`/lessons/${props.currentLesson.id}/complete`);
         }
-        return { like, complete };
+        let addToWatchList = () => {
+            Inertia.post(`/lessons/${props.currentLesson.id}/addToWatchList`);
+        }
+        return { like, complete, addToWatchList };
     }
 }
 </script>

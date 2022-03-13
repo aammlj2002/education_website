@@ -73,6 +73,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
                 ...$lesson->toArray(),
                 "completed" => auth()->user()->isCompleted($lesson), // is complete
                 "liked" => auth()->user()->isLiked($lesson), // is liked
+                "watchlisted" => auth()->user()->isWatchlisted($lesson), // is watchlisted
             ]
         ]);
     });
@@ -89,6 +90,14 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
             $lesson->uncomplete();
         } else {
             $lesson->complete();
+        }
+        return back();
+    });
+    Route::post("/lessons/{lesson}/addToWatchList", function (Lesson $lesson) {
+        if (auth()->user()->isWatchListed($lesson)) {
+            $lesson->removeFromWatchlist();
+        } else {
+            $lesson->addToWatchlist();
         }
         return back();
     });

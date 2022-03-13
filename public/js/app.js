@@ -27134,9 +27134,14 @@ __webpack_require__.r(__webpack_exports__);
       _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_5__.Inertia.post("/lessons/".concat(props.currentLesson.id, "/complete"));
     };
 
+    var addToWatchList = function addToWatchList() {
+      _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_5__.Inertia.post("/lessons/".concat(props.currentLesson.id, "/addToWatchList"));
+    };
+
     return {
       like: like,
-      complete: complete
+      complete: complete,
+      addToWatchList: addToWatchList
     };
   }
 });
@@ -31972,18 +31977,16 @@ var _hoisted_30 = {
   "class": "text-sm font-bold uppercase"
 };
 var _hoisted_31 = {
-  "class": "w-full px-4 py-2 text-white transition-all bg-gray-300 border border-gray-300 border-opacity-50 rounded-full fill-gray-100 bg-opacity-10 hover:bg-white hover:text-blue-500 hover:border-blue-500"
-};
-var _hoisted_32 = {
   "class": "flex flex-row items-center justify-center"
 };
-
-var _hoisted_33 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_32 = {
+  key: 0,
   "class": "text-sm font-bold uppercase"
-}, "add to watchlist")], -1
-/* HOISTED */
-);
-
+};
+var _hoisted_33 = {
+  key: 1,
+  "class": "text-sm font-bold uppercase"
+};
 var _hoisted_34 = {
   "class": "relative flex w-1/12 p-5"
 };
@@ -32059,6 +32062,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       return $setup.complete && $setup.complete.apply($setup, arguments);
     }, ["prevent"]))
   }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+    type: "submit",
     "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)([{
       'bg-opacity-100 border-opacity-100 bg-white text-blue-500 border-blue-500': $props.currentLesson.completed,
       'bg-opacity-10 border-opacity-30 bg-gray-300 text-white border-gray-300': !$props.currentLesson.completed
@@ -32067,10 +32071,24 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   /* CLASS */
   )], 32
   /* HYDRATE_EVENTS */
-  ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", _hoisted_31, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_32, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_SaveIcon, {
+  ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("form", {
+    onSubmit: _cache[2] || (_cache[2] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function () {
+      return $setup.addToWatchList && $setup.addToWatchList.apply($setup, arguments);
+    }, ["prevent"]))
+  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+    type: "submit",
+    "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)([{
+      'bg-opacity-100 border-opacity-100 bg-white text-blue-500 border-blue-500': $props.currentLesson.watchlisted,
+      'bg-opacity-10 border-opacity-30 bg-gray-300 text-white border-gray-300': !$props.currentLesson.watchlisted
+    }, "w-full px-4 py-2 transition-all border rounded-full hover:bg-white hover:text-blue-500 hover:border-blue-500"])
+  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_31, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_SaveIcon, {
     "class": "mr-3",
     width: "10"
-  })]), _hoisted_33])])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_34, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_35, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_36, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
+  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [$props.currentLesson.watchlisted ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_32, "on watchlist")) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_33, "add to watchlist"))])])], 2
+  /* CLASS */
+  )], 32
+  /* HYDRATE_EVENTS */
+  )])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_34, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_35, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_36, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
     as: "button",
     "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)([{
       'cursor-not-allowed': !$props.currentLesson.next
