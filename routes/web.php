@@ -73,7 +73,13 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
         $lesson["comments"]=$lesson->comments->map(function ($comment) {
             return [
                 ...$comment->toArray(),
-                "commenter"=>$comment->commenter
+                "commenter"=>$comment->commenter,
+                "replies"=>$comment->replies->map(function ($reply) {
+                    return[
+                       ...$reply->toArray(),
+                        "commenter"=> $reply->commenter
+                    ];
+                })
             ];
         }); // get comments
         
