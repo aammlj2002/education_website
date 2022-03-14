@@ -1,6 +1,6 @@
 <template>
     <Head title="Category"></Head>
-    <div class="mx-8">
+    <div class="pb-12 mx-8">
         <div class="mb-10 border-b-2 border-b-gray-300">
             <div class="flex items-center justify-center mt-10 ml-10 space-x-4">
                 <Link
