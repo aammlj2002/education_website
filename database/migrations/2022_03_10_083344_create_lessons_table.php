@@ -16,6 +16,7 @@ return new class extends Migration {
             $table->id();
             $table->string("title");
             $table->string("video");
+            $table->integer("episode");
             $table->text("description");
             $table->string("duration");
             $table->integer("progress");

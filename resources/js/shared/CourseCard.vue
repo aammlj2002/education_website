@@ -73,13 +73,11 @@
                     </div>
                 </div>
                 <div class="flex flex-row">
-                    <button
+                    <Link
+                        :href="`/courses/${course.slug}`"
                         class="w-full px-4 py-2 mr-3 text-black bg-gray-100 border border-transparent rounded-full hover:border-blue-400 hover:text-blue-400 hover:transition-all"
                     >
-                        <Link
-                            :href="`/courses/${course.slug}`"
-                            class="flex flex-row items-center justify-center"
-                        >
+                        <div class="flex flex-row items-center justify-center">
                             <div>
                                 <svg width="15" height="15" viewBox="0 0 15 15" class="mr-3">
                                     <g fill="none" fill-rule="evenodd">
@@ -94,8 +92,8 @@
                             <div>
                                 <div class="text-sm">Start Course</div>
                             </div>
-                        </Link>
-                    </button>
+                        </div>
+                    </Link>
                     <button
                         class="w-full px-4 py-2 mr-3 text-white bg-gray-700 border border-transparent rounded-full hover:border-blue-400 hover:text-blue-400 hover:transition-all"
                     >

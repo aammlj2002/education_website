@@ -140,7 +140,7 @@
                             <div class="relative">
                                 <div
                                     class="absolute text-5xl transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2"
-                                >10</div>
+                                >{{lesson.episode}}</div>
                             </div>
                         </div>
                     </div>
@@ -151,26 +151,28 @@
                     <div
                         class="mb-5 text-xs text-center text-gray-300"
                     >Let's wrap up this mini-series by demonstrating how we might test our SendInvoice job.</div>
-                    <button
-                        class="w-full px-4 py-2 mr-3 text-base text-white bg-gray-700 border border-transparent rounded-full hover:border-blue-400 hover:text-blue-400 hover:transition-all"
-                    >
-                        <div class="flex flex-row items-center justify-center">
-                            <div>
-                                <svg width="15" height="15" viewBox="0 0 15 15" class="mr-3">
-                                    <g fill="none" fill-rule="evenodd">
-                                        <path d="M-1-1h18v18H-1z" />
-                                        <path
-                                            class="fill-current"
-                                            d="M6 10.875L10.5 7.5 6 4.125v6.75zM7.5 0C3.36 0 0 3.36 0 7.5 0 11.64 3.36 15 7.5 15c4.14 0 7.5-3.36 7.5-7.5C15 3.36 11.64 0 7.5 0zm0 13.5c-3.307 0-6-2.693-6-6s2.693-6 6-6 6 2.693 6 6-2.693 6-6 6z"
-                                        />
-                                    </g>
-                                </svg>
+                    <Link :href="`/courses/${lesson.course.slug}/lessons/${lesson.episode}`">
+                        <button
+                            class="w-full px-4 py-2 mr-3 text-base text-white bg-gray-700 border border-transparent rounded-full hover:border-blue-400 hover:text-blue-400 hover:transition-all"
+                        >
+                            <div class="flex flex-row items-center justify-center">
+                                <div>
+                                    <svg width="15" height="15" viewBox="0 0 15 15" class="mr-3">
+                                        <g fill="none" fill-rule="evenodd">
+                                            <path d="M-1-1h18v18H-1z" />
+                                            <path
+                                                class="fill-current"
+                                                d="M6 10.875L10.5 7.5 6 4.125v6.75zM7.5 0C3.36 0 0 3.36 0 7.5 0 11.64 3.36 15 7.5 15c4.14 0 7.5-3.36 7.5-7.5C15 3.36 11.64 0 7.5 0zm0 13.5c-3.307 0-6-2.693-6-6s2.693-6 6-6 6 2.693 6 6-2.693 6-6 6z"
+                                            />
+                                        </g>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="capitalize">continue watching</div>
+                                </div>
                             </div>
-                            <div>
-                                <div class="uppercase">watch</div>
-                            </div>
-                        </div>
-                    </button>
+                        </button>
+                    </Link>
                 </div>
             </div>
         </div>
@@ -178,7 +180,9 @@
 </template>
 
 <script>
+import { Link } from "@inertiajs/inertia-vue3"
 export default {
-    props: { watchlistedLessons: Object }
+    props: { watchlistedLessons: Object },
+    components: { Link }
 }
 </script>

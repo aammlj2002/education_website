@@ -22,12 +22,26 @@
                 <p class="mt-2 text-base font-medium leading-6 text-white">Instructors</p>
             </div>
         </div>
-        <div class="flex p-4 mx-auto mt-16 w-52">
-            <Link
-                href="/courses"
-                as="button"
-                class="w-full px-4 py-2 text-base font-semibold text-center text-white transition duration-200 ease-in rounded-lg shadow-md bg-gradient-to-r from-blue-500 to-blue-400 focus:outline-none focus:ring-2 focus:ring-offset-2"
-            >Browse Course</Link>
+        <div class="flex justify-center w-full p-4 mx-auto mt-16">
+            <template v-if="user">
+                <Link
+                    href="/courses"
+                    as="button"
+                    class="px-4 py-2 text-base font-semibold text-center text-white transition duration-200 ease-in rounded-lg shadow-md w-98 bg-gradient-to-r from-blue-500 to-blue-400 focus:outline-none focus:ring-2 focus:ring-offset-2"
+                >Browse Courses</Link>
+            </template>
+            <template v-else>
+                <div class="flex flex-row gap-5">
+                    <Link
+                        class="px-3 py-2 text-sm font-semibold text-center text-white transition duration-200 ease-in rounded-lg shadow-md w-52 bg-gradient-to-r from-blue-500 to-blue-400 focus:outline-none focus:ring-2 focus:ring-offset-2"
+                        href="/login"
+                    >Sign in</Link>
+                    <Link
+                        class="px-3 py-2 text-sm font-semibold text-center text-black transition duration-200 ease-in bg-gray-100 rounded-lg shadow-md w-52 focus:outline-none focus:ring-2 focus:ring-offset-2"
+                        href="/register"
+                    >Sign up</Link>
+                </div>
+            </template>
         </div>
     </section>
     <Footer />
@@ -36,6 +50,7 @@
 import Footer from '../shared/Footer'
 import { Link } from "@inertiajs/inertia-vue3"
 export default {
+    props: { user: Object },
     components: {
         Footer, Link
     },

@@ -20,7 +20,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
             return [
                 ...$lesson->toArray(),
                 "topic"=>$lesson->topic,
-                "course"=>$lesson->course
+                "course"=>$lesson->course,
             ];
         });
         return inertia('MyLibrary', [
