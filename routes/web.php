@@ -69,6 +69,12 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
         $lesson["episode"]= $episode; // episode number
         $lesson["course"]=$lesson->course; // related course
         $lesson["instructor"]= $lesson->instructor; // lesson instructor
+        $lesson["comments"]=$lesson->comments->map(function ($comment) {
+            return [
+                ...$comment->toArray(),
+                "commenter"=>$comment->commenter
+            ];
+        }); // get comments
         
         if ($episode > 1) {
             $lesson["previous"]= "/courses/$course->slug/lessons/". $episode - 1;

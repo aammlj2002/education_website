@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-row items-stretch justify-between gap-4 px-8">
+    <div class="flex flex-row items-stretch justify-between gap-4 px-8 mb-6">
         <div class="w-2/5 p-4 bg-white rounded-lg shadow-sm">
             <h2 class="mb-3 text-lg font-bold capitalize">Things you'll learn</h2>
             <ul class="w-full space-y-3 text-sm text-gray-900">

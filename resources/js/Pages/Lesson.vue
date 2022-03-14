@@ -12,24 +12,24 @@
                 <LessonDescription :currentLesson="currentLesson" />
                 <!-- comment -->
                 <!-- component -->
-                <div
-                    class="flex flex-row gap-3 px-3 py-4 mx-8 mt-6 mb-12 bg-white rounded-md shadow-sm"
-                >
-                    <div class="flex content-center justify-center w-1/12">
-                        <img
-                            class="w-12 h-12 rounded-full"
-                            :src="currentLesson.instructor.profile_photo_url"
-                            alt="avatar"
-                        />
+                <template v-for="comment in currentLesson.comments" :key="comment.id">
+                    <div
+                        class="flex flex-row gap-3 px-3 py-4 mx-8 mb-6 bg-white rounded-md shadow-sm"
+                    >
+                        <div class="flex content-center justify-center w-1/12">
+                            <img
+                                class="w-12 h-12 rounded-full"
+                                :src="comment.commenter.profile_photo_url"
+                                alt="avatar"
+                            />
+                        </div>
+                        <div class="w-10/12">
+                            <h3 class="font-bold text-black font-base">{{comment.commenter.name}}</h3>
+                            <p class="text-gray-600 text-2xs">Posted 3 days ago</p>
+                            <p class="mt-6 text-gray-900">{{comment.body}}</p>
+                        </div>
                     </div>
-                    <div class="w-10/12">
-                        <h3 class="font-bold text-black font-base">John Doe</h3>
-                        <p class="text-gray-600 text-2xs">Posted 3 days ago</p>
-                        <p
-                            class="mt-6 text-gray-900"
-                        >Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui placeat harum molestias, ipsa voluptatem mollitia facilis laborum ad, nesciunt at adipisci provident autem perferendis? Velit possimus voluptatum reprehenderit architecto sit?</p>
-                    </div>
-                </div>
+                </template>
             </div>
         </main>
     </div>

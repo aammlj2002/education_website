@@ -30256,25 +30256,25 @@ var _hoisted_4 = {
   "class": "px-8 pt-4"
 };
 var _hoisted_5 = {
-  "class": "flex flex-row gap-3 px-3 py-4 mx-8 mt-6 mb-12 bg-white rounded-md shadow-sm"
-};
-var _hoisted_6 = {
   "class": "flex content-center justify-center w-1/12"
 };
-var _hoisted_7 = ["src"];
-
-var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_6 = ["src"];
+var _hoisted_7 = {
   "class": "w-10/12"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h3", {
+};
+var _hoisted_8 = {
   "class": "font-bold text-black font-base"
-}, "John Doe"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+};
+
+var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
   "class": "text-gray-600 text-2xs"
-}, "Posted 3 days ago"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
-  "class": "mt-6 text-gray-900"
-}, "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui placeat harum molestias, ipsa voluptatem mollitia facilis laborum ad, nesciunt at adipisci provident autem perferendis? Velit possimus voluptatum reprehenderit architecto sit?")], -1
+}, "Posted 3 days ago", -1
 /* HOISTED */
 );
 
+var _hoisted_10 = {
+  "class": "mt-6 text-gray-900"
+};
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_LessonsLeftSideBar = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("LessonsLeftSideBar");
 
@@ -30307,13 +30307,24 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     currentLesson: $props.currentLesson
   }, null, 8
   /* PROPS */
-  , ["currentLesson"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" comment "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" component "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
-    "class": "w-12 h-12 rounded-full",
-    src: $props.currentLesson.instructor.profile_photo_url,
-    alt: "avatar"
-  }, null, 8
-  /* PROPS */
-  , _hoisted_7)]), _hoisted_8])])])]);
+  , ["currentLesson"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" comment "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" component "), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($props.currentLesson.comments, function (comment) {
+    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
+      key: comment.id,
+      "class": "flex flex-row gap-3 px-3 py-4 mx-8 mb-6 bg-white rounded-md shadow-sm"
+    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+      "class": "w-12 h-12 rounded-full",
+      src: comment.commenter.profile_photo_url,
+      alt: "avatar"
+    }, null, 8
+    /* PROPS */
+    , _hoisted_6)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h3", _hoisted_8, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(comment.commenter.name), 1
+    /* TEXT */
+    ), _hoisted_9, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_10, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(comment.body), 1
+    /* TEXT */
+    )])]);
+  }), 128
+  /* KEYED_FRAGMENT */
+  ))])])]);
 }
 
 /***/ }),
@@ -32015,7 +32026,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
 var _hoisted_1 = {
-  "class": "flex flex-row items-stretch justify-between gap-4 px-8"
+  "class": "flex flex-row items-stretch justify-between gap-4 px-8 mb-6"
 };
 var _hoisted_2 = {
   "class": "w-2/5 p-4 bg-white rounded-lg shadow-sm"
