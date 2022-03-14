@@ -30255,6 +30255,26 @@ var _hoisted_3 = {
 var _hoisted_4 = {
   "class": "px-8 pt-4"
 };
+var _hoisted_5 = {
+  "class": "flex flex-row gap-3 px-3 py-4 mx-8 mt-6 bg-white rounded-md shadow-sm"
+};
+var _hoisted_6 = {
+  "class": "flex content-center justify-center w-1/12"
+};
+var _hoisted_7 = ["src"];
+
+var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "w-10/12"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h3", {
+  "class": "font-bold text-black font-base"
+}, "John Doe"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+  "class": "text-gray-600 text-2xs"
+}, "Posted 3 days ago"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+  "class": "mt-6 text-gray-900"
+}, "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui placeat harum molestias, ipsa voluptatem mollitia facilis laborum ad, nesciunt at adipisci provident autem perferendis? Velit possimus voluptatum reprehenderit architecto sit?")], -1
+/* HOISTED */
+);
+
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_LessonsLeftSideBar = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("LessonsLeftSideBar");
 
@@ -30287,7 +30307,13 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     currentLesson: $props.currentLesson
   }, null, 8
   /* PROPS */
-  , ["currentLesson"])])])]);
+  , ["currentLesson"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" comment "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" component "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+    "class": "w-12 h-12 rounded-full",
+    src: $props.currentLesson.instructor.profile_photo_url,
+    alt: "avatar"
+  }, null, 8
+  /* PROPS */
+  , _hoisted_7)]), _hoisted_8])])])]);
 }
 
 /***/ }),
