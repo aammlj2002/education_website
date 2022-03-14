@@ -46,11 +46,15 @@
                         </div>
                         <!-- watch button -->
                         <div>
-                            <button
-                                class="px-2 py-1 transition-all border rounded-full hover:bg-white hover:text-blue-500 hover:border-blue-500"
+                            <Link
+                                :href="`/courses/${lesson.course.slug}/lessons/${lesson.episode}`"
                             >
-                                <div class="font-bold uppercase text-2xs">watch</div>
-                            </button>
+                                <button
+                                    class="px-2 py-1 transition-all border rounded-full hover:bg-white hover:text-blue-500 hover:border-blue-500"
+                                >
+                                    <div class="font-bold uppercase text-2xs">watch</div>
+                                </button>
+                            </Link>
                         </div>
                     </div>
                 </div>
