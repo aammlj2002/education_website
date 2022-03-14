@@ -11,26 +11,33 @@
                 <InstructorCard :instructor="currentLesson.instructor" />
                 <LessonDescription :currentLesson="currentLesson" />
                 <!-- comment -->
-                <form @submit.prevent="sendComment">
-                    <div class="px-8 py-6 mx-8 mb-4 bg-white rounded-tr-xl rounded-tl-xl">
-                        <div class="pl-4 mb-6 text-lg font-bold text-black">Reply to post</div>
-                        <textarea
-                            class="flex-1 w-full px-4 py-2 text-base text-gray-700 placeholder-gray-400 bg-white border-gray-300 appearance-none resize-none focus:outline-dashed border-x-0 border-y focus:outline-none focus:ring-2 focus:ring-transparent focus:border-gray-400"
-                            placeholder="Enter your comment"
-                            rows="5"
-                            cols="40"
-                            v-model="form.body"
-                        ></textarea>
-                        <p v-if="errors.body" class="mb-4 text-sm text-red-600">{{errors.body}}</p>
-                        <div class="flex flex-row justify-end mt-8 space-x-4">
-                            <!-- <button
-                                class="px-12 py-2 text-base font-semibold text-center text-white transition duration-200 ease-in bg-gray-300 rounded-full shadow-sm hover:bg-gray-400"
-                            >Cancle</button>-->
-                            <button
-                                type="submit"
-                                class="px-12 py-2 text-base font-semibold text-center text-white transition duration-200 ease-in bg-blue-400 rounded-full shadow-sm hover:bg-blue-500"
-                            >Post</button>
-                        </div>
+                <div
+                    @click="toggleCommentForm"
+                    class="flex flex-row gap-3 px-8 py-6 mx-8 mb-6 bg-white border border-transparent rounded-md shadow-sm hover:border-blue-500 hover:border-dashed"
+                >Contribute to Discussion</div>
+                <form
+                    v-if="showCommentForm"
+                    @submit.prevent="sendComment"
+                    class="absolute bottom-0 w-7/12 px-8 py-6 bg-white shadow-xl rounded-tr-xl rounded-tl-xl"
+                >
+                    <div class="pl-4 mb-6 text-lg font-bold text-black">Reply to post</div>
+                    <textarea
+                        class="flex-1 w-full px-4 py-2 text-base text-gray-700 placeholder-gray-400 bg-white border-gray-300 appearance-none resize-none focus:outline-dashed border-x-0 border-y focus:outline-none focus:ring-2 focus:ring-transparent focus:border-gray-400"
+                        placeholder="Enter your comment"
+                        rows="5"
+                        cols="40"
+                        v-model="form.body"
+                    ></textarea>
+                    <p v-if="errors.body" class="mb-4 text-sm text-red-600">{{errors.body}}</p>
+                    <div class="flex flex-row justify-end mt-8 space-x-4">
+                        <div
+                            @click="toggleCommentForm"
+                            class="px-12 py-2 text-base font-semibold text-center text-white transition duration-200 ease-in bg-gray-300 rounded-full shadow-sm hover:bg-gray-400"
+                        >Cancle</div>
+                        <button
+                            type="submit"
+                            class="px-12 py-2 text-base font-semibold text-center text-white transition duration-200 ease-in bg-blue-400 rounded-full shadow-sm hover:bg-blue-500"
+                        >Post</button>
                     </div>
                 </form>
 
@@ -85,6 +92,7 @@ import InstructorCard from '@/shared/InstructorCard'
 import LessonDetailCard from '@/shared/LessonDetailCard'
 import LessonsLeftSideBar from '@/shared/LessonsLeftSideBar'
 import { Link, useForm } from "@inertiajs/inertia-vue3"
+import { ref } from '@vue/reactivity'
 export default {
     components: {
         LessonDescription,
@@ -100,6 +108,10 @@ export default {
         lessons: Object, currentLesson: Object, errors: Object
     },
     setup(props) {
+        let showCommentForm = ref(false);
+        let toggleCommentForm = () => {
+            showCommentForm.value = !showCommentForm.value;
+        }
         let form = useForm({
             body: ""
         });
@@ -107,7 +119,7 @@ export default {
             form.post(`/lessons/${props.currentLesson.id}/comment/create`);
             form.reset();
         }
-        return { sendComment, form };
+        return { sendComment, form, showCommentForm, toggleCommentForm };
     }
 }
 </script>
