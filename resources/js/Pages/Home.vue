@@ -30,11 +30,15 @@
             >Browse Course</Link>
         </div>
     </section>
+    <Footer />
 </template>
 <script>
+import Footer from '../shared/Footer'
 import { Link } from "@inertiajs/inertia-vue3"
 export default {
-    components: { Link },
+    components: {
+        Footer, Link
+    },
     layout: null
 }
 </script>
