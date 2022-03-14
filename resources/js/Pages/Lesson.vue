@@ -11,24 +11,28 @@
                 <InstructorCard :instructor="currentLesson.instructor" />
                 <LessonDescription :currentLesson="currentLesson" />
                 <!-- comment -->
-
-                <div class="p-6 mx-8 mb-6 bg-white rounded-md shadow-sm">
-                    <form @submit.prevent="sendComment">
-                        <label class="text-gray-700" for="name">
-                            <textarea
-                                class="flex-1 w-full px-4 py-2 text-base text-gray-700 placeholder-gray-400 bg-white border border-gray-300 rounded-lg appearance-none focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
-                                placeholder="Enter your comment"
-                                v-model="form.body"
-                                rows="5"
-                                cols="40"
-                            ></textarea>
-                        </label>
+                <form @submit.prevent="sendComment">
+                    <div class="px-8 py-6 mx-8 mb-4 bg-white rounded-tr-xl rounded-tl-xl">
+                        <div class="pl-4 mb-6 text-lg font-bold text-black">Reply to post</div>
+                        <textarea
+                            class="flex-1 w-full px-4 py-2 text-base text-gray-700 placeholder-gray-400 bg-white border-gray-300 appearance-none resize-none focus:outline-dashed border-x-0 border-y focus:outline-none focus:ring-2 focus:ring-transparent focus:border-gray-400"
+                            placeholder="Enter your comment"
+                            rows="5"
+                            cols="40"
+                            v-model="form.body"
+                        ></textarea>
                         <p v-if="errors.body" class="mb-4 text-sm text-red-600">{{errors.body}}</p>
-                        <button
-                            class="px-4 py-2 text-base font-semibold text-center text-white transition duration-200 ease-in bg-indigo-600 rounded-lg shadow-md hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2"
-                        >Send</button>
-                    </form>
-                </div>
+                        <div class="flex flex-row justify-end mt-8 space-x-4">
+                            <!-- <button
+                                class="px-12 py-2 text-base font-semibold text-center text-white transition duration-200 ease-in bg-gray-300 rounded-full shadow-sm hover:bg-gray-400"
+                            >Cancle</button>-->
+                            <button
+                                type="submit"
+                                class="px-12 py-2 text-base font-semibold text-center text-white transition duration-200 ease-in bg-blue-400 rounded-full shadow-sm hover:bg-blue-500"
+                            >Post</button>
+                        </div>
+                    </div>
+                </form>
 
                 <template v-for="comment in currentLesson.comments" :key="comment.id">
                     <div
