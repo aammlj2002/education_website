@@ -13,20 +13,21 @@
                 <!-- comment -->
 
                 <div class="p-6 mx-8 mb-6 bg-white rounded-md shadow-sm">
-                    <label class="text-gray-700" for="name">
-                        <textarea
-                            class="flex-1 w-full px-4 py-2 text-base text-gray-700 placeholder-gray-400 bg-white border border-gray-300 rounded-lg appearance-none focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
-                            id="comment"
-                            placeholder="Enter your comment"
-                            name="comment"
-                            rows="5"
-                            cols="40"
-                        ></textarea>
-                    </label>
-                    <button
-                        type="button"
-                        class="px-4 py-2 text-base font-semibold text-center text-white transition duration-200 ease-in bg-indigo-600 rounded-lg shadow-md hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2"
-                    >Send</button>
+                    <form @submit.prevent="sendComment">
+                        <label class="text-gray-700" for="name">
+                            <textarea
+                                class="flex-1 w-full px-4 py-2 text-base text-gray-700 placeholder-gray-400 bg-white border border-gray-300 rounded-lg appearance-none focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                                placeholder="Enter your comment"
+                                v-model="form.body"
+                                rows="5"
+                                cols="40"
+                            ></textarea>
+                        </label>
+                        <p v-if="errors.body" class="mb-4 text-sm text-red-600">{{errors.body}}</p>
+                        <button
+                            class="px-4 py-2 text-base font-semibold text-center text-white transition duration-200 ease-in bg-indigo-600 rounded-lg shadow-md hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2"
+                        >Send</button>
+                    </form>
                 </div>
 
                 <template v-for="comment in currentLesson.comments" :key="comment.id">
@@ -58,6 +59,7 @@ import LessonDescription from '@/shared/LessonDescription'
 import InstructorCard from '@/shared/InstructorCard'
 import LessonDetailCard from '@/shared/LessonDetailCard'
 import LessonsLeftSideBar from '@/shared/LessonsLeftSideBar'
+import { Link, useForm } from "@inertiajs/inertia-vue3"
 export default {
     components: {
         LessonDescription,
@@ -65,10 +67,22 @@ export default {
         InstructorCard,
         LessonDetailCard,
         LessonsLeftSideBar,
+        Link
     },
+
     layout: null,
     props: {
-        lessons: Object, currentLesson: Object
+        lessons: Object, currentLesson: Object, errors: Object
+    },
+    setup(props) {
+        let form = useForm({
+            body: ""
+        });
+        let sendComment = () => {
+            form.post(`/lessons/${props.currentLesson.id}/comment/create`);
+            form.reset();
+        }
+        return { sendComment, form };
     }
 }
 </script>

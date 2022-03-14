@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Category;
+use App\Models\Comment;
 use App\Models\Course;
 use App\Models\Lesson;
 use App\Models\Topic;
@@ -114,6 +115,16 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
         } else {
             $lesson->addToWatchlist();
         }
+        return back();
+    });
+    Route::post("/lessons/{lesson}/comment/create", function (Lesson $lesson) {
+        $formData = request()->validate([
+            "body"=>"required"
+        ]);
+        $lesson->comments()->create([
+            ...$formData,
+            "user_id"=>auth()->id()
+        ]);
         return back();
     });
     Route::get('/bits', function () {
