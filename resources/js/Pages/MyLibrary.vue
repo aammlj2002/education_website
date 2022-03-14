@@ -17,15 +17,10 @@
 
 <script>
 import WatchlistLessonCard from '../shared/WatchlistLessonCard'
-import BookIcon from '../shared/svg/BookIcon'
-import ClockIcon from '../shared/svg/ClockIcon'
-import { Link } from "@inertiajs/inertia-vue3"
 export default {
     props: { watchlistedLessons: Object },
     components: {
         WatchlistLessonCard,
-        BookIcon,
-        ClockIcon, Link
     }
 }
 </script>

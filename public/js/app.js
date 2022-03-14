@@ -26450,22 +26450,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _shared_WatchlistLessonCard__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../shared/WatchlistLessonCard */ "./resources/js/shared/WatchlistLessonCard.vue");
-/* harmony import */ var _shared_svg_BookIcon__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../shared/svg/BookIcon */ "./resources/js/shared/svg/BookIcon.vue");
-/* harmony import */ var _shared_svg_ClockIcon__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../shared/svg/ClockIcon */ "./resources/js/shared/svg/ClockIcon.vue");
-/* harmony import */ var _inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @inertiajs/inertia-vue3 */ "./node_modules/@inertiajs/inertia-vue3/dist/index.js");
-
-
-
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: {
     watchlistedLessons: Object
   },
   components: {
-    WatchlistLessonCard: _shared_WatchlistLessonCard__WEBPACK_IMPORTED_MODULE_0__["default"],
-    BookIcon: _shared_svg_BookIcon__WEBPACK_IMPORTED_MODULE_1__["default"],
-    ClockIcon: _shared_svg_ClockIcon__WEBPACK_IMPORTED_MODULE_2__["default"],
-    Link: _inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_3__.Link
+    WatchlistLessonCard: _shared_WatchlistLessonCard__WEBPACK_IMPORTED_MODULE_0__["default"]
   }
 });
 
@@ -27344,7 +27335,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var _inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @inertiajs/inertia-vue3 */ "./node_modules/@inertiajs/inertia-vue3/dist/index.js");
+/* harmony import */ var _svg_ClockIcon__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./svg/ClockIcon */ "./resources/js/shared/svg/ClockIcon.vue");
+/* harmony import */ var _svg_BookIcon__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./svg/BookIcon */ "./resources/js/shared/svg/BookIcon.vue");
+
+
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  components: {
+    ClockIcon: _svg_ClockIcon__WEBPACK_IMPORTED_MODULE_1__["default"],
+    BookIcon: _svg_BookIcon__WEBPACK_IMPORTED_MODULE_2__["default"],
+    Link: _inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_0__.Link
+  },
   props: {
     lesson: Object
   }
@@ -32804,7 +32806,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   /* TEXT */
   )])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" lesson number "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_BookIcon, {
     fill: "fill-gray-500"
-  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.lesson.episode), 1
+  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_12, "Lessons " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.lesson.episode), 1
   /* TEXT */
   )])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" duration "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_15, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_ClockIcon, {
     fill: "fill-gray-500"

@@ -22,7 +22,7 @@
                     <div class="mr-1">
                         <BookIcon fill="fill-gray-500" />
                     </div>
-                    <div class="text-2xs">{{lesson.episode}}</div>
+                    <div class="text-2xs">Lessons {{lesson.episode}}</div>
                 </div>
             </div>
             <!-- duration -->
@@ -49,7 +49,13 @@
 </template>
 
 <script>
+import { Link } from "@inertiajs/inertia-vue3"
+import ClockIcon from './svg/ClockIcon'
+import BookIcon from './svg/BookIcon'
 export default {
+    components: {
+        ClockIcon, BookIcon, Link
+    },
     props: { lesson: Object }
 }
 </script>
