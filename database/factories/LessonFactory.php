@@ -20,7 +20,7 @@ class LessonFactory extends Factory
             "title"=>$this->faker->word(),
             "video"=>"https://vjs.zencdn.net/v/oceans.mp4",
             "description"=>$this->faker->paragraph(),
-            "duration"=>$this->faker->randomNumber(1, 100),
+            "duration"=>$this->faker->randomNumber(1, 100)." minutes",
             "progress"=>$this->faker->randomNumber(1, 100),
         ];
     }
