@@ -56,4 +56,8 @@ class Lesson extends Model
     {
         $this->watchlist()->attach(auth()->id());
     }
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
+    }
 }

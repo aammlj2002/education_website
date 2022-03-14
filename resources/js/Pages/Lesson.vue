@@ -12,7 +12,9 @@
                 <LessonDescription :currentLesson="currentLesson" />
                 <!-- comment -->
                 <!-- component -->
-                <div class="flex flex-row gap-3 px-3 py-4 mx-8 mt-6 bg-white rounded-md shadow-sm">
+                <div
+                    class="flex flex-row gap-3 px-3 py-4 mx-8 mt-6 mb-12 bg-white rounded-md shadow-sm"
+                >
                     <div class="flex content-center justify-center w-1/12">
                         <img
                             class="w-12 h-12 rounded-full"

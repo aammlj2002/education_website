@@ -30256,7 +30256,7 @@ var _hoisted_4 = {
   "class": "px-8 pt-4"
 };
 var _hoisted_5 = {
-  "class": "flex flex-row gap-3 px-3 py-4 mx-8 mt-6 bg-white rounded-md shadow-sm"
+  "class": "flex flex-row gap-3 px-3 py-4 mx-8 mt-6 mb-12 bg-white rounded-md shadow-sm"
 };
 var _hoisted_6 = {
   "class": "flex content-center justify-center w-1/12"
