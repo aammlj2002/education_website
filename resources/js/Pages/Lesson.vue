@@ -32,7 +32,32 @@
                     <div class="flex flex-row justify-end mt-8 space-x-4">
                         <div
                             @click="toggleCommentForm"
-                            class="px-12 py-2 text-base font-semibold text-center text-white transition duration-200 ease-in bg-gray-300 rounded-full shadow-sm hover:bg-gray-400"
+                            class="px-12 py-2 text-base font-semibold text-center text-white transition duration-200 ease-in bg-gray-300 rounded-full shadow-sm cursor-pointer hover:bg-gray-400"
+                        >Cancle</div>
+                        <button
+                            type="submit"
+                            class="px-12 py-2 text-base font-semibold text-center text-white transition duration-200 ease-in bg-blue-400 rounded-full shadow-sm hover:bg-blue-500"
+                        >Post</button>
+                    </div>
+                </form>
+                <form
+                    v-if="showReplyForm"
+                    @submit.prevent="replyComment"
+                    class="absolute bottom-0 w-7/12 px-8 py-6 bg-white shadow-xl rounded-tr-xl rounded-tl-xl"
+                >
+                    <div class="pl-4 mb-6 text-lg font-bold text-black">Reply to JohnDoe</div>
+                    <textarea
+                        class="flex-1 w-full px-4 py-2 text-base text-gray-700 placeholder-gray-400 bg-white border-gray-300 appearance-none resize-none focus:outline-dashed border-x-0 border-y focus:outline-none focus:ring-2 focus:ring-transparent focus:border-gray-400"
+                        placeholder="Enter your comment"
+                        rows="5"
+                        cols="40"
+                        v-model="form.body"
+                    ></textarea>
+                    <p v-if="errors.body" class="mb-4 text-sm text-red-600">{{errors.body}}</p>
+                    <div class="flex flex-row justify-end mt-8 space-x-4">
+                        <div
+                            @click="toggleReplyForm"
+                            class="px-12 py-2 text-base font-semibold text-center text-white transition duration-200 ease-in bg-gray-300 rounded-full shadow-sm cursor-pointer hover:bg-gray-400"
                         >Cancle</div>
                         <button
                             type="submit"
@@ -55,7 +80,11 @@
                         <div class="w-10/12">
                             <h3 class="font-bold text-black font-base">{{comment.commenter.name}}</h3>
                             <p class="text-gray-600 text-2xs">Posted 3 days ago</p>
-                            <p class="mt-6 text-gray-900">{{comment.body}}</p>
+                            <p class="mt-6 mb-4 text-gray-900">{{comment.body}}</p>
+                            <button
+                                @click="toggleReplyForm(comment.id)"
+                                class="px-4 py-1 text-gray-600 border border-gray-200 rounded-lg hover:text-gray-700 hover:bg-opacity-10 hover:border-gray-300"
+                            >Reply</button>
                         </div>
                     </div>
                     <!-- reply -->
@@ -86,6 +115,7 @@
 </template>
 
 <script>
+import HeartIcon from '../shared/svg/HeartIcon'
 import Video from '@/shared/Video'
 import LessonDescription from '@/shared/LessonDescription'
 import InstructorCard from '@/shared/InstructorCard'
@@ -95,6 +125,7 @@ import { Link, useForm } from "@inertiajs/inertia-vue3"
 import { ref } from '@vue/reactivity'
 export default {
     components: {
+        HeartIcon,
         LessonDescription,
         Video,
         InstructorCard,
@@ -102,7 +133,6 @@ export default {
         LessonsLeftSideBar,
         Link
     },
-
     layout: null,
     props: {
         lessons: Object, currentLesson: Object, errors: Object
@@ -111,15 +141,33 @@ export default {
         let showCommentForm = ref(false);
         let toggleCommentForm = () => {
             showCommentForm.value = !showCommentForm.value;
+        };
+        let showReplyForm = ref(false);
+        let toggleReplyForm = (parent_id) => {
+            showReplyForm.value = !showReplyForm.value;
+            if (showReplyForm.value == true) {
+                form.parent_id = parent_id;
+            }
+            else {
+                form.parent_id = null;
+            }
+            console.log(form.parent_id);
         }
         let form = useForm({
-            body: ""
+            body: "",
+            parent_id: null
         });
         let sendComment = () => {
             form.post(`/lessons/${props.currentLesson.id}/comment/create`);
             form.reset();
+            showCommentForm.value = false;
+        };
+        let replyComment = () => {
+            form.post(`/lessons/${props.currentLesson.id}/comments/${form.parent_id}/reply`);
+            form.reset();
+            showReplyForm.value = false;
         }
-        return { sendComment, form, showCommentForm, toggleCommentForm };
+        return { sendComment, form, showCommentForm, toggleCommentForm, toggleReplyForm, replyComment, showReplyForm };
     }
 }
 </script>

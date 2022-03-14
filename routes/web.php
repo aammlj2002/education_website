@@ -7,6 +7,7 @@ use App\Models\Lesson;
 use App\Models\Topic;
 use Illuminate\Console\Application;
 use Illuminate\Support\Facades\Route;
+use Symfony\Component\Mime\Part\Multipart\FormDataPart;
 
 Route::get('/', function () {
     return inertia('Home', [
@@ -125,7 +126,18 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     });
     Route::post("/lessons/{lesson}/comment/create", function (Lesson $lesson) {
         $formData = request()->validate([
-            "body"=>"required"
+            "body"=>"required",
+        ]);
+        $lesson->comments()->create([
+            ...$formData,
+            "user_id"=>auth()->id()
+        ]);
+        return back();
+    });
+    Route::post("/lessons/{lesson}/comments/{comment}/reply", function (Lesson $lesson, Comment $comment) {
+        $formData = request()->validate([
+            "body"=>"required",
+            "parent_id"=>"required|integer"
         ]);
         $lesson->comments()->create([
             ...$formData,
