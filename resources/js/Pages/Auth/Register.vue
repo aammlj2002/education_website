@@ -34,6 +34,17 @@
             </div>
 
             <div class="mt-4">
+                <jet-label for="username" value="Username" />
+                <jet-input
+                    id="username"
+                    type="text"
+                    class="block w-full mt-1"
+                    v-model="form.username"
+                    required
+                />
+            </div>
+
+            <div class="mt-4">
                 <jet-label for="password" value="Password" />
                 <jet-input
                     id="password"
@@ -124,6 +135,7 @@ export default defineComponent({
             form: this.$inertia.form({
                 name: '',
                 email: '',
+                username: '',
                 password: '',
                 password_confirmation: '',
                 terms: false,
