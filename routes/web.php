@@ -7,7 +7,6 @@ use App\Models\Lesson;
 use App\Models\Topic;
 use Illuminate\Console\Application;
 use Illuminate\Support\Facades\Route;
-use Symfony\Component\Mime\Part\Multipart\FormDataPart;
 
 Route::get('/', function () {
     return inertia('Home', [

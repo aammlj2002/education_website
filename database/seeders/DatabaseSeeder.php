@@ -19,7 +19,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $mgmg = User::factory()->create(["name"=>"Mg Mg", "email"=>"mgmg@gmail.com", "password"=>bcrypt("00000000")]);
+        $johndoe = User::factory()->create(["name"=>"John Doe", "email"=>"johndoe@gmail.com", "username"=>"johndoe123", "password"=>bcrypt("00000000")]);
         
         // categories
         $frameworks = Category::factory()->create(["name"=>"frameworks", "slug"=>"frameworks"]);
@@ -77,9 +77,9 @@ class DatabaseSeeder extends Seeder
         Course::factory()->create(["name"=>"Laravel Blade Cookbook", "slug"=>"laravel-blade-cookbook", "topic_id"=>$blade->id, "category_id"=>$blade->category->id]);
         Course::factory()->create(["name"=>"Start PHPUnit", "slug"=>"start-phpunit", "topic_id"=>$phpunit->id, "category_id"=>$phpunit->category->id]);
 
-        Lesson::factory()->create(["topic_id"=>$laravel->id, "course_id"=>$laravel8->id, "user_id"=>$mgmg->id, "episode"=>1]);
-        Lesson::factory()->create(["topic_id"=>$laravel->id, "course_id"=>$laravel8->id, "user_id"=>$mgmg->id, "episode"=>2]);
-        Lesson::factory()->create(["topic_id"=>$laravel->id, "course_id"=>$laravel8->id, "user_id"=>$mgmg->id, "episode"=>3]);
-        Lesson::factory()->create(["topic_id"=>$laravel->id, "course_id"=>$laravel8->id, "user_id"=>$mgmg->id, "episode"=>4]);
+        Lesson::factory()->create(["topic_id"=>$laravel->id, "course_id"=>$laravel8->id, "user_id"=>$johndoe->id, "episode"=>1]);
+        Lesson::factory()->create(["topic_id"=>$laravel->id, "course_id"=>$laravel8->id, "user_id"=>$johndoe->id, "episode"=>2]);
+        Lesson::factory()->create(["topic_id"=>$laravel->id, "course_id"=>$laravel8->id, "user_id"=>$johndoe->id, "episode"=>3]);
+        Lesson::factory()->create(["topic_id"=>$laravel->id, "course_id"=>$laravel8->id, "user_id"=>$johndoe->id, "episode"=>4]);
     }
 }
