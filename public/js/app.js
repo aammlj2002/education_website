@@ -27061,6 +27061,24 @@ __webpack_require__.r(__webpack_exports__);
       parent_id: null
     });
 
+    var openReplyForm = function openReplyForm(comment) {
+      showReplyForm.value = true;
+      form.parent_id = comment.id;
+      form.body = "@".concat(comment.commenter.username, " ");
+    };
+
+    var openRereplyForm = function openRereplyForm(replyComment, parent_id) {
+      showReplyForm.value = true;
+      form.parent_id = parent_id;
+      form.body = "@".concat(replyComment.commenter.username, " ");
+    };
+
+    var closeCommentForm = function closeCommentForm() {
+      showReplyForm.value = false;
+      showCommentForm.value = false;
+      form.reset();
+    };
+
     var sendComment = function sendComment() {
       form.post("/lessons/".concat(props.currentLesson.id, "/comment/create"));
       form.reset();
@@ -27075,6 +27093,9 @@ __webpack_require__.r(__webpack_exports__);
 
     return {
       sendComment: sendComment,
+      openRereplyForm: openRereplyForm,
+      openReplyForm: openReplyForm,
+      closeCommentForm: closeCommentForm,
       form: form,
       showCommentForm: showCommentForm,
       replyComment: replyComment,
@@ -31845,13 +31866,14 @@ var _hoisted_20 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 var _hoisted_21 = {
   "class": "mt-6 text-gray-900"
 };
+var _hoisted_22 = ["onClick"];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [_hoisted_1, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     onClick: _cache[0] || (_cache[0] = function ($event) {
       return $setup.showCommentForm = true;
     }),
     "class": "flex flex-row gap-3 px-8 py-6 mx-8 mb-6 bg-white border border-transparent rounded-md shadow-sm hover:border-blue-500 hover:border-dashed"
-  }, "Contribute to Discussion"), $setup.showCommentForm ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("form", {
+  }, "Contribute to Discussion"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" comment form "), $setup.showCommentForm ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("form", {
     key: 0,
     onSubmit: _cache[3] || (_cache[3] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function () {
       return $setup.sendComment && $setup.sendComment.apply($setup, arguments);
@@ -31868,9 +31890,8 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   }, null, 512
   /* NEED_PATCH */
   ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.form.body]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-    onClick: _cache[2] || (_cache[2] = function ($event) {
-      $setup.showCommentForm = false;
-      $setup.form.reset();
+    onClick: _cache[2] || (_cache[2] = function () {
+      return $setup.closeCommentForm && $setup.closeCommentForm.apply($setup, arguments);
     }),
     "class": "px-12 py-2 text-base font-semibold text-center text-white transition duration-200 ease-in bg-gray-300 rounded-full shadow-sm cursor-pointer hover:bg-gray-400"
   }, "Cancle"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
@@ -31883,7 +31904,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   /* CLASS, PROPS */
   , _hoisted_4)])], 32
   /* HYDRATE_EVENTS */
-  )) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $setup.showReplyForm ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("form", {
+  )) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" reply form "), $setup.showReplyForm ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("form", {
     key: 1,
     onSubmit: _cache[6] || (_cache[6] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function () {
       return $setup.replyComment && $setup.replyComment.apply($setup, arguments);
@@ -31894,15 +31915,15 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     placeholder: "Enter your comment",
     rows: "5",
     cols: "40",
+    ref: "body",
     "onUpdate:modelValue": _cache[4] || (_cache[4] = function ($event) {
       return $setup.form.body = $event;
     })
   }, null, 512
   /* NEED_PATCH */
   ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $setup.form.body]]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-    onClick: _cache[5] || (_cache[5] = function ($event) {
-      $setup.showReplyForm = false;
-      $setup.form.parent_id = null;
+    onClick: _cache[5] || (_cache[5] = function () {
+      return $setup.closeCommentForm && $setup.closeCommentForm.apply($setup, arguments);
     }),
     "class": "px-12 py-2 text-base font-semibold text-center text-white transition duration-200 ease-in bg-gray-300 rounded-full shadow-sm cursor-pointer hover:bg-gray-400"
   }, "Cancle"), _hoisted_7])], 32
@@ -31922,27 +31943,33 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     /* TEXT */
     ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
       onClick: function onClick($event) {
-        $setup.showReplyForm = true;
-        $setup.form.parent_id = comment.id;
+        return $setup.openReplyForm(comment);
       },
       "class": "px-4 py-1 text-gray-600 border border-gray-200 rounded-lg hover:text-gray-700 hover:bg-opacity-10 hover:border-gray-300"
     }, "Reply", 8
     /* PROPS */
-    , _hoisted_15)])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" reply "), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(comment.replies, function (comment) {
+    , _hoisted_15)])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" reply "), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(comment.replies, function (replyComment) {
       return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
-        key: comment.id,
+        key: replyComment.id,
         "class": "flex flex-row gap-3 px-3 py-4 mb-6 ml-24 mr-8 bg-white rounded-md shadow-sm"
       }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_16, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
         "class": "w-12 h-12 rounded-full",
-        src: comment.commenter.profile_photo_url,
+        src: replyComment.commenter.profile_photo_url,
         alt: "avatar"
       }, null, 8
       /* PROPS */
-      , _hoisted_17)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_18, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h3", _hoisted_19, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(comment.commenter.name), 1
+      , _hoisted_17)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_18, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h3", _hoisted_19, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(replyComment.commenter.name), 1
       /* TEXT */
-      ), _hoisted_20, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_21, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(comment.body), 1
+      ), _hoisted_20, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_21, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(replyComment.body), 1
       /* TEXT */
-      )])]);
+      ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+        onClick: function onClick($event) {
+          return $setup.openRereplyForm(replyComment, comment.id);
+        },
+        "class": "px-4 py-1 text-gray-600 border border-gray-200 rounded-lg hover:text-gray-700 hover:bg-opacity-10 hover:border-gray-300"
+      }, "Reply", 8
+      /* PROPS */
+      , _hoisted_22)])]);
     }), 128
     /* KEYED_FRAGMENT */
     ))], 64

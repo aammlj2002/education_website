@@ -4,6 +4,8 @@
         @click="showCommentForm=true"
         class="flex flex-row gap-3 px-8 py-6 mx-8 mb-6 bg-white border border-transparent rounded-md shadow-sm hover:border-blue-500 hover:border-dashed"
     >Contribute to Discussion</div>
+
+    <!-- comment form -->
     <form
         v-if="showCommentForm"
         @submit.prevent="sendComment"
@@ -19,7 +21,7 @@
         ></textarea>
         <div class="flex flex-row justify-end mt-8 space-x-4">
             <div
-                @click="showCommentForm=false; form.reset();"
+                @click="closeCommentForm"
                 class="px-12 py-2 text-base font-semibold text-center text-white transition duration-200 ease-in bg-gray-300 rounded-full shadow-sm cursor-pointer hover:bg-gray-400"
             >Cancle</div>
             <button
@@ -30,6 +32,8 @@
             >Post</button>
         </div>
     </form>
+
+    <!-- reply form -->
     <form
         v-if="showReplyForm"
         @submit.prevent="replyComment"
@@ -41,11 +45,12 @@
             placeholder="Enter your comment"
             rows="5"
             cols="40"
+            ref="body"
             v-model="form.body"
         ></textarea>
         <div class="flex flex-row justify-end mt-8 space-x-4">
             <div
-                @click="showReplyForm=false; form.parent_id=null"
+                @click="closeCommentForm"
                 class="px-12 py-2 text-base font-semibold text-center text-white transition duration-200 ease-in bg-gray-300 rounded-full shadow-sm cursor-pointer hover:bg-gray-400"
             >Cancle</div>
             <button
@@ -69,27 +74,31 @@
                 <p class="text-gray-600 text-2xs">Posted 3 days ago</p>
                 <p class="mt-6 mb-4 text-gray-900">{{comment.body}}</p>
                 <button
-                    @click="showReplyForm=true; form.parent_id=comment.id"
+                    @click="openReplyForm(comment)"
                     class="px-4 py-1 text-gray-600 border border-gray-200 rounded-lg hover:text-gray-700 hover:bg-opacity-10 hover:border-gray-300"
                 >Reply</button>
             </div>
         </div>
         <!-- reply -->
-        <template v-for="comment in comment.replies" :key="comment.id">
+        <template v-for="replyComment in comment.replies" :key="replyComment.id">
             <div
                 class="flex flex-row gap-3 px-3 py-4 mb-6 ml-24 mr-8 bg-white rounded-md shadow-sm"
             >
                 <div class="flex content-center justify-center w-1/12">
                     <img
                         class="w-12 h-12 rounded-full"
-                        :src="comment.commenter.profile_photo_url"
+                        :src="replyComment.commenter.profile_photo_url"
                         alt="avatar"
                     />
                 </div>
                 <div class="w-10/12">
-                    <h3 class="font-bold text-black font-base">{{comment.commenter.name}}</h3>
+                    <h3 class="font-bold text-black font-base">{{replyComment.commenter.name}}</h3>
                     <p class="text-gray-600 text-2xs">Posted 3 days ago</p>
-                    <p class="mt-6 text-gray-900">{{comment.body}}</p>
+                    <p class="mt-6 text-gray-900">{{replyComment.body}}</p>
+                    <button
+                        @click="openRereplyForm(replyComment, comment.id)"
+                        class="px-4 py-1 text-gray-600 border border-gray-200 rounded-lg hover:text-gray-700 hover:bg-opacity-10 hover:border-gray-300"
+                    >Reply</button>
                 </div>
             </div>
         </template>
@@ -108,6 +117,21 @@ export default {
             body: "",
             parent_id: null
         });
+        let openReplyForm = (comment) => {
+            showReplyForm.value = true;
+            form.parent_id = comment.id;
+            form.body = `@${comment.commenter.username} `;
+        }
+        let openRereplyForm = (replyComment, parent_id) => {
+            showReplyForm.value = true;
+            form.parent_id = parent_id;
+            form.body = `@${replyComment.commenter.username} `;
+        }
+        let closeCommentForm = () => {
+            showReplyForm.value = false;
+            showCommentForm.value = false;
+            form.reset();
+        }
         let sendComment = () => {
             form.post(`/lessons/${props.currentLesson.id}/comment/create`);
             form.reset();
@@ -118,7 +142,7 @@ export default {
             form.reset();
             showReplyForm.value = false;
         }
-        return { sendComment, form, showCommentForm, replyComment, showReplyForm };
+        return { sendComment, openRereplyForm, openReplyForm, closeCommentForm, form, showCommentForm, replyComment, showReplyForm };
     }
 }
 </script>
