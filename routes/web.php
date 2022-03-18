@@ -126,17 +126,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::post("/lessons/{lesson}/comment/create", function (Lesson $lesson) {
         $formData = request()->validate([
             "body"=>"required",
-        ]);
-        $lesson->comments()->create([
-            ...$formData,
-            "user_id"=>auth()->id()
-        ]);
-        return back();
-    });
-    Route::post("/lessons/{lesson}/comments/{comment}/reply", function (Lesson $lesson, Comment $comment) {
-        $formData = request()->validate([
-            "body"=>"required",
-            "parent_id"=>"required|integer"
+            "parent_id"=>"nullable"
         ]);
         $lesson->comments()->create([
             ...$formData,
