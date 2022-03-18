@@ -27060,6 +27060,12 @@ __webpack_require__.r(__webpack_exports__);
       parent_id: null
     });
 
+    var openCommentForm = function openCommentForm(comment, parent_id) {
+      showCommentForm.value = true;
+      form.parent_id = parent_id;
+      form.body = comment ? "@".concat(comment.commenter.username, " ") : "";
+    };
+
     var closeCommentForm = function closeCommentForm() {
       showCommentForm.value = false;
       form.reset();
@@ -27069,12 +27075,6 @@ __webpack_require__.r(__webpack_exports__);
       form.post("/lessons/".concat(props.currentLesson.id, "/comment/create"));
       form.reset();
       showCommentForm.value = false;
-    };
-
-    var openCommentForm = function openCommentForm(comment, parent_id) {
-      showCommentForm.value = true;
-      form.parent_id = parent_id;
-      form.body = comment ? "@".concat(comment.commenter.username, " ") : "";
     };
 
     return {
@@ -31800,13 +31800,9 @@ var _hoisted_8 = {
 var _hoisted_9 = {
   "class": "font-bold text-black font-base"
 };
-
-var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+var _hoisted_10 = {
   "class": "text-gray-600 text-2xs"
-}, "Posted 3 days ago", -1
-/* HOISTED */
-);
-
+};
 var _hoisted_11 = {
   "class": "mt-6 mb-4 text-gray-900"
 };
@@ -31821,13 +31817,9 @@ var _hoisted_15 = {
 var _hoisted_16 = {
   "class": "font-bold text-black font-base"
 };
-
-var _hoisted_17 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+var _hoisted_17 = {
   "class": "text-gray-600 text-2xs"
-}, "Posted 3 days ago", -1
-/* HOISTED */
-);
-
+};
 var _hoisted_18 = {
   "class": "mt-6 mb-4 text-gray-900"
 };
@@ -31880,7 +31872,9 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     /* PROPS */
     , _hoisted_7)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h3", _hoisted_9, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(comment.commenter.name), 1
     /* TEXT */
-    ), _hoisted_10, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_11, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(comment.body), 1
+    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_10, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(comment.created_at), 1
+    /* TEXT */
+    ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_11, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(comment.body), 1
     /* TEXT */
     ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
       onClick: function onClick($event) {
@@ -31901,7 +31895,9 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       /* PROPS */
       , _hoisted_14)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_15, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h3", _hoisted_16, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(replyComment.commenter.name), 1
       /* TEXT */
-      ), _hoisted_17, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_18, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(replyComment.body), 1
+      ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_17, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(replyComment.created_at), 1
+      /* TEXT */
+      ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_18, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(replyComment.body), 1
       /* TEXT */
       ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
         onClick: function onClick($event) {

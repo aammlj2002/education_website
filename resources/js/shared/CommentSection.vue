@@ -44,7 +44,7 @@
             </div>
             <div class="w-10/12">
                 <h3 class="font-bold text-black font-base">{{comment.commenter.name}}</h3>
-                <p class="text-gray-600 text-2xs">Posted 3 days ago</p>
+                <p class="text-gray-600 text-2xs">{{comment.created_at}}</p>
                 <p class="mt-6 mb-4 text-gray-900">{{comment.body}}</p>
                 <button
                     @click="openCommentForm(comment, comment.id)"
@@ -66,7 +66,7 @@
                 </div>
                 <div class="w-10/12">
                     <h3 class="font-bold text-black font-base">{{replyComment.commenter.name}}</h3>
-                    <p class="text-gray-600 text-2xs">Posted 3 days ago</p>
+                    <p class="text-gray-600 text-2xs">{{replyComment.created_at}}</p>
                     <p class="mt-6 mb-4 text-gray-900">{{replyComment.body}}</p>
                     <button
                         @click="openCommentForm(replyComment, comment.id)"
@@ -89,6 +89,11 @@ export default {
             body: "",
             parent_id: null
         });
+        let openCommentForm = (comment, parent_id) => {
+            showCommentForm.value = true;
+            form.parent_id = parent_id;
+            form.body = comment ? `@${comment.commenter.username} ` : "";
+        }
         let closeCommentForm = () => {
             showCommentForm.value = false;
             form.reset();
@@ -98,11 +103,6 @@ export default {
             form.reset();
             showCommentForm.value = false;
         };
-        let openCommentForm = (comment, parent_id) => {
-            showCommentForm.value = true;
-            form.parent_id = parent_id;
-            form.body = comment ? `@${comment.commenter.username} ` : "";
-        }
         return { sendComment, openCommentForm, closeCommentForm, form, showCommentForm };
     }
 }
