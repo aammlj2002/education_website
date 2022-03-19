@@ -19,7 +19,6 @@ return new class extends Migration {
             $table->text("description");
             $table->string("level");
             $table->string("duration");
-            $table->integer("lesson_count");
             $table->foreignId("category_id");
             $table->foreignId("topic_id");
             $table->timestamps();

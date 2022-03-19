@@ -17,7 +17,7 @@
                                 <div class="mr-2">
                                     <BookIcon :width="11" />
                                 </div>
-                                <div>{{course.lessons_count}} Lessons</div>
+                                <div>{{course.lesson_count}} Lessons</div>
                             </div>
                             <div class="flex flex-row items-center text-xs text-white">
                                 <div class="mr-2">

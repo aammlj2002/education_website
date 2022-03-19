@@ -23,7 +23,6 @@ class CourseFactory extends Factory
             "description"=>$this->faker->paragraph(),
             "level"=>"advanced",
             "duration"=>"4h20m",
-            "lesson_count"=>10,
         ];
     }
 }

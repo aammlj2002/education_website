@@ -7,6 +7,7 @@ use App\Models\Lesson;
 use Carbon\Carbon;
 use App\Models\Topic;
 use Illuminate\Console\Application;
+use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -45,6 +46,9 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     });
     Route::get('/topics/{topic:slug}', function (Topic $topic) {
         $courses =$topic->courses;
+        $courses->map(function ($course) {
+            return $course->lesson_count = $course->lessons->count();
+        });
         $currentCategory = $topic->category;
         $topics = $currentCategory->topics;
         return inertia('Topics', [
@@ -55,11 +59,16 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
         ]);
     });
     Route::get('/courses', function () {
+        $courses = Course::all();
+        $courses->map(function ($course) {
+            return $course->lesson_count = $course->lessons->count();
+        });
         return inertia('Courses', [
-            "courses"=>Course::all()
+            "courses"=>$courses
         ]);
     })->name('courses');
     Route::get("/courses/{course:slug}", function (Course $course) {
+        $course->lesson_count = $course->lessons->count();
         return inertia("Courses", [
             "lessons"=>$course->lessons,
             "course"=>$course
