@@ -32281,7 +32281,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     width: "10",
     fill: "fill-white"
   })])])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
-    href: "/courses/".concat($props.currentLesson.course.slug, "/lessons/").concat($props.itemObjKey + 1),
+    href: "/courses/".concat($props.currentLesson.course.slug, "/lessons/").concat($props.lesson.episode),
     "class": "text-sm font-bold text-white hover:text-blue-500"
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
@@ -32729,7 +32729,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   }, 8
   /* PROPS */
   , ["href"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Link, {
-    href: "/courses"
+    href: "/"
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
       return [_hoisted_4];

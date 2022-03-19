@@ -18,7 +18,7 @@
         <div class="w-9/12">
             <div class="flex flex-col justify-between">
                 <Link
-                    :href="`/courses/${currentLesson.course.slug}/lessons/${itemObjKey+1}`"
+                    :href="`/courses/${currentLesson.course.slug}/lessons/${lesson.episode}`"
                     class="text-sm font-bold text-white hover:text-blue-500"
                 >{{lesson.title}}</Link>
                 <div class="flex flex-row space-x-5 text-gray-300">

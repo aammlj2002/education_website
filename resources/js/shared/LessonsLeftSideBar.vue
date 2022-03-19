@@ -8,7 +8,7 @@
                 <LeftArrowIcon width="26" />
                 <div class="text-xs font-bold capitalize">course overview</div>
             </Link>
-            <Link href="/courses">Edu</Link>
+            <Link href="/">Edu</Link>
         </div>
         <div class="px-2 py-4">
             <div class="flex flex-row justify-evenly">
