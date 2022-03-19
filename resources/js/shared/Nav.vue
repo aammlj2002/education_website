@@ -23,21 +23,6 @@
                                 class="px-3 py-2 text-sm font-extrabold uppercase rounded-md text-slate-600 hover:text-gray-100"
                                 :class="{'text-gray-100': $page.component == 'Courses'}"
                             >courses</Link>
-                            <Link
-                                :href="route('bits')"
-                                class="px-3 py-2 text-sm font-extrabold uppercase rounded-md text-slate-600 hover:text-gray-100"
-                                :class="{'text-gray-100': $page.component == 'Bits'}"
-                            >Bits</Link>
-                            <Link
-                                :href="route('discussions')"
-                                class="px-3 py-2 text-sm font-extrabold uppercase rounded-md text-slate-600 hover:text-gray-100"
-                                :class="{'text-gray-100': $page.component == 'Discussions'}"
-                            >Discussions</Link>
-                            <Link
-                                :href="route('podcast')"
-                                class="px-3 py-2 text-sm font-extrabold uppercase rounded-md text-slate-600 hover:text-gray-100"
-                                :class="{'text-gray-100': $page.component == 'Podcast'}"
-                            >Podcast</Link>
                         </div>
                     </div>
                 </div>
