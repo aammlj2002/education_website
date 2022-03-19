@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-row bg-gray-100">
+    <div class="relative flex flex-row overflow-hidden bg-gray-100">
         <LessonsLeftSideBar :lessons="lessons" :currentLesson="currentLesson" />
         <!-- Main section -->
         <main class="flex flex-col w-4/5 h-screen overflow-y-scroll">

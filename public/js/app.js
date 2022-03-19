@@ -27055,6 +27055,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   setup: function setup(props) {
     var showCommentForm = (0,_vue_reactivity__WEBPACK_IMPORTED_MODULE_1__.ref)(false);
+    var body = (0,_vue_reactivity__WEBPACK_IMPORTED_MODULE_1__.ref)();
     var form = (0,_inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_0__.useForm)({
       body: "",
       parent_id: null
@@ -27064,6 +27065,7 @@ __webpack_require__.r(__webpack_exports__);
       showCommentForm.value = true;
       form.parent_id = parent_id;
       form.body = comment ? "@".concat(comment.commenter.username, " ") : "";
+      body.value.focus();
     };
 
     var closeCommentForm = function closeCommentForm() {
@@ -27079,6 +27081,7 @@ __webpack_require__.r(__webpack_exports__);
 
     return {
       sendComment: sendComment,
+      body: body,
       openCommentForm: openCommentForm,
       closeCommentForm: closeCommentForm,
       form: form,
@@ -30328,7 +30331,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
 var _hoisted_1 = {
-  "class": "flex flex-row bg-gray-100"
+  "class": "relative flex flex-row overflow-hidden bg-gray-100"
 };
 var _hoisted_2 = {
   "class": "flex flex-col w-4/5 h-screen overflow-y-scroll"
@@ -31829,18 +31832,21 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     onClick: _cache[0] || (_cache[0] = function ($event) {
       return $setup.openCommentForm(null, null);
     }),
-    "class": "flex flex-row gap-3 px-8 py-6 mx-8 mb-6 bg-white border border-transparent rounded-md shadow-sm hover:border-blue-500 hover:border-dashed"
-  }, "Contribute to Discussion"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" comment form "), $setup.showCommentForm ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("form", {
-    key: 0,
+    "class": "flex flex-row gap-3 px-8 py-6 mx-8 mb-6 bg-white border border-transparent rounded-md shadow-sm cursor-pointer hover:border-blue-500 hover:border-dashed"
+  }, "Contribute to Discussion"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" comment form "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("form", {
     onSubmit: _cache[3] || (_cache[3] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function () {
       return $setup.sendComment && $setup.sendComment.apply($setup, arguments);
     }, ["prevent"])),
-    "class": "absolute bottom-0 w-7/12 px-8 py-6 bg-white shadow-xl rounded-tr-xl rounded-tl-xl"
+    "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)([{
+      'bottom-0': $setup.showCommentForm,
+      '-bottom-full': !$setup.showCommentForm
+    }, "absolute w-7/12 px-8 py-6 bg-white shadow-2xl shadow-x rounded-tr-xl rounded-tl-xl"])
   }, [_hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("textarea", {
     "class": "flex-1 w-full px-4 py-2 text-base text-gray-700 placeholder-gray-400 bg-white border-gray-300 appearance-none resize-none focus:outline-dashed border-x-0 border-y focus:outline-none focus:ring-2 focus:ring-transparent focus:border-gray-400",
     placeholder: "Enter your comment",
     rows: "5",
     cols: "40",
+    ref: "body",
     "onUpdate:modelValue": _cache[1] || (_cache[1] = function ($event) {
       return $setup.form.body = $event;
     })
@@ -31859,9 +31865,9 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     type: "submit"
   }, "Post", 10
   /* CLASS, PROPS */
-  , _hoisted_4)])], 32
-  /* HYDRATE_EVENTS */
-  )) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" comments  "), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($props.currentLesson.comments, function (comment) {
+  , _hoisted_4)])], 34
+  /* CLASS, HYDRATE_EVENTS */
+  ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" comments  "), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($props.currentLesson.comments, function (comment) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
       key: comment.id
     }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {

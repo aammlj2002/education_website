@@ -2,13 +2,13 @@
     <h2 class="mb-4 text-2xl font-bold text-center text-black capitalize">Discuss This Lesson</h2>
     <div
         @click="openCommentForm(null, null)"
-        class="flex flex-row gap-3 px-8 py-6 mx-8 mb-6 bg-white border border-transparent rounded-md shadow-sm hover:border-blue-500 hover:border-dashed"
+        class="flex flex-row gap-3 px-8 py-6 mx-8 mb-6 bg-white border border-transparent rounded-md shadow-sm cursor-pointer hover:border-blue-500 hover:border-dashed"
     >Contribute to Discussion</div>
     <!-- comment form -->
     <form
-        v-if="showCommentForm"
         @submit.prevent="sendComment"
-        class="absolute bottom-0 w-7/12 px-8 py-6 bg-white shadow-xl rounded-tr-xl rounded-tl-xl"
+        :class="{'bottom-0':showCommentForm, '-bottom-full':!showCommentForm}"
+        class="absolute w-7/12 px-8 py-6 bg-white shadow-2xl shadow-x rounded-tr-xl rounded-tl-xl"
     >
         <div class="pl-4 mb-6 text-lg font-bold text-black">Reply to post</div>
         <textarea
@@ -16,6 +16,7 @@
             placeholder="Enter your comment"
             rows="5"
             cols="40"
+            ref="body"
             v-model="form.body"
         ></textarea>
         <div class="flex flex-row justify-end mt-8 space-x-4">
@@ -85,6 +86,7 @@ export default {
     props: { currentLesson: Object },
     setup(props) {
         let showCommentForm = ref(false);
+        let body = ref();
         let form = useForm({
             body: "",
             parent_id: null
@@ -93,6 +95,7 @@ export default {
             showCommentForm.value = true;
             form.parent_id = parent_id;
             form.body = comment ? `@${comment.commenter.username} ` : "";
+            body.value.focus();
         }
         let closeCommentForm = () => {
             showCommentForm.value = false;
@@ -103,7 +106,7 @@ export default {
             form.reset();
             showCommentForm.value = false;
         };
-        return { sendComment, openCommentForm, closeCommentForm, form, showCommentForm };
+        return { sendComment, body, openCommentForm, closeCommentForm, form, showCommentForm };
     }
 }
 </script>
